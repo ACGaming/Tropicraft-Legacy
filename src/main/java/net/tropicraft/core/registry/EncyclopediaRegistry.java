@@ -189,13 +189,13 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("coffeebean", new ItemStack(ItemRegistry.coffeeBeans, 1, 0)));
         enc.addPage(new MultiItemPage("coral", Arrays.stream(TropicraftCorals.VALUES).map(v -> new ItemStack(BlockRegistry.coral, 1, v.getMeta())).toArray(ItemStack[]::new)));
         enc.addPage(new ItemPage("kapok", new ItemStack(BlockRegistry.leaves, 1, 2)));
-        enc.addPage(new ItemPage("mahogany", new ItemStack(BlockRegistry.logs, 1, 1)));
+        enc.addPage(new ItemPage("mahogany", new ItemStack(BlockRegistry.logs, 1, 0)));
         enc.addPage(new ItemPage("lemonsapling", new ItemStack(BlockRegistry.saplings, 1, 2)));
         enc.addPage(new ItemPage("limesapling", new ItemStack(BlockRegistry.saplings, 1, 4)));
         enc.addPage(new ItemPage("orangesapling", new ItemStack(BlockRegistry.saplings, 1, 3)));
         enc.addPage(new ItemPage("grapefruitsapling", new ItemStack(BlockRegistry.saplings, 1, 1)));
         enc.addPage(new ItemPage("palmsapling", new ItemStack(BlockRegistry.saplings, 1, 0)));
-        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 0)));
+        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 1)));
 
         // Decor
         enc.addPage(new SectionPage("decor"));
