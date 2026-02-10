@@ -149,7 +149,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //  enc.addPage(new ItemPage("firestaff", new ItemStack(TCItemRegistry.staffFire)));
         /*
          * firestaff.title = Fire Staff
-firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
+           firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
          */
         
         // All Armors
@@ -159,8 +159,8 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("fireleggings", new ItemStack(ItemRegistry.fireLeggings)));
         enc.addPage(new ItemPage("fireboots", new ItemStack(ItemRegistry.fireBoots)));
         enc.addPage(new ItemPage("scalehelm", new ItemStack(ItemRegistry.scaleHelmet)));
-        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scalechestplate", new ItemStack(ItemRegistry.scaleChestplate)));
+        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scaleboots", new ItemStack(ItemRegistry.scaleBoots)));
 
         // Scuba Gear
@@ -190,18 +190,21 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new MultiItemPage("coral", Arrays.stream(TropicraftCorals.VALUES).map(v -> new ItemStack(BlockRegistry.coral, 1, v.getMeta())).toArray(ItemStack[]::new)));
         enc.addPage(new ItemPage("kapok", new ItemStack(BlockRegistry.leaves, 1, 2)));
         enc.addPage(new ItemPage("mahogany", new ItemStack(BlockRegistry.logs, 1, 0)));
-        enc.addPage(new ItemPage("lemonsapling", new ItemStack(BlockRegistry.saplings, 1, 2)));
+        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 1)));
+        enc.addPage(new ItemPage("lemonsapling", new ItemStack(BlockRegistry.saplings, 1, 3)));
         enc.addPage(new ItemPage("limesapling", new ItemStack(BlockRegistry.saplings, 1, 4)));
         enc.addPage(new ItemPage("orangesapling", new ItemStack(BlockRegistry.saplings, 1, 3)));
-        enc.addPage(new ItemPage("grapefruitsapling", new ItemStack(BlockRegistry.saplings, 1, 1)));
+        enc.addPage(new ItemPage("grapefruitsapling", new ItemStack(BlockRegistry.saplings, 1, 2)));
         enc.addPage(new ItemPage("palmsapling", new ItemStack(BlockRegistry.saplings, 1, 0)));
-        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 1)));
+        enc.addPage(new ItemPage("mahoganysapling", new ItemStack(BlockRegistry.saplings, 1, 1)));
 
         // Decor
         enc.addPage(new SectionPage("decor"));
-        enc.addPage(new ItemPage("palmplanks", new ItemStack(BlockRegistry.planks, 1, 0))); //0 is palm, 1 is mahogany
+        enc.addPage(new ItemPage("palmplanks", new ItemStack(BlockRegistry.planks, 1, 1))); //0 is palm, 1 is mahogany // Nope, it's the exact opposite.
+        enc.addPage(new ItemPage("mahoganyplanks", new ItemStack(BlockRegistry.planks, 1, 0)));
         enc.addPage(new ItemPage("palmfence", new ItemStack(BlockRegistry.palmFence)));
         enc.addPage(new ItemPage("palmfencegate", new ItemStack(BlockRegistry.palmFenceGate)));
+        enc.addPage(new ItemPage("mahoganydoor", new ItemStack(ItemRegistry.mahoganyDoor)));
         enc.addPage(new ItemPage("mahoganyfence", new ItemStack(BlockRegistry.mahoganyFence)));
         enc.addPage(new ItemPage("mahoganyfencegate", new ItemStack(BlockRegistry.mahoganyFenceGate)));
         enc.addPage(new ItemPage("bambooblock", new ItemStack(BlockRegistry.bundles, 1, 1)));
@@ -242,7 +245,7 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("thetribe", new ItemStack(ItemRegistry.recordTheTribe)));
         enc.addPage(new ItemPage("tradewinds", new ItemStack(ItemRegistry.recordTradeWinds)));
         enc.addPage(new ItemPage("lowtide", new ItemStack(ItemRegistry.recordLowTide)));
-        // TODO buriedtreasure
+        enc.addPage(new ItemPage("buriedtreasure", new ItemStack(ItemRegistry.recordBuriedTreasure)));
 
         // Unsorted / ???
         enc.addPage(new SectionPage("misc"));

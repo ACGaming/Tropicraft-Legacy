@@ -23,6 +23,7 @@ public final class Names {
 	public static final String SIFTER = "sifter";
 	public static final String FLOWER_POT = "flower_pot";
 	public static final String BAMBOO_DOOR = "bamboo_door";
+	public static final String MAHOGANY_DOOR = "mahogany_door";
 	public static final String BLOCK_PALM_STAIRS = "palm_stairs";
 	public static final String BONGO = "bongo";
     public static final String AIR_COMPRESSOR = "air_compressor";

@@ -203,6 +203,7 @@ item.tropicraft.leaf_ball.name=Leaf Ball
 item.tropicraft.coconut_bomb.name=Coconut Bomb
 item.tropicraft.flower_pot.name=Flower Pot
 item.tropicraft.bamboo_door.name=Bamboo Door
+item.tropicraft.mahogany_door.name=Mahogany Door
 item.tropicraft.bamboo_item_frame.name=Bamboo Item Frame
 item.tropicraft.water_wand.name=Water Wand
 item.tropicraft.spawn_egg.iguana.name=Spawn Iguana
@@ -382,6 +383,8 @@ entity.tropicraft.beach_umbrella.name=Beach Umbrella
 entity.tropicraft.beach_float.name=Beach Float
 
 # Achievement localizations
+achievement.tropics.title=Tropicraft
+achievement.tropics.desc=Don't mind this place holder text.
 achievement.tc_craft_pina_colada=If you like pina coladas...
 achievement.tc_craft_pina_colada.desc=(Who doesn't?)
 achievement.tc_drink_pina_colada=Caught in the rain
@@ -519,6 +522,9 @@ tropicraft.encyclopedia.bamboochest.desc=A chest made out of bamboo! It will com
 tropicraft.encyclopedia.bamboodoor.title=Bamboo Door
 tropicraft.encyclopedia.bamboodoor.desc=This bamboo and thatch door is perfect for separating you from the wilderness. Be careful though, this door isn't very strong.
 
+tropicraft.encyclopedia.mahoganydoor.title=Mahogany Door
+tropicraft.encyclopedia.mahoganydoor.desc=Don't mind this place holder.
+
 tropicraft.encyclopedia.bamboofence.title=Bamboo Fence
 tropicraft.encyclopedia.bamboofence.desc=This bamboo fence is great at keeping the bad things out. Careful though, this fence isn't very strong.
 
@@ -543,8 +549,11 @@ tropicraft.encyclopedia.beachfloat.desc=These relaxing floats allow the gentle c
 tropicraft.encyclopedia.blackcoffee.title=Black Coffee
 tropicraft.encyclopedia.blackcoffee.desc=Who doesn't like coffee? Brew yourself a nice cup o' joe and watch the sunrise from your bungalow.
 
+tropicraft.encyclopedia.buriedtreasure.title=Buried Treasure
+tropicraft.encyclopedia.buriedtreasure.desc=Don't mind this place holder text.
+
 tropicraft.encyclopedia.volcanicsand.title=Volcanic Sands
-tropicraft.encyclopedia.volcanicsand.desc = Tread lightly on this sand...or don't at all. If you aren't wearing any scale or fire armor, you better be ready to run reaaaaaaaaally fast.
+tropicraft.encyclopedia.volcanicsand.desc=Tread lightly on this sand...or don't at all. If you aren't wearing any scale or fire armor, you better be ready to run reaaaaaaaaally fast.
 
 #tropicraft.encyclopedia.blowgun.title=Blow Gun
 #tropicraft.encyclopedia.blowgun.desc=This tube of bamboo is used to shoot neurotoxin-laced darts at your pray. You will be surprised how a far and fast you can shoot a dart with a hefty blow.
@@ -586,7 +595,7 @@ tropicraft.encyclopedia.coral.title=Coral
 tropicraft.encyclopedia.coral.desc=While these bioluminescent lifeforms are at home in the ocean, they are well suited for lighting up an aquarium.
 
 tropicraft.encyclopedia.coralsand.title=Coral Sands
-coralsand.dec = It is rumored that hundreds of years ago, these coral sands were washed ashore during a tornado.
+tropicraft.encyclopedia.coralsand.desc=It is rumored that hundreds of years ago, these coral sands were washed ashore during a tornado.
 
 tropicraft.encyclopedia.crocosmia.title=Crocosmia
 tropicraft.encyclopedia.crocosmia.desc=These fiery little flowers are like miniature suns resting on the ground. 
@@ -655,7 +664,8 @@ tropicraft.encyclopedia.froglegscooked.title=Frog Legs, Cooked
 tropicraft.encyclopedia.froglegscooked.desc=This rare delicacy is the result of cooking frog legs.
 
 tropicraft.encyclopedia.frogskin.title=Poison Frog Skin
-tropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin though their skin. By combining this with darts, you can briefly paralyze an enemy. 
+tropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin though their skin.
+#OLDtropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin through their skin. By combining this with darts, you can briefly paralyze an enemy.
 
 tropicraft.encyclopedia.froxconch.title=Frox Conch
 tropicraft.encyclopedia.froxconch.desc=Named after the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!
@@ -714,14 +724,20 @@ tropicraft.encyclopedia.lowtide.desc=Produced by Punchaface, this chilled electr
 tropicraft.encyclopedia.magic_mushroom.title=Magic Mushroom
 tropicraft.encyclopedia.magic_mushroom.desc=Found only in the rainforest, these mushrooms are mysterious, need to explore more.
 
-tropicraft.encyclopedia.mahogany.title=Mahogany Logs
+tropicraft.encyclopedia.mahogany.title=Mahogany Wood
 tropicraft.encyclopedia.mahogany.desc=This beautifully colored wood comprises all Tropicraft rainforest trees and make for a beautiful addition to any tropical paradise.
+
+tropicraft.encyclopedia.mahoganyplanks.title=Mahogany Planks
+tropicraft.encyclopedia.mahoganyplanks.desc=Mahogany planks come from mahogany wood which comes from mahogany trees!
 
 tropicraft.encyclopedia.mahoganyfence.title=Mahogany Fence
 tropicraft.encyclopedia.mahoganyfence.desc=This beautifully colored wood comprises all Tropicraft rainforest trees and make for a beautiful addition to any tropical paradise.
 
 tropicraft.encyclopedia.mahoganyfencegate.title=Mahogany Fence Gate
 tropicraft.encyclopedia.mahoganyfencegate.desc=This beautifully colored wood comprises all Tropicraft rainforest trees and make for a beautiful addition to any tropical paradise.
+
+tropicraft.encyclopedia.mahoganysapling.title=Mahogany Saplings
+tropicraft.encyclopedia.mahoganysapling.desc=Grows into imposing tall trees with large leaf canopies.
 
 tropicraft.encyclopedia.marlinmeat.title=Fresh Marlin
 tropicraft.encyclopedia.marlinmeat.desc=Flesh of the elusive marlin. Cook this to get Seared Marlin.
@@ -730,7 +746,7 @@ tropicraft.encyclopedia.marlincooked.title=Seared Marlin
 tropicraft.encyclopedia.marlincooked.desc=Mmmm. Yummy in my tummy. This is what you get when you cook Fresh Marlin.
 
 tropicraft.encyclopedia.mineralsand.title=Mineral Sands
-mineralsand.dec = This special type of sand is rumored to contain various minerals. Their use is currently unknown.
+tropicraft.encyclopedia.mineralsand.desc=This special type of sand is rumored to contain various minerals. Their use is currently unknown.
 
 tropicraft.encyclopedia.mixer.title=EIH Mixer
 tropicraft.encyclopedia.mixer.desc=Mix various types of fruits with this to get different cocktails. You could have your own bar!
@@ -749,6 +765,15 @@ tropicraft.encyclopedia.orchid.desc=Orchids are perhaps the rarest of all the fl
 
 tropicraft.encyclopedia.pabshell.title=Pab Shell
 tropicraft.encyclopedia.pabshell.desc=Named after one of the original modders of tropicraft, Pablomittens, the Pab shell stands as one of the original items that was in tropicraft since v1.0, but was never given a use.
+
+tropicraft.encyclopedia.soloshell.title=Solonox Shell
+tropicraft.encyclopedia.soloshell.desc=Don't mind this place holder text.
+
+tropicraft.encyclopedia.froxshell.title=Frox Conch
+tropicraft.encyclopedia.froxshell.desc=Don't mind this place holder text.
+
+tropicraft.encyclopedia.rubeshell.title=Rube Nautilus
+tropicraft.encyclopedia.rubeshell.desc=Don't mind this place holder text.
 
 tropicraft.encyclopedia.palmplanks.title=Palm Planks
 tropicraft.encyclopedia.palmplanks.desc=Palm planks come from palm wood which comes from palm trees!

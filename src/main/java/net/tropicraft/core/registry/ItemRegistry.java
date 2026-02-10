@@ -111,7 +111,7 @@ public class ItemRegistry extends TropicraftRegistry {
     // Tool materials
     public static ToolMaterial materialZirconTools = EnumHelper.addToolMaterial("zircon", 2, 200, 4.5F, 1.0F, 14);
     public static ToolMaterial materialEudialyteTools = EnumHelper.addToolMaterial("eudialyte", 2, 750, 6.0F, 2.0F, 14);
-    public static ToolMaterial materialZirconiumTools = EnumHelper.addToolMaterial("zirconium", 3, 1800, 8.5F, 3.0F, 10);
+    //public static ToolMaterial materialZirconiumTools = EnumHelper.addToolMaterial("zirconium", 3, 1800, 8.5F, 3.0F, 10);
     public static ToolMaterial materialBambooTools = EnumHelper.addToolMaterial("bamboo", 1, 110, 1.2F, 1F, 6);
 
     // Tools and weapons
@@ -186,6 +186,7 @@ public class ItemRegistry extends TropicraftRegistry {
     // Decorations
     public static Item flowerPot;
     public static Item bambooDoor;
+    public static Item mahoganyDoor;
     public static Item bambooItemFrame;
 
     public static Item waterWand;
@@ -299,9 +300,25 @@ public class ItemRegistry extends TropicraftRegistry {
         OreDictionary.registerOre("gemZircon", zircon);
         
         grapefruit = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "grapefruit");
+        OreDictionary.registerOre("cropGrapefruit", grapefruit);
+        OreDictionary.registerOre("listAllcitrus", grapefruit);
+        OreDictionary.registerOre("listAllcitrus", grapefruit);
+        OreDictionary.registerOre("listAllfruit", grapefruit);
         lemon = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "lemon");
+        OreDictionary.registerOre("cropLemon", lemon);
+        OreDictionary.registerOre("listAllcitrus", lemon);
+        OreDictionary.registerOre("listAllcitrus", lemon);
+        OreDictionary.registerOre("listAllfruit", lemon);
         lime = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "lime");
+        OreDictionary.registerOre("cropLime", lime);
+        OreDictionary.registerOre("listAllcitrus", lime);
+        OreDictionary.registerOre("listAllcitrus", lime);
+        OreDictionary.registerOre("listAllfruit", lime);
         orange = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "orange");
+        OreDictionary.registerOre("cropOrange", orange);
+        OreDictionary.registerOre("listAllcitrus", orange);
+        OreDictionary.registerOre("listAllcitrus", orange);
+        OreDictionary.registerOre("listAllfruit", orange);
 
         hoeEudialyte = registerItem(registry, new ItemHoe(materialEudialyteTools), "hoe_eudialyte");
         hoeZircon = registerItem(registry, new ItemHoe(materialZirconTools), "hoe_zircon");
@@ -365,6 +382,7 @@ public class ItemRegistry extends TropicraftRegistry {
         blackPearl = registerItem(registry, new ItemTropicraft().setMaxStackSize(64), "black_pearl");
 
         fertilizer = registerItem(registry, new ItemFertilizer(), "fertilizer");
+        OreDictionary.registerOre("fertilizer", fertilizer);
 
         encyclopedia = registerItem(registry, new ItemEncyclopediaTropica(), "encyclopedia_tropica");
 
@@ -374,6 +392,7 @@ public class ItemRegistry extends TropicraftRegistry {
 
         flowerPot = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.flowerPot), "flower_pot");
         bambooDoor = registerItem(registry, new ItemDoor(BlockRegistry.bambooDoor), "bamboo_door");
+        mahoganyDoor = registerItem(registry, new ItemDoor(BlockRegistry.mahoganyDoor), "mahogany_door");
         bambooItemFrame = registerItem(registry, new ItemBambooItemFrame(EntityBambooItemFrame.class), "bamboo_item_frame");
         Tropicraft.proxy.registerArbitraryBlockVariants("bamboo_item_frame", "normal", "map");
 

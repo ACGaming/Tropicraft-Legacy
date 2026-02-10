@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "tropicraft:donation"
+        },
+        "title": {
+            "translate": "achievement.tropics.title"
+        },
+        "description": {
+            "translate": "achievement.tropics.desc"
+        },
+        "background": "tropicraft:textures/blocks/sand_purified.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "crafting_table": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "tropicraft:bamboo_shoot"
+                    }
+                ]
+            }
+        }
+    }
+}
