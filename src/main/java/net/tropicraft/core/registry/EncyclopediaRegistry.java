@@ -149,7 +149,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //  enc.addPage(new ItemPage("firestaff", new ItemStack(TCItemRegistry.staffFire)));
         /*
          * firestaff.title = Fire Staff
-firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
+           firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
          */
         
         // All Armors
@@ -159,8 +159,8 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("fireleggings", new ItemStack(ItemRegistry.fireLeggings)));
         enc.addPage(new ItemPage("fireboots", new ItemStack(ItemRegistry.fireBoots)));
         enc.addPage(new ItemPage("scalehelm", new ItemStack(ItemRegistry.scaleHelmet)));
-        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scalechestplate", new ItemStack(ItemRegistry.scaleChestplate)));
+        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scaleboots", new ItemStack(ItemRegistry.scaleBoots)));
 
         // Scuba Gear
@@ -243,7 +243,7 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("thetribe", new ItemStack(ItemRegistry.recordTheTribe)));
         enc.addPage(new ItemPage("tradewinds", new ItemStack(ItemRegistry.recordTradeWinds)));
         enc.addPage(new ItemPage("lowtide", new ItemStack(ItemRegistry.recordLowTide)));
-        // TODO buriedtreasure
+        enc.addPage(new ItemPage("buriedtreasure", new ItemStack(ItemRegistry.recordBuriedTreasure)));
 
         // Unsorted / ???
         enc.addPage(new SectionPage("misc"));
