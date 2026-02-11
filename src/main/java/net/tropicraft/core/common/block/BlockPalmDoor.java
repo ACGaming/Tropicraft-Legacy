@@ -14,9 +14,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.tropicraft.core.registry.ItemRegistry;
 
-public class BlockMahoganyDoor extends BlockDoor {
+public class BlockPalmDoor extends BlockDoor {
 
-    public BlockMahoganyDoor() {
+    public BlockPalmDoor() {
         super(Material.WOOD);
         this.disableStats();
         this.setHardness(2.0F);
@@ -30,12 +30,12 @@ public class BlockMahoganyDoor extends BlockDoor {
     @Override
     @SideOnly(Side.CLIENT)
     public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
-        return new ItemStack(ItemRegistry.mahoganyDoor);
+        return new ItemStack(ItemRegistry.palmDoor);
     }
 
     // BlockDoor.getItem() is private so we need to override this logic entirely
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? null : ItemRegistry.mahoganyDoor;
+        return state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? null : ItemRegistry.palmDoor;
     }
 }

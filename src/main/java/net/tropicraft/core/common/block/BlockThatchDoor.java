@@ -3,7 +3,6 @@ package net.tropicraft.core.common.block;
 import java.util.Random;
 
 import net.minecraft.block.BlockDoor;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -14,14 +13,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.tropicraft.core.registry.ItemRegistry;
 
-public class BlockMahoganyDoor extends BlockDoor {
+public class BlockThatchDoor extends BlockDoor {
 
-    public BlockMahoganyDoor() {
-        super(Material.WOOD);
-        this.disableStats();
-        this.setHardness(2.0F);
-        this.setSoundType(SoundType.WOOD);
-        this.setHarvestLevel("axe", 0);
+    public BlockThatchDoor() {
+        super(Material.PLANTS);
     }
 
     /**
@@ -30,12 +25,12 @@ public class BlockMahoganyDoor extends BlockDoor {
     @Override
     @SideOnly(Side.CLIENT)
     public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
-        return new ItemStack(ItemRegistry.mahoganyDoor);
+        return new ItemStack(ItemRegistry.thatchDoor);
     }
 
     // BlockDoor.getItem() is private so we need to override this logic entirely
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? null : ItemRegistry.mahoganyDoor;
+        return state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER ? null : ItemRegistry.thatchDoor;
     }
 }

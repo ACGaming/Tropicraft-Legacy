@@ -204,6 +204,8 @@ item.tropicraft.coconut_bomb.name=Coconut Bomb
 item.tropicraft.flower_pot.name=Flower Pot
 item.tropicraft.bamboo_door.name=Bamboo Door
 item.tropicraft.mahogany_door.name=Mahogany Door
+item.tropicraft.palm_door.name=Palm Door
+item.tropicraft.thatch_door.name=Thatch Door
 item.tropicraft.bamboo_item_frame.name=Bamboo Item Frame
 item.tropicraft.water_wand.name=Water Wand
 item.tropicraft.spawn_egg.iguana.name=Spawn Iguana
@@ -524,6 +526,12 @@ tropicraft.encyclopedia.bamboodoor.desc=This bamboo and thatch door is perfect f
 
 tropicraft.encyclopedia.mahoganydoor.title=Mahogany Door
 tropicraft.encyclopedia.mahoganydoor.desc=Don't mind this place holder.
+
+tropicraft.encyclopedia.palmdoor.title=Palm Door
+tropicraft.encyclopedia.palmdoor.desc=Don't mind this place holder.
+
+tropicraft.encyclopedia.thatchdoor.title=Thatch Door
+tropicraft.encyclopedia.thatchdoor.desc=As easy to craft as it is to break, the thatch block provides another sustainable building material to Tropics.
 
 tropicraft.encyclopedia.bamboofence.title=Bamboo Fence
 tropicraft.encyclopedia.bamboofence.desc=This bamboo fence is great at keeping the bad things out. Careful though, this fence isn't very strong.

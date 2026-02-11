@@ -13,7 +13,8 @@
       "item": "tropicraft:bamboo_shoot"
     },
     "X": {
-      "item": "minecraft:leather"
+      "type": "forge:ore_dict",
+      "ore": "itemLeather"
     }
   }
 }

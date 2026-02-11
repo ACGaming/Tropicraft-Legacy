@@ -159,8 +159,8 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("fireleggings", new ItemStack(ItemRegistry.fireLeggings)));
         enc.addPage(new ItemPage("fireboots", new ItemStack(ItemRegistry.fireBoots)));
         enc.addPage(new ItemPage("scalehelm", new ItemStack(ItemRegistry.scaleHelmet)));
-        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scalechestplate", new ItemStack(ItemRegistry.scaleChestplate)));
+        enc.addPage(new ItemPage("scaleleggings", new ItemStack(ItemRegistry.scaleLeggings)));
         enc.addPage(new ItemPage("scaleboots", new ItemStack(ItemRegistry.scaleBoots)));
 
         // Scuba Gear
@@ -190,18 +190,21 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new MultiItemPage("coral", Arrays.stream(TropicraftCorals.VALUES).map(v -> new ItemStack(BlockRegistry.coral, 1, v.getMeta())).toArray(ItemStack[]::new)));
         enc.addPage(new ItemPage("kapok", new ItemStack(BlockRegistry.leaves, 1, 2)));
         enc.addPage(new ItemPage("mahogany", new ItemStack(BlockRegistry.logs, 1, 0)));
+        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 1)));
         enc.addPage(new ItemPage("lemonsapling", new ItemStack(BlockRegistry.saplings, 1, 2)));
         enc.addPage(new ItemPage("limesapling", new ItemStack(BlockRegistry.saplings, 1, 4)));
         enc.addPage(new ItemPage("orangesapling", new ItemStack(BlockRegistry.saplings, 1, 3)));
         enc.addPage(new ItemPage("grapefruitsapling", new ItemStack(BlockRegistry.saplings, 1, 1)));
         enc.addPage(new ItemPage("palmsapling", new ItemStack(BlockRegistry.saplings, 1, 0)));
-        enc.addPage(new ItemPage("palmwood", new ItemStack(BlockRegistry.logs, 1, 1)));
 
         // Decor
         enc.addPage(new SectionPage("decor"));
-        enc.addPage(new ItemPage("palmplanks", new ItemStack(BlockRegistry.planks, 1, 0))); //0 is palm, 1 is mahogany
+        enc.addPage(new ItemPage("palmplanks", new ItemStack(BlockRegistry.planks, 1, 1))); //0 is palm, 1 is mahogany // No, no it's not
+        enc.addPage(new ItemPage("palmdoor", new ItemStack(ItemRegistry.palmDoor)));
         enc.addPage(new ItemPage("palmfence", new ItemStack(BlockRegistry.palmFence)));
         enc.addPage(new ItemPage("palmfencegate", new ItemStack(BlockRegistry.palmFenceGate)));
+        enc.addPage(new ItemPage("mahoganyplanks", new ItemStack(BlockRegistry.planks, 1, 0)));
+        enc.addPage(new ItemPage("mahoganydoor", new ItemStack(ItemRegistry.mahoganyDoor)));
         enc.addPage(new ItemPage("mahoganyfence", new ItemStack(BlockRegistry.mahoganyFence)));
         enc.addPage(new ItemPage("mahoganyfencegate", new ItemStack(BlockRegistry.mahoganyFenceGate)));
         enc.addPage(new ItemPage("bambooblock", new ItemStack(BlockRegistry.bundles, 1, 1)));
@@ -217,6 +220,7 @@ firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows 
         enc.addPage(new ItemPage("chunkfencegate", new ItemStack(BlockRegistry.chunkFenceGate)));
         enc.addPage(new ItemPage("tikitorch", new ItemStack(BlockRegistry.tikiTorch)));
         enc.addPage(new ItemPage("thatchblock", new ItemStack(BlockRegistry.bundles, 1, 0)));
+        enc.addPage(new ItemPage("thatchdoor", new ItemStack(ItemRegistry.thatchDoor)));
         enc.addPage(new ItemPage("thatchfence", new ItemStack(BlockRegistry.thatchFence)));
         enc.addPage(new ItemPage("thatchfencegate", new ItemStack(BlockRegistry.thatchFenceGate)));
 

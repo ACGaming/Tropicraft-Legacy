@@ -187,6 +187,8 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item flowerPot;
     public static Item bambooDoor;
     public static Item mahoganyDoor;
+    public static Item palmDoor;
+    public static Item thatchDoor;
     public static Item bambooItemFrame;
 
     public static Item waterWand;
@@ -393,6 +395,9 @@ public class ItemRegistry extends TropicraftRegistry {
         flowerPot = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.flowerPot), "flower_pot");
         bambooDoor = registerItem(registry, new ItemDoor(BlockRegistry.bambooDoor), "bamboo_door");
         mahoganyDoor = registerItem(registry, new ItemDoor(BlockRegistry.mahoganyDoor), "mahogany_door");
+        palmDoor = registerItem(registry, new ItemDoor(BlockRegistry.palmDoor), "palm_door");
+        thatchDoor = registerItem(registry, new ItemDoor(BlockRegistry.thatchDoor), "thatch_door");
+
         bambooItemFrame = registerItem(registry, new ItemBambooItemFrame(EntityBambooItemFrame.class), "bamboo_item_frame");
         Tropicraft.proxy.registerArbitraryBlockVariants("bamboo_item_frame", "normal", "map");
 

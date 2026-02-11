@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "tropicraft:thatch_door"
+  },
+  "pattern": [
+    "XX",
+    "XX",
+    "XX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:bundle",
+      "data": 0
+    }
+  }
+}

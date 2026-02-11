@@ -184,6 +184,8 @@ public class BlockRegistry extends TropicraftRegistry {
 	public static Block flowerPot;
 	public static Block bambooDoor;
 	public static Block mahoganyDoor;
+	public static Block palmDoor;
+	public static Block thatchDoor;
 
 	public static BlockTropicraftSlab slabs;
 	public static BlockTropicraftSlab doubleSlabs;
@@ -294,6 +296,8 @@ public class BlockRegistry extends TropicraftRegistry {
 		flowerPot = registerBlockNoItem(registry, new BlockTropicraftFlowerPot(), Names.FLOWER_POT);
 		bambooDoor = registerBlockNoItem(registry, new BlockBambooDoor(), Names.BAMBOO_DOOR);
 		mahoganyDoor = registerBlockNoItem(registry, new BlockMahoganyDoor(), Names.MAHOGANY_DOOR);
+		palmDoor = registerBlockNoItem(registry, new BlockPalmDoor(), Names.PALM_DOOR);
+		thatchDoor = registerBlockNoItem(registry, new BlockBambooDoor(), Names.THATCH_DOOR);
 
 		bongo = registerBlock(registry, new BlockBongoDrum(), Names.BONGO, new MultiBlockItemCreator(TropicraftBongos.VALUES));
 
