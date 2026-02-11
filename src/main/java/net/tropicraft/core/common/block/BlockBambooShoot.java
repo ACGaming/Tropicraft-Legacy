@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockReed;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -27,6 +28,7 @@ public class BlockBambooShoot extends BlockReed implements IPlantable {
 		super();
 		setHardness(1.0F);
 		setResistance(4.0F);
+		setSoundType(SoundType.PLANT);
 		setHarvestLevel("axe", 0);
 		setCreativeTab(null);
 	}

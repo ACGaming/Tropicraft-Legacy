@@ -7,6 +7,7 @@ import java.lang.invoke.MethodHandles.Lookup;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.BlockChest;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryLargeChest;
@@ -30,7 +31,8 @@ public class BlockBambooChest extends BlockChest {
 	public BlockBambooChest() {
 		super(TYPE);
 		this.setHardness(2.5F);
-		this.disableStats();
+        this.setSoundType(SoundType.PLANT);
+        this.disableStats();
 	}
 	
     @Override

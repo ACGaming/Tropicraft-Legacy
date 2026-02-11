@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.block.SoundType;
 import org.apache.commons.lang3.ArrayUtils;
 
 import net.minecraft.block.Block;
