@@ -77,6 +77,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new SectionPage("world"));
         enc.addPage(new ItemPage("azurite", new ItemStack(ItemRegistry.azurite)));
         enc.addPage(new ItemPage("zircon", new ItemStack(ItemRegistry.zircon)));
+        enc.addPage(new ItemPage("zirconium", new ItemStack(ItemRegistry.zirconium)));
         enc.addPage(new ItemPage("eudialyte", new ItemStack(ItemRegistry.eudialyte)));
         for (TropicraftSands sand : TropicraftSands.VALUES) {
             enc.addPage(new ItemPage(sand.getSimpleName() + sand.getTypeName(), sand.makeStack(BlockRegistry.sands)));
@@ -149,7 +150,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //  enc.addPage(new ItemPage("firestaff", new ItemStack(TCItemRegistry.staffFire)));
         /*
          * firestaff.title = Fire Staff
-firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
+           firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
          */
         
         // All Armors

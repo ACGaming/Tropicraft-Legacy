@@ -3,6 +3,7 @@ package net.tropicraft;
 public final class Names {
 	// Block names
 	public static final String BLOCK_CHUNK_O_HEAD = "chunk";
+	public static final String BLOCK_ZIRCONIUM = "zirconium_block";
 	public static final String BLOCK_CHUNK_O_HEAD_STAIRS = "chunk_stairs";
 	public static final String BLOCK_THATCH_STAIRS = "thatch_stairs";
 	public static final String BLOCK_THATCH_STAIRS_FUZZY = "thatch_stairs_fuzzy";

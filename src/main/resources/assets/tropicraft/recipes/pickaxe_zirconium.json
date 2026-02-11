@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "tropicraft:pickaxe_zirconium"
+  },
+  "pattern": [
+    "XXX",
+    " I ",
+    " I "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:zirconium"
+    },
+    "I": {
+      "item": "#BAMBOO"
+    }
+  }
+}

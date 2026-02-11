@@ -85,7 +85,7 @@ public class ItemRegistry extends TropicraftRegistry {
     }
 
     // Ore gems
-    public static Item azurite, eudialyte, zircon;
+    public static Item azurite, eudialyte, zircon, zirconium;
 
     // Yummy delicious fruits
     public static Item grapefruit, lemon, lime, orange;
@@ -111,7 +111,7 @@ public class ItemRegistry extends TropicraftRegistry {
     // Tool materials
     public static ToolMaterial materialZirconTools = EnumHelper.addToolMaterial("zircon", 2, 200, 4.5F, 1.0F, 14);
     public static ToolMaterial materialEudialyteTools = EnumHelper.addToolMaterial("eudialyte", 2, 750, 6.0F, 2.0F, 14);
-    //public static ToolMaterial materialZirconiumTools = EnumHelper.addToolMaterial("zirconium", 3, 1800, 8.5F, 3.0F, 10);
+    public static ToolMaterial materialZirconiumTools = EnumHelper.addToolMaterial("zirconium", 3, 1800, 8.5F, 3.0F, 10);
     public static ToolMaterial materialBambooTools = EnumHelper.addToolMaterial("bamboo", 1, 110, 1.2F, 1F, 6);
 
     // Tools and weapons
@@ -125,6 +125,13 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item axeZircon;
     public static Item swordEudialyte;
     public static Item swordZircon;
+
+    public static Item hoeZirconium;
+    public static Item pickaxeZirconium;
+    public static Item shovelZirconium;
+    public static Item axeZirconium;
+    public static Item swordZirconium;
+
     public static Item bambooSpear;
     public static Item dagger;
     //TODO public static Item leafBall;
@@ -300,6 +307,8 @@ public class ItemRegistry extends TropicraftRegistry {
         OreDictionary.registerOre("gemEudialyte", eudialyte);
         zircon = registerItem(registry, new ItemTropicsOre(), "zircon");
         OreDictionary.registerOre("gemZircon", zircon);
+        zirconium = registerItem(registry, new ItemTropicsOre(), "zirconium");
+        OreDictionary.registerOre("gemZirconium", zirconium);
         
         grapefruit = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "grapefruit");
         OreDictionary.registerOre("cropGrapefruit", grapefruit);
@@ -332,6 +341,12 @@ public class ItemRegistry extends TropicraftRegistry {
         axeZircon = registerItem(registry, new ItemTropicraftAxe(materialZirconTools, 6.0F, -3.2F), "axe_zircon");
         swordEudialyte = registerItem(registry, new ItemSword(materialEudialyteTools), "sword_eudialyte");
         swordZircon = registerItem(registry, new ItemSword(materialZirconTools), "sword_zircon");
+
+        hoeZirconium = registerItem(registry, new ItemHoe(materialZirconiumTools), "hoe_zirconium");
+        pickaxeZirconium = registerItem(registry, new ItemTropicraftPickaxe(materialZirconiumTools), "pickaxe_zirconium");
+        shovelZirconium = registerItem(registry, new ItemSpade(materialZirconiumTools), "shovel_zirconium");
+        axeZirconium = registerItem(registry, new ItemTropicraftAxe(materialZirconiumTools, 6.0F, -3.2F), "axe_zirconium");
+        swordZirconium = registerItem(registry, new ItemSword(materialZirconiumTools), "sword_zirconium");
 
         fishingNet = registerItem(registry, new ItemTropicraft(), "fishing_net");
 
