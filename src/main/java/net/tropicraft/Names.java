@@ -27,6 +27,10 @@ public final class Names {
 	public static final String MAHOGANY_DOOR = "mahogany_door";
 	public static final String PALM_DOOR = "palm_door";
 	public static final String THATCH_DOOR = "thatch_door";
+	public static final String BAMBOO_TRAPDOOR = "bamboo_trapdoor";
+	public static final String MAHOGANY_TRAPDOOR = "mahogany_trapdoor";
+	public static final String PALM_TRAPDOOR = "palm_trapdoor";
+	public static final String THATCH_TRAPDOOR = "thatch_trapdoor";
 	public static final String BLOCK_PALM_STAIRS = "palm_stairs";
 	public static final String BONGO = "bongo";
     public static final String AIR_COMPRESSOR = "air_compressor";

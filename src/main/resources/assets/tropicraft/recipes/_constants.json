@@ -96,5 +96,19 @@
       "ore": "cropPineapple"
     },
     "name": "CROPPINEAPPLE"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "bamboo_stick"
+    },
+    "name": "BAMBOOSTICK"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "fuelCoke"
+    },
+    "name": "FUELCOKE"
   }
 ]

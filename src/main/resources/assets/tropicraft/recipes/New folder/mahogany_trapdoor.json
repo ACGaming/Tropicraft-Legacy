@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "tropicraft:mahogany_trapdoor",
+    "count": 2
+  },
+  "pattern": [
+    "XYX",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:plank",
+      "data": 0
+    },    
+    "Y": {
+      "item": "#STICKWOOD"
+    }
+  }
+}

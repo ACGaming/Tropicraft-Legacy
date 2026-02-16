@@ -188,6 +188,11 @@ public class BlockRegistry extends TropicraftRegistry {
 	public static Block palmDoor;
 	public static Block thatchDoor;
 
+	public static Block bambooTrapdoor;
+	public static Block mahoganyTrapdoor;
+	public static Block palmTrapdoor;
+	public static Block thatchTrapdoor;
+
 	public static BlockTropicraftSlab slabs;
 	public static BlockTropicraftSlab doubleSlabs;
 
@@ -265,8 +270,7 @@ public class BlockRegistry extends TropicraftRegistry {
 		
 		planks = registerBlock(registry, new BlockTropicraftPlank(Material.WOOD), "plank", new MultiBlockItemCreator(TropicraftPlanks.VALUES).withOredict("plankWood", OreDictionary.WILDCARD_VALUE));
 		
-		bambooShoot = registerBlock(registry, new BlockBambooShoot(), Names.BAMBOO_SHOOT, new SimpleItemCreator(Names.BAMBOO_SHOOT, false).withOredict("bamboo", 0));
-
+		bambooShoot = registerBlock(registry, new BlockBambooShoot(), Names.BAMBOO_SHOOT, new SimpleItemCreator(Names.BAMBOO_SHOOT, false).withOredict("bamboo", 0).withOredict("cropBambooshoot", 0));
 		thatchStairs = registerBlock(registry, new BlockTropicraftStairs(bundles.defaultForVariant(TropicraftBundles.THATCH)), Names.BLOCK_THATCH_STAIRS, new SimpleItemCreator(Names.BLOCK_THATCH_STAIRS, true));
 		bambooStairs = registerBlock(registry, new BlockTropicraftStairs(bundles.defaultForVariant(TropicraftBundles.BAMBOO)), Names.BLOCK_BAMBOO_STAIRS, new SimpleItemCreator(Names.BLOCK_BAMBOO_STAIRS, true));
 		palmStairs = registerBlock(registry, new BlockTropicraftStairs(planks.defaultForVariant(TropicraftPlanks.PALM)), Names.BLOCK_PALM_STAIRS, new SimpleItemCreator(Names.BLOCK_PALM_STAIRS, true).withOredict("stairsWood", OreDictionary.WILDCARD_VALUE));
@@ -302,6 +306,11 @@ public class BlockRegistry extends TropicraftRegistry {
 		mahoganyDoor = registerBlockNoItem(registry, new BlockMahoganyDoor(), Names.MAHOGANY_DOOR);
 		palmDoor = registerBlockNoItem(registry, new BlockPalmDoor(), Names.PALM_DOOR);
 		thatchDoor = registerBlockNoItem(registry, new BlockThatchDoor(), Names.THATCH_DOOR);
+
+		bambooTrapdoor = registerBlockNoItem(registry, new BlockBambooTrapdoor(), Names.BAMBOO_TRAPDOOR);
+		mahoganyTrapdoor = registerBlockNoItem(registry, new BlockMahoganyTrapdoor(), Names.MAHOGANY_TRAPDOOR);
+		palmTrapdoor = registerBlockNoItem(registry, new BlockPalmTrapdoor(), Names.PALM_TRAPDOOR);
+		thatchTrapdoor = registerBlockNoItem(registry, new BlockThatchTrapdoor(), Names.THATCH_TRAPDOOR);
 
 		bongo = registerBlock(registry, new BlockBongoDrum(), Names.BONGO, new MultiBlockItemCreator(TropicraftBongos.VALUES));
 

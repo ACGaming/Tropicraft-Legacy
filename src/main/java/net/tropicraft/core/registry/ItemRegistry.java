@@ -198,6 +198,11 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item thatchDoor;
     public static Item bambooItemFrame;
 
+    public static Item bambooTrapdoor;
+    public static Item mahoganyTrapdoor;
+    public static Item palmTrapdoor;
+    public static Item thatchTrapdoor;
+
     public static Item waterWand;
 
     public static Item seaUrchinRoe;
@@ -313,21 +318,16 @@ public class ItemRegistry extends TropicraftRegistry {
         grapefruit = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "grapefruit");
         OreDictionary.registerOre("cropGrapefruit", grapefruit);
         OreDictionary.registerOre("listAllcitrus", grapefruit);
-        OreDictionary.registerOre("listAllcitrus", grapefruit);
         OreDictionary.registerOre("listAllfruit", grapefruit);
         lemon = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "lemon");
         OreDictionary.registerOre("cropLemon", lemon);
-        OreDictionary.registerOre("listAllcitrus", lemon);
-        OreDictionary.registerOre("listAllcitrus", lemon);
         OreDictionary.registerOre("listAllfruit", lemon);
         lime = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "lime");
         OreDictionary.registerOre("cropLime", lime);
         OreDictionary.registerOre("listAllcitrus", lime);
-        OreDictionary.registerOre("listAllcitrus", lime);
         OreDictionary.registerOre("listAllfruit", lime);
         orange = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "orange");
         OreDictionary.registerOre("cropOrange", orange);
-        OreDictionary.registerOre("listAllcitrus", orange);
         OreDictionary.registerOre("listAllcitrus", orange);
         OreDictionary.registerOre("listAllfruit", orange);
 
@@ -412,6 +412,11 @@ public class ItemRegistry extends TropicraftRegistry {
         mahoganyDoor = registerItem(registry, new ItemDoor(BlockRegistry.mahoganyDoor), "mahogany_door");
         palmDoor = registerItem(registry, new ItemDoor(BlockRegistry.palmDoor), "palm_door");
         thatchDoor = registerItem(registry, new ItemDoor(BlockRegistry.thatchDoor), "thatch_door");
+
+        bambooTrapdoor = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.bambooTrapdoor), "bamboo_trapdoor");
+        mahoganyTrapdoor = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.mahoganyTrapdoor), "mahogany_trapdoor");
+        palmTrapdoor = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.palmTrapdoor), "palm_trapdoor");
+        thatchTrapdoor = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.thatchTrapdoor), "thatch_trapdoor");
 
         bambooItemFrame = registerItem(registry, new ItemBambooItemFrame(EntityBambooItemFrame.class), "bamboo_item_frame");
         Tropicraft.proxy.registerArbitraryBlockVariants("bamboo_item_frame", "normal", "map");

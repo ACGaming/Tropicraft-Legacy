@@ -11,7 +11,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {
-      "item": "#BAMBOO"
+      "item": "#BAMBOOSTICK"
     }
   }
 }

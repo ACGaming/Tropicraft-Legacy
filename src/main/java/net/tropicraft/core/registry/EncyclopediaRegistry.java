@@ -215,6 +215,12 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("bamboofencegate", new ItemStack(BlockRegistry.bambooFenceGate)));
         enc.addPage(new ItemPage("bamboostick", new ItemStack(ItemRegistry.bambooStick)));
         enc.addPage(new ItemPage("bamboo_ladder", new ItemStack(BlockRegistry.bambooLadder)));
+
+        enc.addPage(new ItemPage("bamboo_trapdoor", new ItemStack(ItemRegistry.bambooTrapdoor)));
+        enc.addPage(new ItemPage("mahogany_trapdoor", new ItemStack(ItemRegistry.mahoganyTrapdoor)));
+        enc.addPage(new ItemPage("palm_trapdoor", new ItemStack(ItemRegistry.palmTrapdoor)));
+        enc.addPage(new ItemPage("thatch_trapdoor", new ItemStack(ItemRegistry.thatchTrapdoor)));
+
         enc.addPage(new ItemPage("tropiframe", new ItemStack(ItemRegistry.bambooItemFrame)));
         enc.addPage(new ItemPage("chunkohead", new ItemStack(BlockRegistry.chunk)));
         enc.addPage(new ItemPage("chunkfence", new ItemStack(BlockRegistry.chunkFence)));

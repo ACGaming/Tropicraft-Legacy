@@ -99,6 +99,11 @@ tile.tropicraft.packed_purified_sand.name=Packed Purified Sand
 tile.tropicraft.donation.name=Donation Alert Spawner
 tile.tropicraft.donation.tooltip=Spawns fireworks when a donation is received!
 
+item.tropicraft.bamboo_trapdoor.name=Bamboo Trapdoor
+item.tropicraft.mahogany_trapdoor.name=Mahogany Trapdoor
+item.tropicraft.palm_trapdoor.name=Palm Trapdoor
+item.tropicraft.thatch_trapdoor.name=Thatch Trapdoor
+
 # Item localizations
 item.tropicraft.eudialyte.name=Eudialyte Shard
 item.tropicraft.zircon.name=Zircon Crystal
@@ -785,7 +790,7 @@ tropicraft.encyclopedia.soloshell.title=Solonox Shell
 tropicraft.encyclopedia.soloshell.desc=Don't mind this place holder text.
 
 tropicraft.encyclopedia.froxshell.title=Frox Conch
-tropicraft.encyclopedia.froxshell.desc=Don't mind this place holder text.
+tropicraft.encyclopedia.froxshell.desc=Created to commemorate the contributors of the yearly LoveTropics charity event.
 
 tropicraft.encyclopedia.rubeshell.title=Rube Nautilus
 tropicraft.encyclopedia.rubeshell.desc=Don't mind this place holder text.
@@ -951,3 +956,15 @@ tropicraft.encyclopedia.koa.fisherman.desc=A friendly Koa, prefers to fish anyth
 
 tropicraft.encyclopedia.koa.hunter.title=Koa Hunter
 tropicraft.encyclopedia.koa.hunter.desc=A Koa always looking for their next great hunt on land, will take pearls for various land meats and materials. Right click with dive computer to try to receive trimix.
+
+tropicraft.encyclopedia.bamboo_trapdoor.title=Bamboo Trapdoor
+tropicraft.encyclopedia.bamboo_trapdoor.desc=This bamboo and thatch trapdoor is perfect for separating you from the wilderness. Be careful though, this trapdoor isn't very strong.
+
+tropicraft.encyclopedia.mahogany_trapdoor.title=Mahogany Trapdoor
+tropicraft.encyclopedia.mahogany_trapdoor.desc=Don't mind this place holder text.
+
+tropicraft.encyclopedia.palm_trapdoor.title=Palm Trapdoor
+tropicraft.encyclopedia.palm_trapdoor.desc=Don't mind this place holder text.
+
+tropicraft.encyclopedia.thatch_trapdoor.title=Thatch Trapdoor
+tropicraft.encyclopedia.thatch_trapdoor.desc=This thatch trapdoor is perfect for separating you from the wilderness. Be careful though, this trapdoor isn't very strong.
