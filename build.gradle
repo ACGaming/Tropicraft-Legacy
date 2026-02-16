@@ -33,11 +33,6 @@ repositories {
     }
 }
 
-dependencies {
-    implementation "curse.maven:galacticraft-legacy-564236:6364107"
-    implementation "curse.maven:hwyla-253449:2568751"
-}
-
 minecraft {
     version = "${minecraft_version}-${forge_version}"
     runDir = "run"
