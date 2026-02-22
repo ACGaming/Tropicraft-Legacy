@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockWall;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockFaceShape;
@@ -65,6 +66,7 @@ public class BlockTikiTorch extends BlockTropicraft implements ITropicraftBlock 
 		super(Material.CIRCUITS);
 		this.setTickRandomly(true);
 		this.setCreativeTab(null);
+		this.setSoundType(SoundType.PLANT);
 
 		this.lightValue = (int)(15.0F);
 

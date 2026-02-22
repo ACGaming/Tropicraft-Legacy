@@ -10,8 +10,10 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.audio.Sound;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -290,9 +292,14 @@ public class BlockRegistry extends TropicraftRegistry {
 		pineapple = registerBlock(registry, new BlockPineapple(), "pineapple");
 		iris = registerBlock(registry, new BlockIris(), "iris");
 		coffeePlant = registerBlock(registry, new BlockCoffeeBush(), "coffee_bush", (IBlockItemRegistrar) null);
-		
-		sands = registerBlock(registry, new BlockTropicraftSands(), "sand", new MultiBlockItemCreator(TropicraftSands.VALUES).withOredict("sand", TropicraftSands.PURIFIED.getMeta()));
-		
+
+		sands = registerBlock(registry, new BlockTropicraftSands(), "sand", new MultiBlockItemCreator(TropicraftSands.VALUES)
+				.withOredict("sand", TropicraftSands.PURIFIED.getMeta())
+				.withOredict("sand", TropicraftSands.CORAL.getMeta())
+				.withOredict("sand", TropicraftSands.FOAMY.getMeta())
+				.withOredict("sand", TropicraftSands.VOLCANIC.getMeta())
+				.withOredict("sand", TropicraftSands.MINERAL.getMeta()));
+
 		volcano = registerBlock(registry, new BlockVolcano(), Names.VOLCANO, (IBlockItemRegistrar) null);
 		
 		tikiTorch = registerBlock(registry, new BlockTikiTorch(), "tiki_torch");

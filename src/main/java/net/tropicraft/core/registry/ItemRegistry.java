@@ -351,7 +351,7 @@ public class ItemRegistry extends TropicraftRegistry {
         fishingNet = registerItem(registry, new ItemTropicraft(), "fishing_net");
 
         bambooStick = registerItem(registry, new ItemTropicraft(), "bamboo_stick");
-        OreDictionary.registerOre("bamboo", bambooStick);
+        OreDictionary.registerOre("stickBamboo", bambooStick);
         bambooMug = registerItem(registry, new ItemTropicraft().setMaxStackSize(16), "bamboo_mug");
 
         freshMarlin = registerItem(registry, new ItemTropicraftFood(2, 0.3F), "fresh_marlin");
@@ -367,7 +367,7 @@ public class ItemRegistry extends TropicraftRegistry {
 
         coffeeBeans = registerMultiItem(registry, new ItemCoffeeBean(Names.COFFEE_NAMES, BlockRegistry.coffeePlant), "coffee_beans", Names.COFFEE_NAMES);
         OreDictionary.registerOre("seedCoffee", new ItemStack(coffeeBeans, 1, 0));
-        OreDictionary.registerOre("cropCoffee", new ItemStack(coffeeBeans, 1, 1));
+        OreDictionary.registerOre("cropCoffee", new ItemStack(coffeeBeans, 1, 2));
 
         frogLeg = registerItem(registry, new ItemTropicraft().setMaxStackSize(64), "frog_leg");
         cookedFrogLeg = registerItem(registry, new ItemTropicraftFood(2, 0.15F), "cooked_frog_leg");

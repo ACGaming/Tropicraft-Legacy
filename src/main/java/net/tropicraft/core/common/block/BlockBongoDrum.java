@@ -1,5 +1,6 @@
 package net.tropicraft.core.common.block;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,6 +38,7 @@ public class BlockBongoDrum extends BlockTropicraftEnumVariants<TropicraftBongos
 
     public BlockBongoDrum() {
         super(Material.CIRCUITS, TropicraftBongos.class);
+        this.setSoundType(SoundType.WOOD);
         this.setHardness(1.0F);
     }
 
