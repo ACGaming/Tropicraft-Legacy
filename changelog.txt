@@ -1,3 +1,35 @@
+7.1.9.120 for 1.12.2:
+Changes
+-Updated bamboo_chest_break.png to represent the newer bamboo chest texture (_BIG_G_)
+-Changed the tropical creeper texture, now it has a back side  (_BIG_G_)
+Fixes
+-Fixed the Sifter using stone sound effects (_BIG_G_)
+-Fixed Bamboo, Thatch, Mahogany and Palm fences using the wrong sound effects (_BIG_G_)
+7.1.9.119 for 1.12.2:
+Changes
+-Now all sands are part of the "sand" ore dictionary (_BIG_G_)
+Fixes
+-Fixed Roasted Coffee Beans being part of the "cropCoffee" ore dictionary instead of the Coffee Berry (_BIG_G_)
+-Fixed bamboo ladders using stone sound effects (_BIG_G_)
+-Fixed all three bongos using stone sound effects and missing a bottom texture (_BIG_G_)
+-Fixed the tiki torch also using stone sound effects (_BIG_G_)
+7.1.9.118 for 1.12.2:
+Fixes
+-Fixed all recipes using bamboo sticks being broken who would've thought, oredicts can't have underscores (_BIG_G_)
+7.1.9.117 for 1.12.2:
+New
+-Backported Bamboo, Mahogany, Palm and Thatch trapdoors, although as of right now none of them can be used as furnace fuel (_BIG_G_)
+Fixes
+-Fixed bamboo being usable inplace of bamboo sticks (_BIG_G_)
+-Also fixed bamboo sticks not being craftable due to a mass text swap breaking it's recipe (_BIG_G_)
+-Tiki Torches can now be crafted with Coal Coke if a mod that adds it is present (_BIG_G_)
+7.1.9.116 for 1.12.2:
+New
+-Backported Mahogany, Thatch and Palm doors (_BIG_G_)
+-Implemented Zirconium related items: Zirconium Gem, Block and tools (_BIG_G_)
+Fixes
+-Fixed Bamboo Shoots and chests using stone sound effects instead of grass (_BIG_G_)
+-Extensive fixes to various Encyclopedia Tropica entries (_BIG_G_)
 7.1.9 for 1.12.2:
 New
 - Added config option to disable swim animation (tterrag)

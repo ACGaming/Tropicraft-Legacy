@@ -1,0 +1,7 @@
+-Fill in all placeholder Encyclopedia entries
+-Add a recipe to turn pineapples into cubes and coconuts into chunks using harvestcraft's cutting board
+-Fix fence gates using the wrong soundtypes
+-Make the sifter cull it's sides like glass
+-Implement Leaf Ball
+-Implement Dart Gun
+-Implement Fire Wand

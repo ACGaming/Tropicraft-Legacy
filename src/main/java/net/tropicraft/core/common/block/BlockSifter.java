@@ -6,6 +6,7 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -19,6 +20,7 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -32,6 +34,7 @@ public class BlockSifter extends BlockTropicraft implements ITileEntityProvider 
 		super(Material.WOOD);
 		this.setHardness(1.0F);
 		this.setResistance(4.0F);
+		this.setSoundType(SoundType.WOOD);
 	}
 	
 	@Override
@@ -54,7 +57,12 @@ public class BlockSifter extends BlockTropicraft implements ITileEntityProvider 
     public boolean isFullCube(IBlockState state) {
         return false;
     }
-
+/*
+	// Does not work.
+	@Deprecated
+	@SideOnly(Side.CLIENT)
+	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess access, BlockPos pos, EnumFacing side) { return true;}
+*/
 	@Override
 	public boolean isTopSolid(IBlockState state) {
 		return false;

@@ -13,7 +13,6 @@ import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.audio.Sound;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -46,6 +45,8 @@ import net.tropicraft.core.common.enums.TropicraftSlabs;
 import net.tropicraft.core.common.itemblock.ItemBlockTropicraft;
 import net.tropicraft.core.common.itemblock.ItemTropicraftSlab;
 import net.tropicraft.core.registry.ItemRegistry.IBlockItemRegistrar;
+
+import static net.minecraft.block.material.Material.PLANTS;
 
 @Mod.EventBusSubscriber(modid = Info.MODID)
 public class BlockRegistry extends TropicraftRegistry {
@@ -324,19 +325,19 @@ public class BlockRegistry extends TropicraftRegistry {
 		bambooFenceGate = registerBlock(registry, (BlockFenceGate) new BlockFenceGate(BlockPlanks.EnumType.BIRCH).setHardness(2.0F).setResistance(5.0F), "bamboo_fence_gate");
 		thatchFenceGate = registerBlock(registry, (BlockFenceGate) new BlockFenceGate(BlockPlanks.EnumType.BIRCH).setHardness(2.0F).setResistance(5.0F), "thatch_fence_gate");
 		chunkFenceGate = registerBlock(registry, (BlockFenceGate) new BlockFenceGate(BlockPlanks.EnumType.DARK_OAK).setHardness(2.0F).setResistance(30F), "chunk_fence_gate");
-		
+
 		palmFenceGate = registerBlock(registry, (BlockFenceGate) new BlockFenceGate(BlockPlanks.EnumType.SPRUCE).setHardness(2.0F).setResistance(5.0F), "palm_fence_gate", 
 		        new SimpleItemCreator("palm_fence_gate", false).withOredict("fenceGateWood", OreDictionary.WILDCARD_VALUE));
 		mahoganyFenceGate = registerBlock(registry, (BlockFenceGate) new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F), "mahogany_fence_gate",
 		        new SimpleItemCreator("mahogany_fence_gate", false).withOredict("fenceGateWood", OreDictionary.WILDCARD_VALUE));
 
-		bambooFence = registerBlock(registry, new BlockTropicraftFence(bambooFenceGate, Material.WOOD, MapColor.SAND), "bamboo_fence");
-		thatchFence = registerBlock(registry, new BlockTropicraftFence(thatchFenceGate, Material.PLANTS, MapColor.SAND), "thatch_fence");
-		chunkFence = registerBlock(registry, new BlockTropicraftFence(chunkFenceGate, Material.ROCK, MapColor.SAND), "chunk_fence");
+		bambooFence = registerBlock(registry, new BlockTropicraftFence(bambooFenceGate, Material.WOOD, MapColor.SAND, SoundType.PLANT), "bamboo_fence");
+		thatchFence = registerBlock(registry, new BlockTropicraftFence(thatchFenceGate, PLANTS, MapColor.SAND, SoundType.PLANT), "thatch_fence");
+		chunkFence = registerBlock(registry, new BlockTropicraftFence(chunkFenceGate, Material.ROCK, MapColor.SAND, SoundType.STONE), "chunk_fence");
 		
-		palmFence = registerBlock(registry, new BlockTropicraftFence(palmFenceGate, Material.WOOD, MapColor.SAND), "palm_fence",
+		palmFence = registerBlock(registry, new BlockTropicraftFence(palmFenceGate, Material.WOOD, MapColor.SAND, SoundType.WOOD), "palm_fence",
 		        new SimpleItemCreator("palm_fence", true).withOredict("fenceWood", OreDictionary.WILDCARD_VALUE));
-		mahoganyFence = registerBlock(registry, new BlockTropicraftFence(mahoganyFenceGate, Material.WOOD, MapColor.SAND), "mahogany_fence",
+		mahoganyFence = registerBlock(registry, new BlockTropicraftFence(mahoganyFenceGate, Material.WOOD, MapColor.SAND, SoundType.WOOD), "mahogany_fence",
 		        new SimpleItemCreator("mahogany_fence", true).withOredict("fenceWood", OreDictionary.WILDCARD_VALUE));
 
 		bambooLadder = registerBlock(registry, new BlockTropicraftLadder().setHardness(BlockHardnessValues.BAMBOO.hardness).setResistance(BlockHardnessValues.BAMBOO.resistance), Names.BAMBOO_LADDER);

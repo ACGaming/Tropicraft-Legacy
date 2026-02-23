@@ -48,9 +48,10 @@ public class BlockTropicraftFence extends BlockFence {
     
     private final BlockFenceGate gate;
 	
-	public BlockTropicraftFence(BlockFenceGate fenceGate, Material material, MapColor mapColor) {
+	public BlockTropicraftFence(BlockFenceGate fenceGate, Material material, MapColor mapColor, SoundType soundType) {
 		super(material, mapColor);
 		this.useNeighborBrightness = true;
+		this.setSoundType(soundType);
 		this.setDefaultState(getDefaultState().withProperty(WATER, WaterState.NONE));
 		this.gate = fenceGate;
 	}
