@@ -1,2 +1,2 @@
 Simply a fork of tropicraft for 1.12.2 to add some polish and backport features, check [changelog.txt](https://github.com/BigGame2004/Tropicraft/blob/1.12.2/changelog.txt) for the latest changes and the [Releases Tab](https://github.com/BigGame2004/Tropicraft/releases) for the latest pre built jars.
-Obviously credit goes to the original creators of tropicraft and all the contributors who worked on the mod over the years.
+Obviously credit goes to the original creators of tropicraft and all the contributors who worked on the mod over the years. Also check [TODO.txt](https://github.com/BigGame2004/Tropicraft/blob/1.12.2/TODO.txt) for the never ending list of stuff to do.
