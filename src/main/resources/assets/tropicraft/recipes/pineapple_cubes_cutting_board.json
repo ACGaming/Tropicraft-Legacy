@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "tropicraft:pineapple_cubes",
+    "count": 3
+  },
+
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "toolCuttingboard"
+    },
+    {
+      "item": "tropicraft:pineapple"
+    }
+  ],
+  "type": "forge:ore_shapeless"
+}

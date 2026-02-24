@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "tropicraft:coconut_chunk",
+    "count": 3
+  },
+
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "toolCuttingboard"
+    },
+    {
+      "item": "tropicraft:coconut"
+    }
+  ],
+  "type": "forge:ore_shapeless"
+}

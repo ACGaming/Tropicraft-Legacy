@@ -98,11 +98,11 @@ public class WorldGenSunkenShip extends TCDirectionalGen {
 	}
 
 	public ItemStack randLoot() {
-		int picker = rand.nextInt(20) + 1;
+		int picker = rand.nextInt(22) + 1;
 		if (picker < 6) {
 			return new ItemStack(BlockRegistry.bambooShoot, rand.nextInt(20) + 1);
 		} 
-
+		// TODO redo this in the json loot table system
 		switch (picker) {
 		case 6:
 			if (rand.nextInt(250) == 0) {
@@ -135,12 +135,18 @@ public class WorldGenSunkenShip extends TCDirectionalGen {
 			return new ItemStack(ItemRegistry.recordTheTribe, 1);
 		case 19:
 			return new ItemStack(ItemRegistry.recordTradeWinds, 1);
+		case 20:
+			return new ItemStack(ItemRegistry.coconutBomb, rand.nextInt(3) + 1);
+		case 21:
+			return new ItemStack(ItemRegistry.shell, rand.nextInt(5) + 1, rand.nextInt(6));
+//		case 22:
+//			return new ItemStack(ItemRegistry.maskMap, 1, rand.nextInt(7));
 		default:
 			return new ItemStack(ItemRegistry.zircon, 1);
 		}
 		//
 		//			return new ItemStack(TropicraftItems.coconutBomb, rand.nextInt(3) + 1); TODO
 		//			return new ItemStack(ItemRegistry.shells, rand.nextInt(5) + 1, rand.nextInt(6));
-		////			return new ItemStack(TropicraftItems.ashenMasks, 1, rand.nextInt(7)); TODO
+		//			return new ItemStack(TropicraftItems.ashenMasks, 1, rand.nextInt(7)); TODO
 	}
 }

@@ -259,6 +259,9 @@ public class WorldGenEIH extends TCGenBase {
 	    	case 6:
 	    		blockstate = BlockRegistry.oreBlock.defaultForVariant(TropicraftOres.VALUES[tropiBlockMeta]);
 	    		break;
+            case 7:
+                blockstate = BlockRegistry.zirconiumBlock.getDefaultState();
+                break;
 	    	default:	// Should never get called, if so, redstone in tropics :o
 	    		blockstate = Blocks.REDSTONE_BLOCK.getDefaultState();
 	    		break;

@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -43,6 +44,7 @@ public class BlockTropicraftFlowerPot extends BlockTropicraft implements ITileEn
 
 	public BlockTropicraftFlowerPot() {
 		super(Material.CIRCUITS);
+		this.setSoundType(SoundType.PLANT);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(CONTENTS, TropicraftFlowerType.EMPTY));
 	}
 
@@ -174,11 +176,12 @@ public class BlockTropicraftFlowerPot extends BlockTropicraft implements ITileEn
     /**
      * Get the Item that this Block should drop when harvested.
      */
+	/**
+	 * And then forgets about the part where it needs to also drop the flower you put in it.
+	 */
     @Nullable
     @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return ItemRegistry.flowerPot;
-    }
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) { return ItemRegistry.flowerPot; }
     
     @Override
     protected BlockStateContainer createBlockState() {

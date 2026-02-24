@@ -36,10 +36,16 @@ public class BlockBambooTrapdoor extends BlockTrapDoor {
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
         return ItemRegistry.bambooTrapdoor;
     }
-/*
+
+    /*
     // This doesn't work :(
     @SubscribeEvent
-    public static void slabBurnTimeHandler(FurnaceFuelBurnTimeEvent event) {
+    public static void trapdoorBurnTimeHandler(FurnaceFuelBurnTimeEvent event) {
+            if (!event.getItemStack().isEmpty()) {
+            Block block = Block.getBlockFromItem(event.getItemStack().getItem());
+                if (block == BlockRegistry.bambooTrapdoor) {
                 event.setBurnTime(300);
+            }
+        }
     }*/
 }

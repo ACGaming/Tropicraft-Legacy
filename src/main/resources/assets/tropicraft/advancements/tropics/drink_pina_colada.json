@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "tropicraft:bamboo_mug"
+        },
+        "title": {
+            "translate": "achievement.tc_drink_pina_colada"
+        },
+        "description": {
+            "translate": "achievement.tc_drink_pina_colada.desc"
+        }
+        
+    },
+    "parent": "tropicraft:tropics/craft_pina_colada",
+    "criteria": {
+        "get_stone": {
+            "trigger": "consume_item",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "tropicraft:cocktail",
+                        "data": 0
+                    }
+                ]
+            }
+        }
+    }
+}

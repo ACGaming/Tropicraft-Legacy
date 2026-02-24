@@ -253,12 +253,13 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("thetribe", new ItemStack(ItemRegistry.recordTheTribe)));
         enc.addPage(new ItemPage("tradewinds", new ItemStack(ItemRegistry.recordTradeWinds)));
         enc.addPage(new ItemPage("lowtide", new ItemStack(ItemRegistry.recordLowTide)));
-        // TODO buriedtreasure
+        enc.addPage(new ItemPage("buriedtreasure", new ItemStack(ItemRegistry.recordBuriedTreasure)));
 
         // Unsorted / ???
         enc.addPage(new SectionPage("misc"));
 
 
+        enc.addPage(new ItemPage("nigel", new ItemStack(ItemRegistry.nigelStache)));
         enc.addPage(new ItemPage("coconutbomb", new ItemStack(ItemRegistry.coconutBomb)));
 
 

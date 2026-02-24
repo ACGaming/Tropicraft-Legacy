@@ -72,7 +72,7 @@ tile.tropicraft.tiki_torch.name=Tiki Torch
 tile.tropicraft.drink_mixer.name=Drink Mixer
 tile.tropicraft.sifter.name=Sifter
 tile.tropicraft.air_compressor.name=Air Compressor
-tile.tropicraft.flower_pot.name=Flower Pot
+tile.tropicraft.flower_pot.name=Bamboo Flower Pot
 tile.tropicraft.palm_stairs.name=Palm Stairs
 tile.tropicraft.mahogany_stairs.name=Mahogany Stairs
 tile.tropicraft.slab.bamboo.name=Bamboo Slab
@@ -213,7 +213,7 @@ item.tropicraft.bamboo_spear.name=Bamboo Spear
 item.tropicraft.dagger.name=Dagger
 item.tropicraft.leaf_ball.name=Leaf Ball
 item.tropicraft.coconut_bomb.name=Coconut Bomb
-item.tropicraft.flower_pot.name=Flower Pot
+item.tropicraft.flower_pot.name=Bamboo Flower Pot
 item.tropicraft.bamboo_door.name=Bamboo Door
 item.tropicraft.mahogany_door.name=Mahogany Door
 item.tropicraft.palm_door.name=Palm Door
@@ -397,8 +397,6 @@ entity.tropicraft.beach_umbrella.name=Beach Umbrella
 entity.tropicraft.beach_float.name=Beach Float
 
 # Achievement localizations
-achievement.tropics.title=Tropicraft
-achievement.tropics.desc=Don't mind this place holder text.
 achievement.tc_craft_pina_colada=If you like pina coladas...
 achievement.tc_craft_pina_colada.desc=(Who doesn't?)
 achievement.tc_drink_pina_colada=Caught in the rain
@@ -575,6 +573,9 @@ tropicraft.encyclopedia.buriedtreasure.desc=Don't mind this place holder text.
 tropicraft.encyclopedia.volcanicsand.title=Volcanic Sands
 tropicraft.encyclopedia.volcanicsand.desc=Tread lightly on this sand...or don't at all. If you aren't wearing any scale or fire armor, you better be ready to run reaaaaaaaaally fast.
 
+tropicraft.encyclopedia.nigel.title=Nigel Winthorpe
+tropicraft.encyclopedia.nigel.desc=The person who's journal was used to write the Encyclopedia Tropica. He was the first to discover the Tropics after finding a strange staff in an unknown jungle temple. While his current were abouts are unknown one thing is certain, he sure won't needing this no more.
+
 #tropicraft.encyclopedia.blowgun.title=Blow Gun
 #tropicraft.encyclopedia.blowgun.desc=This tube of bamboo is used to shoot neurotoxin-laced darts at your pray. You will be surprised how a far and fast you can shoot a dart with a hefty blow.
 
@@ -671,7 +672,7 @@ tropicraft.encyclopedia.fishbucket.desc=Use this to place the fish that you catc
 tropicraft.encyclopedia.fishingnet.title=Fishing Net
 tropicraft.encyclopedia.fishingnet.desc=This sturdy net is great for picking up the small fish that inhabit the Tropics. Be sure to have a water bucket, or you won't have anywhere to place you fish.
 
-tropicraft.encyclopedia.flowerpot.title=Flower Pot
+tropicraft.encyclopedia.flowerpot.title=Bamboo Flower Pot
 tropicraft.encyclopedia.flowerpot.desc=This flower pot can be used to beautify any garden by holding any tropical flower, plant, or sapling
 
 tropicraft.encyclopedia.foliage.title=Foliage

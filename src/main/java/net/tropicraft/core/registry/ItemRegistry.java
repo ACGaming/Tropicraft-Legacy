@@ -33,33 +33,7 @@ import net.tropicraft.core.common.entity.underdasea.atlantoku.EntityTropicalFish
 import net.tropicraft.core.common.enums.AshenMasks;
 import net.tropicraft.core.common.enums.ITropicraftVariant;
 import net.tropicraft.core.common.enums.TropicraftShells;
-import net.tropicraft.core.common.item.ItemBambooItemFrame;
-import net.tropicraft.core.common.item.ItemBeachFloat;
-import net.tropicraft.core.common.item.ItemChair;
-import net.tropicraft.core.common.item.ItemCocktail;
-import net.tropicraft.core.common.item.ItemCoconutBomb;
-import net.tropicraft.core.common.item.ItemCoffeeBean;
-import net.tropicraft.core.common.item.ItemDagger;
-import net.tropicraft.core.common.item.ItemEncyclopediaTropica;
-import net.tropicraft.core.common.item.ItemFertilizer;
-import net.tropicraft.core.common.item.ItemFishBucket;
-import net.tropicraft.core.common.item.ItemFishingRod;
-import net.tropicraft.core.common.item.ItemLoveTropicsShell;
-import net.tropicraft.core.common.item.ItemMobEgg;
-import net.tropicraft.core.common.item.ItemMusicDisc;
-import net.tropicraft.core.common.item.ItemPortalEnchanter;
-import net.tropicraft.core.common.item.ItemRiverFish;
-import net.tropicraft.core.common.item.ItemSeaweed;
-import net.tropicraft.core.common.item.ItemShell;
-import net.tropicraft.core.common.item.ItemTropicalFish;
-import net.tropicraft.core.common.item.ItemTropicraft;
-import net.tropicraft.core.common.item.ItemTropicraftAxe;
-import net.tropicraft.core.common.item.ItemTropicraftBlockSpecial;
-import net.tropicraft.core.common.item.ItemTropicraftFood;
-import net.tropicraft.core.common.item.ItemTropicraftPickaxe;
-import net.tropicraft.core.common.item.ItemTropicsOre;
-import net.tropicraft.core.common.item.ItemUmbrella;
-import net.tropicraft.core.common.item.ItemWaterWand;
+import net.tropicraft.core.common.item.*;
 import net.tropicraft.core.common.item.armor.ItemAshenMask;
 import net.tropicraft.core.common.item.armor.ItemFireArmor;
 import net.tropicraft.core.common.item.armor.ItemNigelStache;
@@ -134,7 +108,7 @@ public class ItemRegistry extends TropicraftRegistry {
 
     public static Item bambooSpear;
     public static Item dagger;
-    //TODO public static Item leafBall;
+    public static Item leafBall;
     public static Item coconutBomb;
     public static Item fishingNet;
 
@@ -406,6 +380,7 @@ public class ItemRegistry extends TropicraftRegistry {
         dagger = registerItem(registry, new ItemDagger(materialZirconTools), "dagger");
         bambooSpear = registerItem(registry, new ItemSword(materialBambooTools), "bamboo_spear");
         coconutBomb = registerItem(registry, new ItemCoconutBomb(), "coconut_bomb");
+//      leafBall = registerItem(registry, new ItemLeafBall(), "leaf_ball");
 
         flowerPot = registerItem(registry, new ItemTropicraftBlockSpecial(BlockRegistry.flowerPot), "flower_pot");
         bambooDoor = registerItem(registry, new ItemDoor(BlockRegistry.bambooDoor), "bamboo_door");
