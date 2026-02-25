@@ -1,11 +1,12 @@
+- Add a built-in resource pack to undo all texture changes
 - Add Bamboo Crafting Table
 - Add bamboo-glass boat?
 - Bring back coral and foamy sands spawning on beaches
 - Buried Treasure do not appear to generate
+- Fill in all placeholder Encyclopedia entries
 - Fix Bamboo Flower Pots: - Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
                           - Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
                           - Trying to middle mouse click (MMB3) in creative mode to pick the bamboo flower pot will give the player the vanilla flower pot (present as early as TC 7.0 for 1.10.2)
-- Fill in all placeholder Encyclopedia entries
 - Fix fence gates using the wrong soundtypes
 - Fix Home Trees not rendering properly on the client side when first generated (somehow still an issue as of TC 9 for 1.21.8)
 - Fix incompatibility with Roughly Enough IDs
