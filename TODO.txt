@@ -1,7 +1,19 @@
 -Fill in all placeholder Encyclopedia entries
--Add a recipe to turn pineapples into cubes and coconuts into chunks using harvestcraft's cutting board
 -Fix fence gates using the wrong soundtypes
 -Make the sifter cull it's sides like glass
 -Implement Leaf Ball
--Implement Dart Gun
+-Implement Dart Gun (was most likely not a priority to reimplement due to 1.9 adding tipped arrows)
 -Implement Fire Wand
+-Implement Ice Wand
+-Implement Tame Wand
+-Make fire armor craftable by throwing scale armor in lava
+-Bring back coral and foamy sands spawning on beaches
+-Fix Bamboo Flower Pots: -Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
+                         -Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
+                         -Trying to middle mouse click (MMB3) in creative mode to pick the bamboo flower pot will give the player the vanilla flower pot (present as early as TC 7.0 for 1.10.2)
+-Fix incompatibility with Roughly Enough IDs
+-Fix incompatibility with Traverse
+-Make trapdoors work as furnace fuels
+-Fix Home Trees do not render properly on the client side when first generated (somehow still an issue as of TC 9 for 1.21.8)
+-Berried Treasure do not appear to generate
+-Add bamboo-glass boat?
