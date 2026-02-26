@@ -1,6 +1,7 @@
 - Add a built-in resource pack to undo all texture changes
 - Add Bamboo Crafting Table
 - Add bamboo-glass boat?
+- Add Unlimited Chiselworks compat
 - Bring back coral and foamy sands spawning on beaches
 - Buried Treasure do not appear to generate
 - Fill in all placeholder Encyclopedia entries
@@ -18,5 +19,6 @@
 - Implement Tame Wand
 - Make fire armor craftable by throwing scale armor in lava
 - Make the sifter cull it's sides like glass
+- Make the tiki torch look more like a tiki torch
 - Make trapdoors work as furnace fuels
 - Update sapling_palm.png, make it actually look like a palm tree
