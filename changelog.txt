@@ -1,51 +1,56 @@
+7.1.9.122 for 1.12.2:
+
 7.1.9.121 for 1.12.2:
 New
--Pineapples and Coconuts can now be processed into cubes and chunks respectively using the Harvestcraft Cutting Board when Said mod is present (_BIG_G_)
--Added a new encyclopedia entry for Nigel's Stache (_BIG_G_)
--Added two (not really new) advancements, one for crafting a Piña colada and one for drinking it (_BIG_G_)
+- Pineapples and Coconuts can now be processed into cubes and chunks respectively using the Harvestcraft Cutting Board when Said mod is present (_BIG_G_)
+- Added a new encyclopedia entry for Nigel's Stache (_BIG_G_)
+- Added two (not really new) advancements, one for crafting a Piña colada and one for drinking it (_BIG_G_)
 Changes
--Coconuts now use wood sound effects (_BIG_G_)
--Brought back the old Pineapple Bottom texture (_BIG_G_)
--Changed the Sifter texture to reflect the fact it is made with glass (_BIG_G_)
--Now the bamboo flower pot is actually named "Bamboo Flower Pot" (_BIG_G_)
--Zirconium Blocks can now be found as easter island heads' eyes (_BIG_G_)
--Shipwreck chests can now also contain once again Coconut Bombs and randomized shells (_BIG_G_)
+- Coconuts now use wood sound effects (_BIG_G_)
+- Brought back the old Pineapple Bottom texture (_BIG_G_)
+- Changed the Sifter texture to reflect the fact it is made with glass (_BIG_G_)
+- Now the bamboo flower pot is actually named "Bamboo Flower Pot" (_BIG_G_)
+- Zirconium Blocks can now be found as easter island heads' eyes (_BIG_G_)
+- Shipwreck chests can now also contain once again Coconut Bombs and randomized shells (_BIG_G_)
 Fixes
--Fixed the bamboo flower pot using stone sound effects (_BIG_G_)
+- Fixed the bamboo flower pot using stone sound effects (_BIG_G_)
+
 7.1.9.120 for 1.12.2:
 Changes
--Updated bamboo_chest_break.png to represent the newer bamboo chest texture (_BIG_G_)
--Changed the tropical creeper texture, now it has a back side  (_BIG_G_)
+- Updated bamboo_chest_break.png to represent the newer bamboo chest texture (_BIG_G_)
+- Changed the tropical creeper texture, now it has a back side  (_BIG_G_)
 Fixes
--Fixed the Sifter using stone sound effects (_BIG_G_)
--Fixed Bamboo, Thatch, Mahogany and Palm fences using the wrong sound effects (_BIG_G_)
+- Fixed the Sifter using stone sound effects (_BIG_G_)
+- Fixed Bamboo, Thatch, Mahogany and Palm fences using the wrong sound effects (_BIG_G_)
+
 7.1.9.119 for 1.12.2:
 Changes
--Now all sands are part of the "sand" ore dictionary (_BIG_G_)
+- Now all sands are part of the "sand" ore dictionary (_BIG_G_)
 Fixes
--Fixed Roasted Coffee Beans being part of the "cropCoffee" ore dictionary instead of the Coffee Berry (_BIG_G_)
--Fixed bamboo ladders using stone sound effects (_BIG_G_)
--Fixed all three bongos using stone sound effects and missing a bottom texture (_BIG_G_)
--Fixed the tiki torch also using stone sound effects (_BIG_G_)
+- Fixed Roasted Coffee Beans being part of the "cropCoffee" ore dictionary instead of the Coffee Berry (_BIG_G_)
+- Fixed bamboo ladders using stone sound effects (_BIG_G_)
+- Fixed all three bongos using stone sound effects and missing a bottom texture (_BIG_G_)
+- Fixed the tiki torch also using stone sound effects (_BIG_G_)
 7.1.9.118 for 1.12.2:
 Fixes
--Fixed all recipes using bamboo sticks being broken who would've thought, oredicts can't have underscores (_BIG_G_)
+- Fixed all recipes using bamboo sticks being broken who would've thought, oredicts can't have underscores (_BIG_G_)
+
 7.1.9.117 for 1.12.2:
 New
--Backported Bamboo, Mahogany, Palm and Thatch trapdoors, although as of right now none of them can be used as furnace fuel (_BIG_G_)
+- Backported Bamboo, Mahogany, Palm and Thatch trapdoors, although as of right now none of them can be used as furnace fuel (_BIG_G_)
 Fixes
--Fixed bamboo being usable inplace of bamboo sticks (_BIG_G_)
--Also fixed bamboo sticks not being craftable due to a mass text swap breaking it's recipe (_BIG_G_)
--Tiki Torches can now be crafted with Coal Coke if a mod that adds it is present (_BIG_G_)
+- Fixed bamboo being usable inplace of bamboo sticks (_BIG_G_)
+- Also fixed bamboo sticks not being craftable due to a mass text swap breaking it's recipe (_BIG_G_)
+- Tiki Torches can now be crafted with Coal Coke if a mod that adds it is present (_BIG_G_)
+
 7.1.9.116 for 1.12.2:
 New
--Backported Mahogany, Thatch and Palm doors (_BIG_G_)
--Implemented Zirconium related items: Zirconium Gem, Block and tools (_BIG_G_)
+- Backported Mahogany, Thatch and Palm doors (_BIG_G_)
+- Implemented Zirconium related items: Zirconium Gem, Block and tools (_BIG_G_)
 Fixes
--Fixed Bamboo Shoots and chests using stone sound effects instead of grass (_BIG_G_)
--Extensive fixes to various Encyclopedia Tropica entries (_BIG_G_)
--Merged Tropicraft Item Fixes (https://www.curseforge.com/minecraft/texture-packs/tropicraft-items-fixes) (_BIG_G_)
-
+- Fixed Bamboo Shoots and chests using stone sound effects instead of grass (_BIG_G_)
+- Extensive fixes to various Encyclopedia Tropica entries (_BIG_G_)
+- Merged Tropicraft Item Fixes (https://www.curseforge.com/minecraft/texture-packs/tropicraft-items-fixes) (_BIG_G_)
 
 
 

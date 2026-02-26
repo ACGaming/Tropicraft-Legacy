@@ -139,14 +139,9 @@ public class WorldGenSunkenShip extends TCDirectionalGen {
 			return new ItemStack(ItemRegistry.coconutBomb, rand.nextInt(3) + 1);
 		case 21:
 			return new ItemStack(ItemRegistry.shell, rand.nextInt(5) + 1, rand.nextInt(6));
-//		case 22:
-//			return new ItemStack(ItemRegistry.maskMap, 1, rand.nextInt(7));
 		default:
 			return new ItemStack(ItemRegistry.zircon, 1);
 		}
-		//
-		//			return new ItemStack(TropicraftItems.coconutBomb, rand.nextInt(3) + 1); TODO
 		//			return new ItemStack(ItemRegistry.shells, rand.nextInt(5) + 1, rand.nextInt(6));
-		//			return new ItemStack(TropicraftItems.ashenMasks, 1, rand.nextInt(7)); TODO
 	}
 }
