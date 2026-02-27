@@ -3,8 +3,10 @@
 - Add bamboo-glass boat?
 - Add Unlimited Chiselworks compat
 - Bring back coral and foamy sands spawning on beaches
+- Bring back placeable cocktails?
 - Buried Treasure do not appear to generate
 - Fill in all placeholder Encyclopedia entries
+- Fix Coconut Bomb entity... more like coconut drill
 - Fix Bamboo Flower Pots: - Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
                           - Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
                           - Trying to middle mouse click (MMB3) in creative mode to pick the bamboo flower pot will give the player the vanilla flower pot (present as early as TC 7.0 for 1.10.2)
@@ -22,3 +24,4 @@
 - Make the tiki torch look more like a tiki torch
 - Make trapdoors work as furnace fuels
 - Update sapling_palm.png, make it actually look like a palm tree
+- Update the Drink Mixer model and texture, make it not look exactly like the air compressor
