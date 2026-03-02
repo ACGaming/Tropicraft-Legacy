@@ -1,6 +1,9 @@
 7.1.9.122 for 1.12.2:
 Changes
 - Changed the coconut model, now it's displayed as an item when in the player's inventory (_BIG_G_)
+- Changed the tooltip of the Donation block to state it no longer works (_BIG_G_)
+- Changed the blast resistance of the Zirconium block to match the others (_BIG_G_)
+- Changed advancements, now there's a rood advancement triggered by picking up bamboo shoots
 
 7.1.9.121 for 1.12.2:
 New
@@ -33,6 +36,7 @@ Fixes
 - Fixed bamboo ladders using stone sound effects (_BIG_G_)
 - Fixed all three bongos using stone sound effects and missing a bottom texture (_BIG_G_)
 - Fixed the tiki torch also using stone sound effects (_BIG_G_)
+
 7.1.9.118 for 1.12.2:
 Fixes
 - Fixed all recipes using bamboo sticks being broken who would've thought, oredicts can't have underscores (_BIG_G_)
