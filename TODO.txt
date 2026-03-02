@@ -3,8 +3,10 @@
 - Add Unlimited Chiselworks compat
 - Bring back coral and foamy sands spawning on beaches
 - Check if easter island heads do actually spawn with zirconium block eyes
+- Caught in the rain advancement is triggered by drinking anything but a pina colada???
 - Fill in all placeholder Encyclopedia entries
 - Finish implementing the diving computer
+- Fix crash caused by incompatibility with buildcraft's and buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
 - Fix bamboo fishing rods stacking if bought from koa fisherman
 - Fix Bamboo Flower Pots: - Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
                           - Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
@@ -18,7 +20,7 @@
 - Fix Home Trees not rendering properly on the client side when first generated (somehow still an issue as of TC 9 for 1.21.8)
 - Fix incompatibility with Roughly Enough IDs
 - Fix incompatibility with Traverse
-- Fix miss matched block blast ressistence for Chunk Slab and all fences
+- Fix miss matched block blast resistance for Chunk Slab and all fences
 - Implement Dart Gun (was most likely not a priority to reimplement due to 1.9 adding tipped arrows)
 - Implement Fire Wand
 - Implement Ice Wand
