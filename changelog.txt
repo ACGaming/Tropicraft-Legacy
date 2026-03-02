@@ -3,7 +3,7 @@ Changes
 - Changed the coconut model, now it's displayed as an item when in the player's inventory (_BIG_G_)
 - Changed the tooltip of the Donation block to state it no longer works (_BIG_G_)
 - Changed the blast resistance of the Zirconium block to match the others (_BIG_G_)
-- Changed advancements, now there's a rood advancement triggered by picking up bamboo shoots
+- Changed advancements, now there's a root advancement triggered by picking up bamboo shoots
 
 7.1.9.121 for 1.12.2:
 New
