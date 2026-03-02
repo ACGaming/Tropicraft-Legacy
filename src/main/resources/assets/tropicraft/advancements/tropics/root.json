@@ -1,27 +1,25 @@
 {
     "display": {
         "icon": {
-            "item": "tropicraft:cocktail",
-            "data": 0
+            "item": "tropicraft:pineapple"
         },
         "title": {
-            "translate": "achievement.tc_craft_pina_colada"
+            "translate": "achievement.tc"
         },
         "description": {
-            "translate": "achievement.tc_craft_pina_colada.desc"
+            "translate": "achievement.tc.desc"
         },
+        "background": "tropicraft:textures/blocks/sand_purified.png",
         "show_toast": true,
         "announce_to_chat": true
     },
-    "parent": "tropicraft:tropics/root",
     "criteria": {
-        "get_stone": {
+        "crafting_table": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "tropicraft:cocktail",
-                        "data": 0
+                        "item": "tropicraft:bamboo_shoot"
                     }
                 ]
             }

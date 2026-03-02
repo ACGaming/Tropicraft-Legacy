@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "tropicraft:bamboo_crafting_table"
+  },
+  "pattern": [
+    "XY",
+    "YX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:bamboo_shoot"
+    },
+    "Y": {
+      "item": "tropicraft:bundle",
+      "data": 1
+    }
+  }
+}

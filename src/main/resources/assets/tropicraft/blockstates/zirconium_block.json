@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "model": "minecraft:cube_all",
-    "textures": { "all": "tropicraft:blocks/zirconium_block" },
+    "textures": { "all": "tropicraft:blocks/block_zirconium" },
     "transform": "forge:default-block"
   },
   "variants": {

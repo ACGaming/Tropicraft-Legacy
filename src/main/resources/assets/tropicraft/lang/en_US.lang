@@ -97,12 +97,8 @@ tile.tropicraft.portal_wall.name=Tropics Portal Wall
 tile.tropicraft.bamboo_ladder.name=Bamboo Ladder
 tile.tropicraft.packed_purified_sand.name=Packed Purified Sand
 tile.tropicraft.donation.name=Donation Alert Spawner
-tile.tropicraft.donation.tooltip=Spawns fireworks when a donation is received!
-
-item.tropicraft.bamboo_trapdoor.name=Bamboo Trapdoor
-item.tropicraft.mahogany_trapdoor.name=Mahogany Trapdoor
-item.tropicraft.palm_trapdoor.name=Palm Trapdoor
-item.tropicraft.thatch_trapdoor.name=Thatch Trapdoor
+tile.tropicraft.donation.tooltip=Spawns fireworks when a donation is received!\nCurrently out of order :(
+tile.tropicraft.bamboo_crafting_table.name=Bamboo Crafting Table
 
 # Item localizations
 item.tropicraft.eudialyte.name=Eudialyte Shard
@@ -218,6 +214,10 @@ item.tropicraft.bamboo_door.name=Bamboo Door
 item.tropicraft.mahogany_door.name=Mahogany Door
 item.tropicraft.palm_door.name=Palm Door
 item.tropicraft.thatch_door.name=Thatch Door
+item.tropicraft.bamboo_trapdoor.name=Bamboo Trapdoor
+item.tropicraft.mahogany_trapdoor.name=Mahogany Trapdoor
+item.tropicraft.palm_trapdoor.name=Palm Trapdoor
+item.tropicraft.thatch_trapdoor.name=Thatch Trapdoor
 item.tropicraft.bamboo_item_frame.name=Bamboo Item Frame
 item.tropicraft.water_wand.name=Water Wand
 item.tropicraft.spawn_egg.iguana.name=Spawn Iguana
@@ -261,7 +261,6 @@ item.tropicraft.coffee.bean.raw.name=Coffee Beans
 item.tropicraft.coffee.bean.roasted.name=Roasted Coffee Beans
 item.tropicraft.coffee.berry.name=Coffee Berry
 
-
 item.tropicraft.pink_weight_belt.name=Pink Weight Belt
 item.tropicraft.yellow_weight_belt.name=Yellow Weight Belt
 item.tropicraft.pink_pony_bottle.name=Pink Pony Bottle
@@ -285,6 +284,7 @@ item.tropicraft.nori_raw.name=Raw Nori
 item.tropicraft.nori_toasted.name=Toasted Nori
 item.tropicraft.ray_raw.name=Raw Spotted Eagle Ray
 item.tropicraft.ray_cooked.name=Cooked Spotted Eagle Ray
+
 # Feesh
 item.tropicraft.tropicalfish.0.raw.name=Raw Clownfish
 item.tropicraft.tropicalfish.1.raw.name=Raw Queen Angelfish
@@ -397,10 +397,12 @@ entity.tropicraft.beach_umbrella.name=Beach Umbrella
 entity.tropicraft.beach_float.name=Beach Float
 
 # Achievement localizations
+achievement.tc=Tropicraft
+achievement.tc.desc=Welcome to paradise!
 achievement.tc_craft_pina_colada=If you like pina coladas...
-achievement.tc_craft_pina_colada.desc=(Who doesn't?)
+achievement.tc_craft_pina_colada.desc=Who doesn't?
 achievement.tc_drink_pina_colada=Caught in the rain
-achievement.tc_drink_pina_colada.desc=(Did you forget your umbrella?)
+achievement.tc_drink_pina_colada.desc=Did you forget your umbrella?
 
 #Gui localizations
 tropicraft.gui.air.type=Air Type: %s
@@ -531,6 +533,9 @@ tropicraft.encyclopedia.bambooblock.desc=This easy-to-craft block is made from s
 tropicraft.encyclopedia.bamboochest.title=Bamboo Chest
 tropicraft.encyclopedia.bamboochest.desc=A chest made out of bamboo! It will complete your tropical-themed shack!
 
+tropicraft.encyclopedia.bamboo_crafting_table.title=Bamboo Crafting Table
+tropicraft.encyclopedia.bamboo_crafting_table.desc=Don't mind this place holder.
+
 tropicraft.encyclopedia.bamboodoor.title=Bamboo Door
 tropicraft.encyclopedia.bamboodoor.desc=This bamboo and thatch door is perfect for separating you from the wilderness. Be careful though, this door isn't very strong.
 
@@ -589,7 +594,7 @@ tropicraft.encyclopedia.canna.title=Canna
 tropicraft.encyclopedia.canna.desc=This yellow-orange flower blends in well in the tropical realm, complementing the hard-hitting red of the red anthurium.
 
 tropicraft.encyclopedia.chunkohead.title=Chunk O' Head
-tropicraft.encyclopedia.chunkohead.desc=The Easter Island Heads that can occasionally be seen are made up of this rock. It is a holy stone to those who built the Heads, and taking it is considered sacrilege. 
+tropicraft.encyclopedia.chunkohead.desc=The Easter Island Heads that can occasionally be seen are made up of this rock. It is a holy stone to those who built the Heads, and taking it is considered sacrilege.
 
 tropicraft.encyclopedia.chunkfence.title=Chunk O' Head Fence
 tropicraft.encyclopedia.chunkfence.desc=The Easter Island Heads that can occasionally be seen are made up of this rock. Surround your base with a lovely fence version of the block.
@@ -610,7 +615,7 @@ tropicraft.encyclopedia.coffeebean.title=Coffee Bean
 tropicraft.encyclopedia.coffeebean.desc=The pit inside the red or purple fruit often referred to as a cherry. This is the seed for the coffee plants found throughout the tropics.
 
 tropicraft.encyclopedia.commelina_diffusa.title=Co. Diffusa
-tropicraft.encyclopedia.commelina_diffusa.desc=Commelina Diffusa adds a pleasant blue to the landscape of the Tropics. 
+tropicraft.encyclopedia.commelina_diffusa.desc=Commelina Diffusa adds a pleasant blue to the landscape of the Tropics.
 
 tropicraft.encyclopedia.coral.title=Coral
 tropicraft.encyclopedia.coral.desc=While these bioluminescent lifeforms are at home in the ocean, they are well suited for lighting up an aquarium.
@@ -619,7 +624,7 @@ tropicraft.encyclopedia.coralsand.title=Coral Sands
 tropicraft.encyclopedia.coralsand.desc=It is rumored that hundreds of years ago, these coral sands were washed ashore during a tornado.
 
 tropicraft.encyclopedia.crocosmia.title=Crocosmia
-tropicraft.encyclopedia.crocosmia.desc=These fiery little flowers are like miniature suns resting on the ground. 
+tropicraft.encyclopedia.crocosmia.desc=These fiery little flowers are like miniature suns resting on the ground.
 
 tropicraft.encyclopedia.croton.title=Croton
 tropicraft.encyclopedia.croton.desc=Go ahead and try to figure out what color this is. I DARE you.
@@ -686,7 +691,6 @@ tropicraft.encyclopedia.froglegscooked.desc=This rare delicacy is the result of 
 
 tropicraft.encyclopedia.frogskin.title=Poison Frog Skin
 tropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin though their skin.
-#OLDtropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin through their skin. By combining this with darts, you can briefly paralyze an enemy.
 
 tropicraft.encyclopedia.froxconch.title=Frox Conch
 tropicraft.encyclopedia.froxconch.desc=Named after the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!
@@ -707,7 +711,7 @@ tropicraft.encyclopedia.iguana_leather.title=Iguana Leather
 tropicraft.encyclopedia.iguana_leather.desc=The adorable iguanas that inhabit the tropics also drop a green leather. This leather functions just like regular leather and can be used interchangeably. You can also make bongo drums with iguana leather!
 
 tropicraft.encyclopedia.iris.title=Iris
-tropicraft.encyclopedia.iris.desc=These tall purple flowers are quite a sight. They can easily be replanted. 
+tropicraft.encyclopedia.iris.desc=These tall purple flowers are quite a sight. They can easily be replanted.
 
 tropicraft.encyclopedia.kapok.title=Kapok Leaves
 tropicraft.encyclopedia.kapok.desc=These leaves are found on humongous trees that appear on rare occasions in rainforest biomes
@@ -782,7 +786,7 @@ tropicraft.encyclopedia.orangesapling.title=Orange Sapling
 tropicraft.encyclopedia.orangesapling.desc=Plant this orange sapling, and soon you will have a fully-bloomed orange tree! Punch orange leaves, get orange. ??? Profit!
 
 tropicraft.encyclopedia.orchid.title=Orchid
-tropicraft.encyclopedia.orchid.desc=Orchids are perhaps the rarest of all the flowers in the Tropics. Their delicate pink and white petals are sure to add an air of sophistication to your home. 
+tropicraft.encyclopedia.orchid.desc=Orchids are perhaps the rarest of all the flowers in the Tropics. Their delicate pink and white petals are sure to add an air of sophistication to your home.
 
 tropicraft.encyclopedia.pabshell.title=Pab Shell
 tropicraft.encyclopedia.pabshell.desc=Named after one of the original modders of tropicraft, Pablomittens, the Pab shell stands as one of the original items that was in tropicraft since v1.0, but was never given a use.
@@ -794,7 +798,7 @@ tropicraft.encyclopedia.froxshell.title=Frox Conch
 tropicraft.encyclopedia.froxshell.desc=Created to commemorate the contributors of the yearly LoveTropics charity event.
 
 tropicraft.encyclopedia.rubeshell.title=Rube Nautilus
-tropicraft.encyclopedia.rubeshell.desc=Don't mind this place holder text.
+tropicraft.encyclopedia.rubeshell.desc=Created to commemorate MrRube, one of the co-creators of tropicraft.
 
 tropicraft.encyclopedia.palmplanks.title=Palm Planks
 tropicraft.encyclopedia.palmplanks.desc=Palm planks come from palm wood which comes from palm trees!
@@ -827,7 +831,7 @@ tropicraft.encyclopedia.pineapplecubes.title=Pineapple Cubes
 tropicraft.encyclopedia.pineapplecubes.desc=This great food source can easily be obtained by slashing a pineapple with a sword.
 
 tropicraft.encyclopedia.pinacolada.title=Pina Colada
-tropicraft.encyclopedia.pinacolada.desc=This refreshing drink is made by mixing pineapples and coconut chunks in a bamboo mug. Watch out though, monkeys enjoy pina coladas just as much as you do. 
+tropicraft.encyclopedia.pinacolada.desc=This refreshing drink is made by mixing pineapples and coconut chunks in a bamboo mug. Watch out though, monkeys enjoy pina coladas just as much as you do.
 
 tropicraft.encyclopedia.portalstarter.title=Tropicraft Portal Enchanter
 tropicraft.encyclopedia.portalstarter.desc=This item, made with enchanted azurite and zircon, forms a portal that can be used to teleport between the Tropics and overworld when right-clicked on a 3x3 flat square of sandstone filled with water inside.
@@ -878,7 +882,7 @@ tropicraft.encyclopedia.summering.title=Summering
 tropicraft.encyclopedia.summering.desc=Downtempo summery vibes carefully crafted by Billy Christiansen. Pop a squat, craft a pina colada, and listen to this song to enhance your tropical relaxation experience.
 
 tropicraft.encyclopedia.tikitorch.title=Tiki Torches
-tropicraft.encyclopedia.tikitorch.desc=These tall torches are great for lighting up beaches. 
+tropicraft.encyclopedia.tikitorch.desc=These tall torches are great for lighting up beaches.
 
 tropicraft.encyclopedia.thatchblock.title=Thatch Blocks
 tropicraft.encyclopedia.thatchblock.desc=As easy to craft as it is to break, the thatch block provides another sustainable building material to Tropics. It can be crafted into stairs and slabs.
@@ -905,7 +909,7 @@ tropicraft.encyclopedia.turtleshell.title=Turtle Shell
 tropicraft.encyclopedia.turtleshell.desc=This shell is great for sprucing up your beach bungalow.
 
 tropicraft.encyclopedia.waterwand.title=Water Wand
-tropicraft.encyclopedia.waterwand.desc=This mysterious rod has the unique ability to absorb 1000 blocks of water. This property makes the Water Wand perfect for creating water free underwater abodes. 
+tropicraft.encyclopedia.waterwand.desc=This mysterious rod has the unique ability to absorb 1000 blocks of water. This property makes the Water Wand perfect for creating water free underwater abodes.
 
 tropicraft.encyclopedia.zircon.title=Zircon
 tropicraft.encyclopedia.zircon.desc=This mystical red crystal can be mined from Zircon ores, which are found deep underground in the tropical realm.

@@ -13,7 +13,7 @@ public class TropicraftGuiHandler implements IGuiHandler {
     public TropicraftGuiHandler() {
 
     }
-
+    //TODO add a statement for the bamboo crafting table GUI
     @Override
     public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         if (id == 0) {

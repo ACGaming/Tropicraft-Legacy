@@ -1,4 +1,9 @@
 7.1.9.122 for 1.12.2:
+Changes
+- Changed the coconut model, now it's displayed as an item when in the player's inventory (_BIG_G_)
+- Changed the tooltip of the Donation block to state it no longer works (_BIG_G_)
+- Changed the blast resistance of the Zirconium block to match the others (_BIG_G_)
+- Changed advancements, now there's a root advancement triggered by picking up bamboo shoots
 
 7.1.9.121 for 1.12.2:
 New
@@ -31,6 +36,7 @@ Fixes
 - Fixed bamboo ladders using stone sound effects (_BIG_G_)
 - Fixed all three bongos using stone sound effects and missing a bottom texture (_BIG_G_)
 - Fixed the tiki torch also using stone sound effects (_BIG_G_)
+
 7.1.9.118 for 1.12.2:
 Fixes
 - Fixed all recipes using bamboo sticks being broken who would've thought, oredicts can't have underscores (_BIG_G_)
@@ -496,6 +502,10 @@ New
 - Added hidden configuration options
 - Added crop circles
 
+3.0.5 for 1.2.5:
+
+3.0.4 for 1.2.5:
+
 3.0.3 for 1.2.5:
 New
 - Added some missing wood-based recipes
@@ -540,3 +550,61 @@ Fixes
 - MLProp not using the values you provide in the config
 - Tribal Fishing Rod should not be visible in TMI anymore
 - Fixed Eudialyte Axe Recipe
+
+3.0.2 for 1.:
+
+3.0.1 for 1.:
+
+3.0 for 1.:
+
+2.5.1 for 1.0.0:
+
+2.5 for 1.0.0:
+
+2.4 for b1.8.1:
+- Palm Tree leaf decay works correctly now
+- Armor no longer bugs and steals health
+- Poison tree frogs are no longer overpowered
+- Added pineapple cubes (chop pineapple with sword!)
+- Poison from tree frogs now works correctly
+- Palm wood now affected correctly by each type of axe
+- EIHs can only be hurt by use of a pickaxe of strength stone or higher!
+- Iguanas have a new texture and model!
+- Spawn rates of ALL mobs have been fixed!
+- Curved palm trees now face the water when they grow!
+
+2.3 for:
+
+2.2 for b1.7.3:
+- Bamboo no longer drops coconuts
+
+2.1 for b1.7.3:
+- Pina colada recipe no longer makes frog legs
+
+2.0 for b1.7.3:
+Nature
+- Pineapples now grow back at a rate similar to that of a reed
+- If you cut the top of a pineapple off it's stem, the stem will stay and regrow the pineapple
+- If you cut the top of a pineapple off it's stem and replant it, only the stem will replant (don't worry, a pineapple will grow on it soon!)
+- Moved coconuts 1 block higher on regular sized palm trees
+- Added large palm trees
+- Added slanted palm trees
+- New palm leaf texture
+- Added randomly generated Easter Island Head monuments in the wild
+- Decreased spawn rate of palm trees slightly
+Mobs
+- Added Easter Island Heads
+- Added 4 types of tree frogs (Jump height of ~3 blocks, and has a chance of sticking to trees and other walls)
+- Poisonous tree frogs (Red, Blue, Yellow)
+- Non-poisonous tree frogs (Green)
+- Iguanas have almost double the health as before
+- Added sounds for Easter Island Heads and Iguanas
+Misc
+- Gold swords make cocoonut chunks (Bug discovered thanks to GameChap and Bertie's video :D)
+- Hitting palm wood sounds like stone
+- Added Bamboo blocks, slabs, and stairs
+- Added Thatch blocks, slabs, and stairs
+- Fixed order of pina colada recipe (coconut chunks w/pineapple) so it doesn't matter
+- Bamboo cups are now made of actual bamboo (changed ingredient, same recipe)
+
+1.0 for b1.7.3:

@@ -5,7 +5,7 @@
   "description": "This is Tropicraft, the utopian idyllic getaway that you have been waiting for!",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https://tropicraft.net",
+  "url": "https://github.com/BigGame2004/Tropicraft",
   "updateUrl": "https://coros.us/versionchecker/tropiversion.txt",
   "authorList": ["Cojomax99", "Corosus", "Fishtaco567", "Mr_okushama", "MrRube", "newthead", "303", "tterrag"],
   "credits": "Special thanks to Terry, medsouz, RazzleberryFox, MrCliftron, frox, Billy Christiansen, Punchaface, PhoenixFireLune, Emile van Krieken, Dino, rakiru, and everybody else who has helped us along the way. We love you all :)",

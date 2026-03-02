@@ -8,8 +8,9 @@
         },
         "description": {
             "translate": "achievement.tc_drink_pina_colada.desc"
-        }
-        
+        },
+        "show_toast": true,
+        "announce_to_chat": true
     },
     "parent": "tropicraft:tropics/craft_pina_colada",
     "criteria": {

@@ -26,6 +26,7 @@ import net.tropicraft.core.common.worldgen.genlayer.GenLayerTropicraft;
 
 public class BiomeProviderTropicraft extends BiomeProvider {
 
+	// TODO this entire biome system needs to be rewritten because it messes with most other mods that want to add biomes
 	public static final List<Biome> allowedBiomes = Arrays.asList(BiomeTropicraft.tropics, BiomeTropicraft.rainforestPlains);
 	private GenLayer genBiomes;
 	private GenLayer biomeIndexLayer;

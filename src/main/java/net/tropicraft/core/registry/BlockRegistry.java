@@ -196,7 +196,7 @@ public class BlockRegistry extends TropicraftRegistry {
 	public static Block palmTrapdoor;
 	public static Block thatchTrapdoor;
 
-//	public static Block bambooCraftingTable;
+	public static Block bambooCraftingTable;
 
 	public static BlockTropicraftSlab slabs;
 	public static BlockTropicraftSlab doubleSlabs;
@@ -322,7 +322,8 @@ public class BlockRegistry extends TropicraftRegistry {
 		palmTrapdoor = registerBlockNoItem(registry, new BlockPalmTrapdoor(), Names.PALM_TRAPDOOR);
 		thatchTrapdoor = registerBlockNoItem(registry, new BlockThatchTrapdoor(), Names.THATCH_TRAPDOOR);
 
-//		bambooCraftingTable = registerBlock(registry, new BlockBambooCraftingTable(), Names.BAMBOO_CRAFTING_TABLE);
+		//bambooCraftingTable = registerBlock(registry, new BlockBambooCraftingTable(), Names.BAMBOO_CRAFTING_TABLE);
+		//		              .withOredict("workbench", OreDictionary.WILDCARD_VALUE);
 
 		bongo = registerBlock(registry, new BlockBongoDrum(), Names.BONGO, new MultiBlockItemCreator(TropicraftBongos.VALUES));
 

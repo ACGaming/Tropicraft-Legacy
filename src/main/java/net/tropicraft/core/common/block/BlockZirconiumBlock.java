@@ -8,7 +8,7 @@ public class BlockZirconiumBlock extends BlockTropicraft {
     public BlockZirconiumBlock() {
         super(Material.ROCK);
         this.setHardness(2.0F);
-        this.setResistance(30F);
+        this.setResistance(10F);
     }
 
 }

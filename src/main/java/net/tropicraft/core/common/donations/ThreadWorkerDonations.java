@@ -82,7 +82,7 @@ public class ThreadWorkerDonations implements Runnable {
 
 
     }
-
+    // V3 of the tiltify API no longer exists as well as the campaign it's supposed to be looking for, so this now does nothing.
     public String getData_Real() {
         try {
             //URL url = new URL("https://tiltify.com/api/v3/campaigns/love-tropics");
