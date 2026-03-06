@@ -17,7 +17,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 ext.buildnumber = 0
-project.buildnumber = System.getenv('BUILD_NUMBER') ?: '122'
+project.buildnumber = System.getenv('BUILD_NUMBER') ?: '123'
 
 boolean dev = System.getenv('RELEASE') == null || System.getenv('RELEASE').equals('false');
 
@@ -30,6 +30,18 @@ sourceCompatibility = targetCompatibility = '1.8'
 repositories {
     maven {
         url "https://cursemaven.com"
+    }
+    maven {
+        url "http://maven.ic2.player.to/"
+    }
+    maven {
+        url "https://maven.covers1624.net/"
+    }
+    maven {
+        url "http://chickenbones.net/maven/"
+    }
+    maven {
+        url "https://maven.blamejared.com"
     }
 }
 
@@ -45,6 +57,18 @@ minecraft {
 
 jar.appendix = "MC${minecraft_version}"
 sourceJar.appendix = jar.appendix
+
+dependencies {
+    compileOnly("net.sengir.forestry:forestry_1.12.2:5.8.2.422") { transitive = false }
+    compileOnly "codechicken:CodeChickenLib:1.12.2-3.2.2.354:universal"
+    compileOnly "cofh:RedstoneFlux:1.12-2.1.0.7:universal"
+    compileOnly "cofh:CoFHWorld:1.12.2-1.3.0.6:universal"
+    compileOnly "cofh:CoFHCore:1.12.2-4.6.2.25:universal"
+    compileOnly "cofh:ThermalFoundation:1.12.2-2.6.2.26:universal"
+    compileOnly "cofh:ThermalExpansion:1.12.2-5.5.3.41:universal"
+    compileOnly "mezz.jei:jei_1.12.2:4.9.2.196"
+    compileOnly "curse.maven:pams-harvestcraft-221857:2904825"
+}
 
 processResources
 {

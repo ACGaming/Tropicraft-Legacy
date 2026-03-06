@@ -32,7 +32,7 @@ public class ScubaHandlerCommon {
 	        return;
 		if(event.getEntity() instanceof EntityPlayer) {
 			if(isInWater((EntityPlayer)event.getEntity()))
-			if(event.getSource().equals(DamageSource.IN_WALL)) {
+				if(event.getSource().equals(DamageSource.IN_WALL)) {
 				event.setCanceled(true);
 			}
 		}

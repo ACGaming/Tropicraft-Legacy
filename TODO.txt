@@ -7,6 +7,7 @@
 - Fill in all placeholder Encyclopedia entries
 - Finish implementing the diving computer
 - Fix crash caused by incompatibility with buildcraft's and buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
+- Fix respawning coconuts being able to replace other blocks, check "BlockTropicraftLog" line 64
 - Fix bamboo fishing rods stacking if bought from koa fisherman
 - Fix Bamboo Flower Pots: - Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
                           - Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
@@ -33,6 +34,7 @@
 - Rewrite encyclopedia entity page type, make them not only get unlocked if you give yourself the spawn eggs of mobs
 - Update sapling_palm.png, make it actually look like a palm tree
 - Update the Drink Mixer model and texture, make it not look exactly like the air compressor
+- Update languages: franch, russian, chinese, etc
 Maybe:
 - Rebalance tool stats?
 - Make koa trades unlock like villager trades?

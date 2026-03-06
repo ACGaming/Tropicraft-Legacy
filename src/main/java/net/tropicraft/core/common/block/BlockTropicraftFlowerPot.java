@@ -25,6 +25,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -33,9 +34,12 @@ import net.tropicraft.core.common.block.tileentity.TileEntityFactory;
 import net.tropicraft.core.common.block.tileentity.TileEntityTropicraftFlowerPot;
 import net.tropicraft.core.common.enums.TropicraftFlowerType;
 import net.tropicraft.core.common.enums.TropicraftFlowers;
+import net.tropicraft.core.common.enums.TropicraftLogs;
 import net.tropicraft.core.common.enums.TropicraftSaplings;
 import net.tropicraft.core.registry.BlockRegistry;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import static net.tropicraft.core.registry.BlockRegistry.flowerPot;
 
 public class BlockTropicraftFlowerPot extends BlockTropicraft implements ITileEntityProvider {
 
@@ -79,6 +83,17 @@ public class BlockTropicraftFlowerPot extends BlockTropicraft implements ITileEn
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
+
+	/**
+	 * Called when a user uses the creative pick block button on this block
+	 *
+//	 * @param target The full target the player is looking at
+	 * @return A ItemStack to add to the player's inventory, Null if nothing should be added.
+	 */
+//	@Override
+//	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+//		return new ItemStack(this);
+//	}
 
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {		

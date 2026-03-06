@@ -72,6 +72,12 @@ public class TropicsConfigs {
     private static final String C_ENTITY = "entity";
     private static final String C_MISC = "misc";
     public static final String C_DONATIONS = "~lovetropics";
+    private static final String C_MODULES = "modules";
+
+    /* == Modules == */
+    public static boolean enableForestryModule = true;
+    public static boolean enableThermalModule = true;
+    public static boolean enableHarvestcraftModule = true;
 
     private static Configuration config;
 
@@ -104,7 +110,7 @@ public class TropicsConfigs {
         tallFlowerGenChanceOverworld = config.getInt("tallFlowerGenChanceOverworld", C_GENERATION, tallFlowerGenChanceOverworld, 0, 1000, "Chance of pineapple/iris spawn. Lower values = more common");
 
         onlyGenFlowersInTropicalBiomes = config.get(C_GENERATION, "onlyGenFlowersInTropicalBiomesOverworld", onlyGenFlowersInTropicalBiomes, "Should Tropicraft flowers only generate in tropical biomes in the overworld?").getBoolean();
-        
+
         coconutBombWhitelist = config.get(C_MISC, "coconutBombWhitelist", coconutBombWhitelist).getStringList();
         enableSwimAnimation = config.get(C_MISC, "enableSwimAnimation", enableSwimAnimation).getBoolean();
 
@@ -119,7 +125,11 @@ public class TropicsConfigs {
 
         spawnPassiveTropicsLandMobsOverworld = config.get(C_ENTITY, "spawnPassiveTropicsLandMobsOverworld", spawnPassiveTropicsLandMobsOverworld, "Should Tropicraft's passive land mobs spawn in the overworld?").getBoolean();
         spawnHostileTropicsLandMobsOverworld = config.get(C_ENTITY, "spawnHostileTropicsLandMobsOverworld", spawnHostileTropicsLandMobsOverworld, "Should Tropicraft's hostile land mobs spawn in the overworld?").getBoolean();
-        
+
+        enableForestryModule = config.get(C_MODULES, "enableForestryModule", enableForestryModule, "Enable or disable the Forestry compatibility module. [default: true]").getBoolean();
+        enableThermalModule = config.get(C_MODULES, "enableThermalModule", enableThermalModule, "Enable or disable the Thermal Expansion compatibility module. [default: true]").getBoolean();
+        enableHarvestcraftModule = config.get(C_MODULES, "enableHarvestcraftModule", enableHarvestcraftModule, "Enable or disable the Harvestcraft compatibility module. It currently does nothing :( [default: true]").getBoolean();
+
         config.setCategoryComment(C_DONATIONS, "Used for the LoveTropics charity drive.");
         tiltifyAppToken = config.get(C_DONATIONS, "tiltifyAppToken", tiltifyAppToken, "Add a token here to enable donation tracking, leave blank to disable").getString();
         tiltifyCampaign = config.get(C_DONATIONS, "tiltifyCampaign", tiltifyCampaign, "The tiltify campaign to track donations from").getInt();

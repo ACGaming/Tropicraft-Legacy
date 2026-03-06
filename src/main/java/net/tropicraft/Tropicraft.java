@@ -3,34 +3,34 @@ package net.tropicraft;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.client.ClientCommandHandler;
-import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.event.RegistryEvent.MissingMappings;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent.MissingMappings.Mapping;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.event.RegistryEvent.MissingMappings;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
-import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.tropicraft.client.gui.TropicraftGuiHandler;
-import net.tropicraft.core.common.BuildEvents;
 import net.tropicraft.core.common.biome.BiomeTropicraft;
+import net.tropicraft.core.common.BuildEvents;
 import net.tropicraft.core.common.capability.ExtendedPlayerStorage;
 import net.tropicraft.core.common.capability.ExtendedWorldStorage;
 import net.tropicraft.core.common.capability.PlayerDataInstance;
 import net.tropicraft.core.common.capability.WorldDataInstance;
 import net.tropicraft.core.common.command.CommandTropicsMiscClient;
+import net.tropicraft.core.common.compatibility.CompatHandler;
 import net.tropicraft.core.common.config.TropicsConfigs;
 import net.tropicraft.core.common.dimension.TropicraftWorldUtils;
 import net.tropicraft.core.common.donations.ThreadWorkerDonations;
@@ -79,6 +79,7 @@ public class Tropicraft {
 
 	    TropicsConfigs.init(event.getSuggestedConfigurationFile());
 
+		CompatHandler.preInit();
 		ColorHelper.init();
 		SoundRegistry.init();
 		//FluidRegistry.preInit();
@@ -96,6 +97,7 @@ public class Tropicraft {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		TCPacketHandler.init();
+		CompatHandler.init();
 	//	ItemRegistry.init();
 //		AchievementRegistry.init();
 		//EntityRegistry.init();
@@ -121,6 +123,7 @@ public class Tropicraft {
 	public void postInit(FMLPostInitializationEvent event) {
 		FluidRegistry.postInit();
 		LootRegistry.postInit();
+		CompatHandler.postInit();
 		
 		if (event.getSide().isClient()) {
 		    ClientCommandHandler.instance.registerCommand(new CommandTropicsMiscClient());

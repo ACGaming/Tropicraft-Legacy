@@ -1,9 +1,25 @@
+7.1.9.123 for 1.12.2:
+New
+- New Bamboo Crafting Table textures (whatevernick.9479)
+- The Bamboo Crafting Table has been enabled, although as of right now it is purely decorational :( (_BIG_G_)
+- Added more mod compatibility, each module can be enabled and disabled in the configs:
+    - Forestry:
+        - Coffee beans can now be used to produce seed oil in a squeezer (_BIG_G_)
+        - Fertilizer can now be used as fuel in a fermenter (_BIG_G_)
+        - Grapefruits, lemons, limes, oranges, pineapples and coconut chunks can now be used to produce fruit juice (_BIG_G_)
+    - Thermal Expansion:
+        - Bamboo shoots, pineapples, coconuts and iris flowers can now be grown inside a phytogenic insolator (_BIG_G_)
+        - Chunk o' head as well as all types of tropical sands can now be produced in an igneous extruder (_BIG_G_)
+Changes
+- Added tones of ore dictionary entries to various items and blocks, for all foods, flowers and the shaka ore (like anyone's gonna need that) (_BIG_G_)
+- Packed Purified Sand can nw be crafted using four blocks of Purified Sand (_BIG_G_)
+
 7.1.9.122 for 1.12.2:
 Changes
 - Changed the coconut model, now it's displayed as an item when in the player's inventory (_BIG_G_)
 - Changed the tooltip of the Donation block to state it no longer works (_BIG_G_)
 - Changed the blast resistance of the Zirconium block to match the others (_BIG_G_)
-- Changed advancements, now there's a root advancement triggered by picking up bamboo shoots
+- Changed advancements, now there's a root advancement triggered by picking up bamboo shoots (_BIG_G_)
 
 7.1.9.121 for 1.12.2:
 New

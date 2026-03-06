@@ -329,7 +329,9 @@ public class ItemRegistry extends TropicraftRegistry {
         bambooMug = registerItem(registry, new ItemTropicraft().setMaxStackSize(16), "bamboo_mug");
 
         freshMarlin = registerItem(registry, new ItemTropicraftFood(2, 0.3F), "fresh_marlin");
+        OreDictionary.registerOre("listAllmeatraw", freshMarlin);
         searedMarlin = registerItem(registry, new ItemTropicraftFood(8, 0.65F), "seared_marlin");
+        OreDictionary.registerOre("listAllmeatcooked", searedMarlin);
 
         tropicsWaterBucket = registerItem(registry, (new ItemBucket(BlockRegistry.tropicsWater)).setContainerItem(Items.BUCKET), "tropics_water_bucket");
         fishBucket = registerItem(registry, new ItemFishBucket(), "fish_bucket");
@@ -341,10 +343,13 @@ public class ItemRegistry extends TropicraftRegistry {
 
         coffeeBeans = registerMultiItem(registry, new ItemCoffeeBean(Names.COFFEE_NAMES, BlockRegistry.coffeePlant), "coffee_beans", Names.COFFEE_NAMES);
         OreDictionary.registerOre("seedCoffee", new ItemStack(coffeeBeans, 1, 0));
+        OreDictionary.registerOre("listAllseed", new ItemStack(coffeeBeans, 1, 0));
         OreDictionary.registerOre("cropCoffee", new ItemStack(coffeeBeans, 1, 2));
 
         frogLeg = registerItem(registry, new ItemTropicraft().setMaxStackSize(64), "frog_leg");
+        OreDictionary.registerOre("listAllmeatraw", frogLeg);
         cookedFrogLeg = registerItem(registry, new ItemTropicraftFood(2, 0.15F), "cooked_frog_leg");
+        OreDictionary.registerOre("listAllmeatcooked", cookedFrogLeg);
         poisonFrogSkin = registerItem(registry, new ItemTropicraft().setMaxStackSize(64), "poison_frog_skin");
 
         scale = registerItem(registry, new ItemTropicraft().setMaxStackSize(64), "scale");
@@ -424,14 +429,45 @@ public class ItemRegistry extends TropicraftRegistry {
         ltShell = registerMultiItem(registry, new ItemLoveTropicsShell(), "ltshell", Names.LT17_NAMES.length);
 
         rawSeaweed = registerItem(registry, new ItemSeaweed(), "seaweed");
+        OreDictionary.registerOre("cropSeaweed", rawSeaweed);
+        OreDictionary.registerOre("listAllveggie", rawSeaweed);
+        OreDictionary.registerOre("listAllgreenveggie", rawSeaweed);
         rawNori = registerItem(registry, new ItemTropicraft(), "nori_raw");
         toastedNori = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "nori_toasted");
         rawRay = registerItem(registry, new ItemTropicraft(), "ray_raw");
+        OreDictionary.registerOre("listAllmeatraw", rawRay);
         cookedRay = registerItem(registry, new ItemTropicraftFood(5, 0.5F), "ray_cooked");
+        OreDictionary.registerOre("listAllmeatcooked", cookedRay);
+
         rawTropicalFish = registerMultiItem(registry, new ItemTropicalFish(2, 0.2F, "tropicalfish", "raw"), "raw_fish", EntityTropicalFish.NAMES.length);
+
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 0));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 1));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 2));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 3));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 4));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 5));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 6));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawTropicalFish, 1, 7));
+
         cookedTropicalFish = registerMultiItem(registry, new ItemTropicalFish(4, 0.4F, "tropicalfish", "cooked"), "cooked_fish", EntityTropicalFish.NAMES.length);
+        // Yes, yes there are smarter ways to do this, but laziness beats intelligence.
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 0));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 1));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 2));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 3));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 4));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 5));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 6));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedTropicalFish, 1, 7));
+
         rawRiverFish = registerMultiItem(registry, new ItemRiverFish(2, 0.2F, "riverfish", "raw"), "raw_river_fish", 2);
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawRiverFish, 1, 0));
+        OreDictionary.registerOre("listAllmeatraw", new ItemStack(rawRiverFish, 1, 1));
+
         cookedRiverFish = registerMultiItem(registry, new ItemRiverFish(4, 0.4F, "riverfish", "cooked"), "cooked_river_fish", 2);
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedRiverFish, 1, 0));
+        OreDictionary.registerOre("listAllmeatcooked", new ItemStack(cookedRiverFish, 1, 1));
 
         nigelStache = registerItem(registry, new ItemNigelStache(materialNigelStache, 0, EntityEquipmentSlot.HEAD), "nigel_stache");
     }

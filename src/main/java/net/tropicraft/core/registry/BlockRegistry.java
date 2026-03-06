@@ -51,7 +51,7 @@ import static net.minecraft.block.material.Material.PLANTS;
 @Mod.EventBusSubscriber(modid = Info.MODID)
 public class BlockRegistry extends TropicraftRegistry {
     
-    private static class SimpleItemCreator implements IBlockItemRegistrar {
+    public static class SimpleItemCreator implements IBlockItemRegistrar {
         private final String name;
         private final boolean useBlock;
         private final Int2ObjectMap<List<String>> oredict = new Int2ObjectArrayMap<>();
@@ -237,7 +237,8 @@ public class BlockRegistry extends TropicraftRegistry {
 		        .withOredict("oreAzurite", TropicraftOres.AZURITE.getMeta())
 		        .withOredict("oreEudialyte", TropicraftOres.EUDIALYTE.getMeta())
 		        .withOredict("oreZircon", TropicraftOres.ZIRCON.getMeta())
-		        .withOredict("oreManganese", TropicraftOres.MANGANESE.getMeta()));
+		        .withOredict("oreManganese", TropicraftOres.MANGANESE.getMeta())
+				.withOredict("oreShaka", TropicraftOres.SHAKA.getMeta()));
 		// FIXME ew
 		oreBlock = registerBlock(registry, new BlockTropicraftOreBlock(), "oreblock", new MultiBlockItemCreator(TropicraftOres.ORES_WITH_BLOCKS) {
 		    @Override
@@ -250,7 +251,28 @@ public class BlockRegistry extends TropicraftRegistry {
 		        };
 		    }
 		});
-		flowers = registerBlock(registry, new BlockTropicsFlowers(), "flower", new StandardItemCreator(TropicraftFlowers.VALUES));
+		flowers = registerBlock(registry, new BlockTropicsFlowers(), "flower", new StandardItemCreator(TropicraftFlowers.VALUES)
+				.withOredict("flowerBlue", TropicraftFlowers.COMMELINA_DIFFUSA.getMeta())
+				.withOredict("flowerGreen", TropicraftFlowers.FERN.getMeta())
+				.withOredict("flowerMagenta", TropicraftFlowers.ORCHID.getMeta())
+				.withOredict("flowerOrange", TropicraftFlowers.CROCOSMIA.getMeta())
+				.withOredict("flowerOrange", TropicraftFlowers.ORANGE_ANTHURIUM.getMeta())
+				.withOredict("flowerRed", TropicraftFlowers.BROMELIAD.getMeta())
+				.withOredict("flowerRed", TropicraftFlowers.RED_ANTHURIUM.getMeta())
+				.withOredict("flowerWhite", TropicraftFlowers.ANEMONE.getMeta())
+				.withOredict("flowerYellow", TropicraftFlowers.CANNA.getMeta())
+				.withOredict("listAllMushroom", TropicraftFlowers.MAGIC_MUSHROOM.getMeta())
+
+				.withOredict("flower", TropicraftFlowers.COMMELINA_DIFFUSA.getMeta())
+				.withOredict("flower", TropicraftFlowers.FERN.getMeta())
+				.withOredict("flower", TropicraftFlowers.ORCHID.getMeta())
+				.withOredict("flower", TropicraftFlowers.CROCOSMIA.getMeta())
+				.withOredict("flower", TropicraftFlowers.ORANGE_ANTHURIUM.getMeta())
+				.withOredict("flower", TropicraftFlowers.BROMELIAD.getMeta())
+				.withOredict("flower", TropicraftFlowers.RED_ANTHURIUM.getMeta())
+				.withOredict("flower", TropicraftFlowers.ANEMONE.getMeta())
+				.withOredict("flower", TropicraftFlowers.CANNA.getMeta()));
+
 		logs = registerBlock(registry, new BlockTropicraftLog(), "log", new MultiBlockItemCreator(TropicraftLogs.values()).withOredict("logWood", OreDictionary.WILDCARD_VALUE));
 		coral = registerBlock(registry, new BlockCoral(), "coral", new StandardItemCreator(TropicraftCorals.VALUES));
 		bundles = registerBlock(registry, new BlockBundle(Material.WOOD), "bundle", new StandardItemCreator(TropicraftBundles.values())
@@ -322,8 +344,8 @@ public class BlockRegistry extends TropicraftRegistry {
 		palmTrapdoor = registerBlockNoItem(registry, new BlockPalmTrapdoor(), Names.PALM_TRAPDOOR);
 		thatchTrapdoor = registerBlockNoItem(registry, new BlockThatchTrapdoor(), Names.THATCH_TRAPDOOR);
 
-		//bambooCraftingTable = registerBlock(registry, new BlockBambooCraftingTable(), Names.BAMBOO_CRAFTING_TABLE);
-		//		              .withOredict("workbench", OreDictionary.WILDCARD_VALUE);
+		bambooCraftingTable = registerBlock(registry, new BlockBambooCraftingTable(), Names.BAMBOO_CRAFTING_TABLE);
+		OreDictionary.registerOre("workbench", bambooCraftingTable);
 
 		bongo = registerBlock(registry, new BlockBongoDrum(), Names.BONGO, new MultiBlockItemCreator(TropicraftBongos.VALUES));
 

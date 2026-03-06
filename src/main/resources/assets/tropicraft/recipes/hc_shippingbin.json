@@ -1,0 +1,25 @@
+{
+
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "b": {
+      "type": "forge:ore_dict",
+      "ore": "logWood"
+    },
+    "c": {
+      "item": "tropicraft:white_pearl"
+    }
+  },
+  "result": {
+    "item": "harvestcraft:shippingbin"
+  },
+  "type": "forge:ore_shaped"
+}

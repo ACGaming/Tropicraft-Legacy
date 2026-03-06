@@ -215,7 +215,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("bamboofencegate", new ItemStack(BlockRegistry.bambooFenceGate)));
         enc.addPage(new ItemPage("bamboostick", new ItemStack(ItemRegistry.bambooStick)));
         enc.addPage(new ItemPage("bamboo_ladder", new ItemStack(BlockRegistry.bambooLadder)));
-//      enc.addPage(new ItemPage("bamboo_crafting_table", new ItemStack(BlockRegistry.bambooCraftingTable)));
+        enc.addPage(new ItemPage("bamboo_crafting_table", new ItemStack(BlockRegistry.bambooCraftingTable)));
 
         enc.addPage(new ItemPage("bamboo_trapdoor", new ItemStack(ItemRegistry.bambooTrapdoor)));
         enc.addPage(new ItemPage("mahogany_trapdoor", new ItemStack(ItemRegistry.mahoganyTrapdoor)));
@@ -274,10 +274,6 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //          enc.addPage(new ItemPage("dart", new ItemStack(TCItemRegistry.dart, 1, i)));
         //      }
         enc.addPage(new ItemPage("fertilizer", new ItemStack(ItemRegistry.fertilizer)));
-        
-
-        //TODO enc.addPage(new ItemPage("flippers", new ItemStack(ItemRegistry.flippers)));
-        //TODO enc.addPage(new ItemPage("flippers", new ItemStack(Items.LEATHER)));
 
         enc.addPage(new ItemPage("frogskin", new ItemStack(ItemRegistry.poisonFrogSkin)));
 
@@ -287,7 +283,6 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //enc.addPage(new ItemPage("journalpage", new ItemStack(TCItemRegistry.journalPage)));
         //TODO enc.addPage(new ItemPage("koachest", new ItemStack(BlockRegistry.koaChest)));
         //TODO enc.addPage(new ItemPage("leafball", new ItemStack(ItemRegistry.leafBall)));
-        //enc.addPage(new ItemPage("leather", new ItemStack(Items.LEATHER)));
 
         //enc.addPage(new ItemPage("nigeljournal", new ItemStack(TCItemRegistry.nigelJournal)));
 
