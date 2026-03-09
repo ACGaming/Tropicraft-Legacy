@@ -347,7 +347,7 @@ item.tropicraft.mask_ashen_mask4.name=Ashen Mask
 item.tropicraft.mask_ashen_mask5.name=Ashen Mask
 
 # Menu localizations
-itemGroup.tropicraft=Tropicraft
+itemGroup.tropicraft=Tropicraft Legacy
 
 # Config localizations
 tropicraft.config.title=Tropicraft Configuration
@@ -398,7 +398,7 @@ entity.tropicraft.beach_umbrella.name=Beach Umbrella
 entity.tropicraft.beach_float.name=Beach Float
 
 # Achievement localizations
-achievement.tc=Tropicraft
+achievement.tc=Tropicraft Legacy
 achievement.tc.desc=Welcome to paradise!
 achievement.tc_craft_pina_colada=If you like pina coladas...
 achievement.tc_craft_pina_colada.desc=Who doesn't?
@@ -694,9 +694,6 @@ tropicraft.encyclopedia.froglegscooked.desc=This rare delicacy is the result of 
 tropicraft.encyclopedia.frogskin.title=Poison Frog Skin
 tropicraft.encyclopedia.frogskin.desc=Poisonous tree frogs secrete a paralyzing toxin though their skin.
 
-tropicraft.encyclopedia.froxconch.title=Frox Conch
-tropicraft.encyclopedia.froxconch.desc=Named after the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!
-
 tropicraft.encyclopedia.grapefruit.title=Grapefruit
 tropicraft.encyclopedia.grapefruit.desc=Tasty grapefruit citrus fruit that drops from Grapefruit leaves.
 
@@ -794,7 +791,7 @@ tropicraft.encyclopedia.pabshell.title=Pab Shell
 tropicraft.encyclopedia.pabshell.desc=Named after one of the original modders of tropicraft, Pablomittens, the Pab shell stands as one of the original items that was in tropicraft since v1.0, but was never given a use.
 
 tropicraft.encyclopedia.soloshell.title=Solonox Shell
-tropicraft.encyclopedia.soloshell.desc=Don't mind this place holder text.
+tropicraft.encyclopedia.soloshell.desc=Named after the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!
 
 tropicraft.encyclopedia.froxshell.title=Frox Conch
 tropicraft.encyclopedia.froxshell.desc=Created to commemorate the contributors of the yearly LoveTropics charity event.
@@ -904,7 +901,7 @@ tropicraft.encyclopedia.tradewinds.desc=A chillout song produced by Frox. At 136
 tropicraft.encyclopedia.trimix.title=Trimix Gas Mixture
 tropicraft.encyclopedia.trimix.desc=A breathing gas consisting of oxygen, helium, and nitrogen. Trimix can be placed in an air compressor to fill a tank with trimix-infused air, allowing the player to stay underwater for much longer!
 
-tropicraft.encyclopedia.tropiframe.title=Tropicraft Item Frame
+tropicraft.encyclopedia.tropiframe.title=Bamboo Item Frame
 tropicraft.encyclopedia.tropiframe.desc=This item frame functions the same way as a vanilla item frame but has a bamboo border
 
 tropicraft.encyclopedia.turtleshell.title=Turtle Shell

@@ -1,7 +1,7 @@
 [
 {
   "modid": "tropicraft",
-  "name": "Tropicraft",
+  "name": "Tropicraft Legacy",
   "description": "This is Tropicraft, the utopian idyllic getaway that you have been waiting for!",
   "version": "${version}",
   "mcversion": "${mcversion}",

@@ -17,13 +17,13 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 ext.buildnumber = 0
-project.buildnumber = System.getenv('BUILD_NUMBER') ?: '123'
+project.buildnumber = System.getenv('BUILD_NUMBER') ?: '124'
 
 boolean dev = System.getenv('RELEASE') == null || System.getenv('RELEASE').equals('false');
 
 version = "${mod_version}.${buildnumber}"
 group= "net.tropicraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "tropicraft"
+archivesBaseName = "tropicraft-legacy"
 
 sourceCompatibility = targetCompatibility = '1.8'
 
@@ -68,6 +68,7 @@ dependencies {
     compileOnly "cofh:ThermalExpansion:1.12.2-5.5.3.41:universal"
     compileOnly "mezz.jei:jei_1.12.2:4.9.2.196"
     compileOnly "curse.maven:pams-harvestcraft-221857:2904825"
+    compileOnly "curse.maven:unlimited-chisel-works-278493:3319307"
 }
 
 processResources

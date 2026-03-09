@@ -29,7 +29,7 @@ public class Thermal {
             InsolatorManager.addDefaultRecipe(Iris, ItemHelper.cloneStack(Iris, 2), ItemStack.EMPTY, 0);
             InsolatorManager.addDefaultRecipe(Coconut, ItemHelper.cloneStack(Coconut, 2), ItemStack.EMPTY, 0);
 
-            // Only load the recipe below IF thermal expansion is present but not harvestcraft as this recipe conflicts with its bamboo shoot.
+            // Only load the recipe below IF thermal expansion is present but not harvestcraft as it conflicts with its bamboo shoots.
             if (!Loader.isModLoaded("harvestcraft")) {
                 InsolatorManager.addDefaultRecipe(Bamboo, ItemHelper.cloneStack(Bamboo, 2), ItemStack.EMPTY, 0);
             }
