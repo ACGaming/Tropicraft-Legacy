@@ -259,13 +259,9 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         // Unsorted / ???
         enc.addPage(new SectionPage("misc"));
 
-
         enc.addPage(new ItemPage("nigel", new ItemStack(ItemRegistry.nigelStache)));
         enc.addPage(new ItemPage("coconutbomb", new ItemStack(ItemRegistry.coconutBomb)));
 
-
-
-        
         //      TODO for (int i = 0; i < ItemCurare.effectNames.length; i++) {
         //          enc.addPage(new ItemPage("curare", new ItemStack(TCItemRegistry.curare, 1, i)));
         //      }
@@ -287,7 +283,6 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //enc.addPage(new ItemPage("nigeljournal", new ItemStack(TCItemRegistry.nigelJournal)));
 
         enc.addPage(new ItemPage("sifter", new ItemStack(BlockRegistry.sifter)));
-        //TODO enc.addPage(new ItemPage("smeltedzircon", new ItemStack(ItemRegistry.ore, 1, 4)));
         //TODO enc.addPage(new ItemPage("snaretrap", new ItemStack(ItemRegistry.snareTrap)));
         //TODO enc.addPage(new ItemPage("snorkel", new ItemStack(ItemRegistry.snorkel)));
 

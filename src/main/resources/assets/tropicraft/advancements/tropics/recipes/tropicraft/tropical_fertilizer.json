@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:fertilizer"
+    ]
+  },
+  "criteria": {
+    "has_magic_mushroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tropicraft:flower",
+            "data": 7
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:fertilizer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_magic_mushroom",
+      "has_the_recipe"
+    ]
+  ]
+}

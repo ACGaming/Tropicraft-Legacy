@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:slab_0"
+    ]
+  },
+  "criteria": {
+    "has_bamboo_bundle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tropicraft:bundle",
+            "data": 1
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:slab_0"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo_bundle",
+      "has_the_recipe"
+    ]
+  ]
+}

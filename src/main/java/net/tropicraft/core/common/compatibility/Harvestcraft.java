@@ -2,13 +2,12 @@ package net.tropicraft.core.common.compatibility;
 
 import com.pam.harvestcraft.HarvestCraft;
 import com.pam.harvestcraft.tileentities.MarketData;
-import com.pam.harvestcraft.tileentities.MarketItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 import static net.tropicraft.core.registry.BlockRegistry.*;
 
-public class Harvestcraft extends MarketItems{
+public class Harvestcraft {
 
     public static void preInit() {}
 

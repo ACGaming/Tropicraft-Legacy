@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:float_6"
+    ]
+  },
+  "criteria": {
+    "has_cyan_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:wool",
+            "data": 9
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:float_6"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cyan_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

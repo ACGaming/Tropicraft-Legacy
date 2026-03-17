@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:air_compressor"
+    ]
+  },
+  "criteria": {
+    "has_azurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tropicraft:azurite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:drink_mixer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_azurite",
+      "has_the_recipe"
+    ]
+  ]
+}

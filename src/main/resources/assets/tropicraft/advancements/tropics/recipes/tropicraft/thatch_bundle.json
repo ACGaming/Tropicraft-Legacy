@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:bundle_0"
+    ]
+  },
+  "criteria": {
+    "has_sugar_cane": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:reeds"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:bundle_0"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_cane",
+      "has_the_recipe"
+    ]
+  ]
+}

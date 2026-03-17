@@ -721,9 +721,6 @@ tropicraft.encyclopedia.kapok.desc=These leaves are found on humongous trees tha
 #tropicraft.encyclopedia.leafball.title=Leaf Ball
 #tropicraft.encyclopedia.leafball.desc=Leaf balls can only be obtained via a trade with a Koa tribe member. When you throw a leaf ball, as soon as it makes contact it disperses into many leaves.
 
-#tropicraft.encyclopedia.leather.title=Leather
-#tropicraft.encyclopedia.leather.desc=Leather is not only great for making stylish boots, it can also make flippers.
-
 tropicraft.encyclopedia.lemon.title=Lemon
 tropicraft.encyclopedia.lemon.desc=Tasty lemon citrus fruit that drops from Lemon leaves.
 
@@ -770,7 +767,7 @@ tropicraft.encyclopedia.marlincooked.title=Seared Marlin
 tropicraft.encyclopedia.marlincooked.desc=Mmmm. Yummy in my tummy. This is what you get when you cook Fresh Marlin.
 
 tropicraft.encyclopedia.mineralsand.title=Mineral Sands
-tropicraft.encyclopedia.mineralsand.desc=This special type of sand is rumored to contain various minerals. Their use is currently unknown.
+tropicraft.encyclopedia.mineralsand.desc=This special type of sand is rumored to contain various minerals. Their use is currently unknown. Can be found beneath the purified sands of tropical oceans.
 
 tropicraft.encyclopedia.mixer.title=EIH Mixer
 tropicraft.encyclopedia.mixer.desc=Mix various types of fruits with this to get different cocktails. You could have your own bar!
@@ -794,7 +791,7 @@ tropicraft.encyclopedia.soloshell.title=Solonox Shell
 tropicraft.encyclopedia.soloshell.desc=Named after the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!
 
 tropicraft.encyclopedia.froxshell.title=Frox Conch
-tropicraft.encyclopedia.froxshell.desc=Created to commemorate the contributors of the yearly LoveTropics charity event.
+tropicraft.encyclopedia.froxshell.desc=Created to commemorate the donators of the yearly LoveTropics charity event.
 
 tropicraft.encyclopedia.rubeshell.title=Rube Nautilus
 tropicraft.encyclopedia.rubeshell.desc=Created to commemorate MrRube, one of the co-creators of tropicraft.
@@ -862,14 +859,8 @@ tropicraft.encyclopedia.seaurchinroe.desc=Sea Urchin Eggs. Excellent source of O
 tropicraft.encyclopedia.sifter.title=Sifter
 tropicraft.encyclopedia.sifter.desc=Right click a sifter with a any kind of sand, wait about ten seconds, and out will pop up to three items. It could be rare shells, gold nuggets, or more!
 
-#tropicraft.encyclopedia.smeltedzircon.title=Smelted Zircon
-#tropicraft.encyclopedia.smeltedzircon.desc=If you have this, you are only 4 diamonds away from having zirconium.
-
 #tropicraft.encyclopedia.snaretrap.title=Snare Trap
 #tropicraft.encyclopedia.snaretrap.desc=This device is used for trapping mobs and players, rendering them immobile.
-
-#tropicraft.encyclopedia.snorkel.title=Snorkel
-#tropicraft.encyclopedia.snorkel.desc=With this you can dive deep into the crystal-clear blue waters of the tropical realm without fear of drowning! You can stay under water four times as long when wearing a snorkel!
 
 tropicraft.encyclopedia.solonoxshell.title=Solonox Shell
 tropicraft.encyclopedia.solonoxshell.desc=Named after a nickname of the creator of Tropicraft's theme song "Trade Winds", the Solonox shell yields a chance of finding a black or white pearl inside, so be on the lookout!

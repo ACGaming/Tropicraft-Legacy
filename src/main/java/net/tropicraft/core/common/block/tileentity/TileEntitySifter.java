@@ -21,7 +21,6 @@ import net.tropicraft.core.common.block.tileentity.message.MessageSifterInventor
 import net.tropicraft.core.common.block.tileentity.message.MessageSifterStart;
 import net.tropicraft.core.common.enums.TropicraftShells;
 import net.tropicraft.core.common.network.TCPacketHandler;
-import net.tropicraft.core.registry.BlockRegistry;
 import net.tropicraft.core.registry.ItemRegistry;
 
 public class TileEntitySifter extends TileEntity implements ITickable {
@@ -154,6 +153,8 @@ public class TileEntitySifter extends TileEntity implements ITickable {
 	 * If the block below this sifter is a heat source, return true
 	 * @return If the block below the sifter should turn this sifter into a heated sifter
 	 */
+	// This was supposed to be used to refine mineral sands into unrefined mineral sands and eventually into raftous ore
+	// but said ore never received a use after being added in 1.7 so it was removed after 1.10.
 	public boolean isHeatedSifter() {
 		IBlockState stateBelow = getWorld().getBlockState(this.getPos().down());
 

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:float_3"
+    ]
+  },
+  "criteria": {
+    "has_brown_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:wool",
+            "data": 12
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:float_3"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_brown_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

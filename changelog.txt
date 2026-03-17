@@ -1,4 +1,8 @@
 7.1.9.124 for 1.12.2:
+New
+- Now seaweed can be grown in a Phytogenic Insolator from Thermal Expansion (_BIG_G_)
+- Added recipe book support for most items (like anyone ever uses it), currently excluding tools, and the scuba gear (_BIG_G_)
+- Coffee plants can be farmed using Frestry's Crop Farm, although the farm will not be able to harvest any coffee bushes that grow taller then one block (_BIG_G_)
 
 7.1.9.123 for 1.12.2:
 New

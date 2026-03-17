@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:float_14"
+    ]
+  },
+  "criteria": {
+    "has_orange_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:wool",
+            "data": 4
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:float_14"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

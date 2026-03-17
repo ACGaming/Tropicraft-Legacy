@@ -1,8 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "tropicraft:cocktail",
-            "data": 0
+            "item": "tropicraft:cocktail"
         },
         "title": {
             "translate": "achievement.tc_craft_pina_colada"

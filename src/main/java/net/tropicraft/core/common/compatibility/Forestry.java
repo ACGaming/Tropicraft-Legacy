@@ -1,20 +1,35 @@
 package net.tropicraft.core.common.compatibility;
 
+import com.google.common.base.Preconditions;
 import forestry.api.core.ForestryAPI;
 import forestry.api.fuels.FermenterFuel;
 import forestry.api.fuels.FuelManager;
 import forestry.api.recipes.RecipeManagers;
+import forestry.core.config.Constants;
 import forestry.core.fluids.Fluids;
 import forestry.core.items.ItemRegistryCore;
-import forestry.core.ModuleCore;
+import forestry.farming.FarmRegistry;
+import forestry.farming.logic.ForestryFarmIdentifier;
+import forestry.farming.logic.farmables.FarmableAgingCrop;
+import forestry.farming.logic.farmables.FarmableSapling;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ModuleHelper;
+
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 
-import static net.tropicraft.core.registry.ItemRegistry.*;
+import static forestry.api.core.ForestryAPI.moduleManager;
+import static forestry.api.storage.StorageManager.crateRegistry;
+import static forestry.core.ModuleCore.getItems;
+
 import static net.tropicraft.core.registry.BlockRegistry.*;
+import static net.tropicraft.core.registry.ItemRegistry.*;
 
 public class Forestry {
 
@@ -25,11 +40,11 @@ public class Forestry {
         // Read if forestry's Factory module is enabled and if so run the code below
         if (ModuleHelper.isEnabled(ForestryModuleUids.FACTORY)) {
 
-            ItemRegistryCore coreItems = ModuleCore.getItems();
+            ItemRegistryCore coreItems = getItems();
             //ItemStack mulch = new ItemStack(coreItems.mulch);
 
             int seedOilMultiplier = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.seed");
-            int appleMulchAmount = ForestryAPI.activeMode.getIntegerSetting("squeezer.mulch.apple");
+            //int appleMulchAmount = ForestryAPI.activeMode.getIntegerSetting("squeezer.mulch.apple");
             int appleJuiceAmount = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.apple");
 
             Fluid seedOil = Fluids.SEED_OIL.getFluid();
@@ -37,7 +52,6 @@ public class Forestry {
 
             // Squeezer recipes
 
-            // Add a recipe that turns coffee beans into 10mb of seed oil in a squeezer
             if (seedOil != null) {
                 RecipeManagers.squeezerManager.addRecipe(20, new ItemStack(coffeeBeans, 1, 0), new FluidStack(seedOil, seedOilMultiplier));
             }
@@ -59,10 +73,66 @@ public class Forestry {
                     ForestryAPI.activeMode.getIntegerSetting("fermenter.value.fertilizer"),
                     ForestryAPI.activeMode.getIntegerSetting("fermenter.cycles.fertilizer")));
 
+            // Crates
+            /*
+            ItemStack PalmLog = new ItemStack(logs, 1, 1);
+            ItemStack MahoganyLog = new ItemStack(logs, 1, 0);
+            ItemStack Bamboo = new ItemStack(bambooShoot);
+            ItemStack PalmSapling = new ItemStack(saplings, 1, 0);
+            ItemStack MahoganySapling = new ItemStack(saplings, 1, 1);
+            ItemStack GrapefruitSapling = new ItemStack(saplings, 1, 2);
+            ItemStack LemonSapling = new ItemStack(saplings, 1, 3);
+            ItemStack LimeSapling = new ItemStack(saplings, 1, 4);
+            ItemStack OrangeSapling = new ItemStack(saplings, 1, 5);
+            ItemStack CoffeeBean = new ItemStack(coffeeBeans, 1, 2);
+
+            // Currently forestry doesn't want to register these crate's item models or recipes, so this is disabled for
+            // now.
+
+            if (moduleManager.isModuleEnabled(Constants.MOD_ID, ForestryModuleUids.CRATE)) {
+
+                crateRegistry.registerCrate(MahoganyLog);
+                crateRegistry.registerCrate(PalmLog);
+
+                crateRegistry.registerCrate(Bamboo);
+
+                crateRegistry.registerCrate(PalmSapling);
+                crateRegistry.registerCrate(MahoganySapling);
+                crateRegistry.registerCrate(GrapefruitSapling);
+                crateRegistry.registerCrate(LemonSapling);
+                crateRegistry.registerCrate(LimeSapling);
+                crateRegistry.registerCrate(OrangeSapling);
+
+                crateRegistry.registerCrate(coconut);
+                crateRegistry.registerCrate(pineapple);
+
+                crateRegistry.registerCrate(azurite);
+                crateRegistry.registerCrate(eudialyte);
+                crateRegistry.registerCrate(zircon);
+                crateRegistry.registerCrate(zirconium);
+
+                crateRegistry.registerCrate(grapefruit);
+                crateRegistry.registerCrate(lemon);
+                crateRegistry.registerCrate(lime);
+                crateRegistry.registerCrate(orange);
+
+                crateRegistry.registerCrate(CoffeeBean);
+
+                crateRegistry.registerCrate(blackPearl);
+                crateRegistry.registerCrate(whitePearl);
+                crateRegistry.registerCrate(fertilizer);
+                crateRegistry.registerCrate(iguanaLeather);
+            }*/
+
             // Arboretum
 
-            // This is where support for tropicraft's trees to be farmed in a forestry arboretum would go, if I could
-            // find the code for it!
+            //FarmRegistry.getInstance().registerFarmables(ForestryFarmIdentifier.ARBOREAL, new FarmableSapling(new ItemStack(saplings), new ItemStack[0]));
+
+            // Crop Farm
+
+            if (ModuleHelper.isEnabled(ForestryModuleUids.FARMING)) {
+                FarmRegistry.getInstance().registerFarmables(ForestryFarmIdentifier.CROPS, new FarmableAgingCrop(new ItemStack(coffeeBeans, 1, 0), coffeePlant, (IProperty<Integer>) coffeePlant.getBlockState().getProperty("age"), 6));
+            }
         }
     }
 

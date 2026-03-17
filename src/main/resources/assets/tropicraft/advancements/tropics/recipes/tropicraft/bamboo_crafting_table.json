@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tropicraft:bamboo_crafting_table"
+    ]
+  },
+  "criteria": {
+    "has_bamboo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tropicraft:bundle",
+            "data": 1
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tropicraft:bamboo_crafting_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo",
+      "has_the_recipe"
+    ]
+  ]
+}

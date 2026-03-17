@@ -24,15 +24,13 @@ public class Thermal {
             ItemStack Iris = new ItemStack(iris);
             ItemStack Bamboo = new ItemStack(bambooShoot);
             ItemStack Coconut = new ItemStack(coconut);
+            ItemStack Seaweed = new ItemStack(seaweed);
 
             InsolatorManager.addDefaultRecipe(Pineapple, ItemHelper.cloneStack(Pineapple, 2), ItemStack.EMPTY, 0);
             InsolatorManager.addDefaultRecipe(Iris, ItemHelper.cloneStack(Iris, 2), ItemStack.EMPTY, 0);
             InsolatorManager.addDefaultRecipe(Coconut, ItemHelper.cloneStack(Coconut, 2), ItemStack.EMPTY, 0);
-
-            // Only load the recipe below IF thermal expansion is present but not harvestcraft as it conflicts with its bamboo shoots.
-            if (!Loader.isModLoaded("harvestcraft")) {
-                InsolatorManager.addDefaultRecipe(Bamboo, ItemHelper.cloneStack(Bamboo, 2), ItemStack.EMPTY, 0);
-            }
+            InsolatorManager.addDefaultRecipe(Bamboo, ItemHelper.cloneStack(Bamboo, 2), ItemStack.EMPTY, 0);
+            InsolatorManager.addDefaultRecipe(Seaweed, ItemHelper.cloneStack(Seaweed, 2), ItemStack.EMPTY, 0);
 
             // Phytogenic Insolator tree augment
 
