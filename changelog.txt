@@ -1,8 +1,22 @@
+7.1.9.125 for 1.12.2:
+New
+- Coffee Berries can now be processed in a thermal expansion sawmill into biomass (_BIG_G_)
+- Bamboo Bundles can now be turned into charcoal and creosote oil in either a thermal expansion redstone furnace with the pyrolysis augment and immersive engineering or railcraft coke ovens (_BIG_G_)
+- All tropical gems can now be used as fuel in a numismatic dynamo from thermal expansion with the lapidary augment (_BIG_G_)
+- Tropical fertilizer can now be used as fuel in a thermal expansion arboreal extractor (_BIG_G_)
+- Reimplemented the Dart Gun, although for now it is just a basic ranged tool, no effect darts for now (_BIG_G_)
+Changes
+- Whole coconuts are now turned into fruit juice inside a forestry squeezer instead of coconut chunks (_BIG_G_)
+- Now Sifters are rendered like glass and can be used as building blocks, also includes connected textures (_BIG_G_)
+- Bamboo shoots can now grow up to 16 blocks tall (_BIG_G_)
+Fixes
+- Fixed there being a duplicate recipe for creating zirconium (_BIG_G_)
+
 7.1.9.124 for 1.12.2:
 New
 - Now seaweed can be grown in a Phytogenic Insolator from Thermal Expansion (_BIG_G_)
 - Added recipe book support for most items (like anyone ever uses it), currently excluding tools, and the scuba gear (_BIG_G_)
-- Coffee plants can be farmed using Forestry's Crop Farm, although the farm will not be able to harvest any coffee bushes that grow taller then one block (_BIG_G_)
+- Coffee plants can be farmed using Forestry's Crop Farm, although the farm will not be able to harvest any coffee bushes that grow taller than one block (_BIG_G_)
 - Initial Curseforge release
 
 7.1.9.123 for 1.12.2:
