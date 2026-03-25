@@ -284,6 +284,8 @@ item.tropicraft.nori_raw.name=Raw Nori
 item.tropicraft.nori_toasted.name=Toasted Nori
 item.tropicraft.ray_raw.name=Raw Spotted Eagle Ray
 item.tropicraft.ray_cooked.name=Cooked Spotted Eagle Ray
+item.tropicraft.dart_gun.name=Dart Gun
+item.tropicraft.dart.name=Dart
 
 # Feesh
 item.tropicraft.tropicalfish.0.raw.name=Raw Clownfish
@@ -426,6 +428,9 @@ gui.tropicraft.maxDepth=Max
 gui.tropicraft.timeRemaining=Gas Time
 gui.tropicraft.amtRefined=Percentage Refined
 
+#Death message localization
+death.attack.dart=%s was pin cushioned to death
+
 # Fluid localizations
 fluid.tropicraft.water=Tropics Water
 fluid.tropicraft.portal=Tropics Portal
@@ -470,6 +475,7 @@ tropicraft.tooltip.air_compressor=Place one or two empty scuba tanks in the comp
 tropicraft.tooltip.drink_mixer=Place two drink ingredients on the mixer, then place an empty mug on the base, then ???, then enjoy!
 tropicraft.tooltip.sifter=Place any type of tropics or regular sand in the sifter. What treasures are hidden inside?
 tropicraft.tooltip.bamboo_crafting_table=Currently non functional, but makes for a good decoration.
+tropicraft.tooltip.dart_gun=Damage increases with range.
 
 # Book text
 tropicraft.book.toc.title=Table of Contents
@@ -583,8 +589,8 @@ tropicraft.encyclopedia.volcanicsand.desc=Tread lightly on this sand...or don't 
 tropicraft.encyclopedia.nigel.title=Nigel Winthorpe
 tropicraft.encyclopedia.nigel.desc=The person who's journal was used to write the Encyclopedia Tropica. He was the first to discover the Tropics after finding a strange staff in an unknown jungle temple. While his current were abouts are unknown one thing is certain, he sure won't needing this no more.
 
-#tropicraft.encyclopedia.blowgun.title=Blow Gun
-#tropicraft.encyclopedia.blowgun.desc=This tube of bamboo is used to shoot neurotoxin-laced darts at your pray. You will be surprised how a far and fast you can shoot a dart with a hefty blow.
+tropicraft.encyclopedia.dart_gun.title=Blow Gun
+tropicraft.encyclopedia.dart_gun.desc=This tube of bamboo is used to shoot neurotoxin-laced darts at your pray. You will be surprised how a far and fast you can shoot a dart with a hefty blow.
 
 tropicraft.encyclopedia.bromeliad.title=Bromeliad
 tropicraft.encyclopedia.bromeliad.desc=This exotic red flower thrives in the thick of rainforests among the tree frogs and moist conditions.
@@ -640,8 +646,8 @@ tropicraft.encyclopedia.croton.desc=Go ahead and try to figure out what color th
 tropicraft.encyclopedia.dagger.title=Dagger
 tropicraft.encyclopedia.dagger.desc=Weilded by the Koa tribe when hunting or when attacked.
 
-#tropicraft.encyclopedia.dart.title=Dart
-#tropicraft.encyclopedia.dart.desc=This neurotoxin-laced dart is capable of stopping most mobs in their tracks. Be careful though, the effect is only temporary. Darts can have varying potion effects associated with them.
+tropicraft.encyclopedia.dart.title=Dart
+tropicraft.encyclopedia.dart.desc=This neurotoxin-laced dart is capable of stopping most mobs in their tracks. Be careful though, the effect is only temporary. Darts can have varying potion effects associated with them.
 
 tropicraft.encyclopedia.dracaena.title=Dracaena
 tropicraft.encyclopedia.dracaena.desc=This interesting peach and green colored plant can be found only in the rainforest.

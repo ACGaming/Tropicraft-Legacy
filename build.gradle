@@ -17,7 +17,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 ext.buildnumber = 0
-project.buildnumber = System.getenv('BUILD_NUMBER') ?: '124'
+project.buildnumber = System.getenv('BUILD_NUMBER') ?: '125'
 
 boolean dev = System.getenv('RELEASE') == null || System.getenv('RELEASE').equals('false');
 
@@ -67,8 +67,11 @@ dependencies {
     compileOnly "cofh:ThermalFoundation:1.12.2-2.6.2.26:universal"
     compileOnly "cofh:ThermalExpansion:1.12.2-5.5.3.41:universal"
     compileOnly "mezz.jei:jei_1.12.2:4.9.2.196"
+
     compileOnly "curse.maven:pams-harvestcraft-221857:2904825"
     compileOnly "curse.maven:unlimited-chisel-works-278493:3319307"
+    compileOnly "curse.maven:railcraft-51195:3853491"
+    compileOnly "curse.maven:immersive-engineering-231951:2974106"
 }
 
 processResources

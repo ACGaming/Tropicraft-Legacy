@@ -23,6 +23,7 @@
 - Fix incompatibility with Roughly Enough IDs
 - Fix incompatibility with Traverse
 - Fix miss matched block blast resistance for Chunk Slab and all fences
+- Fix multimob's dummy mob spawning all ofer the place in the tropics
 - Implement Dart Gun (was most likely not a priority to reimplement due to 1.9 adding tipped arrows)
 - Implement Fire Wand
 - Implement Ice Wand

@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "tropicraft:dart_gun"
+  },
+  "pattern": [
+    "X  ",
+    " I ",
+    "  X"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:bamboo_stick"
+    },
+    "I": {
+      "item": "tropicraft:zircon"
+    }
+  }
+}

@@ -9,16 +9,9 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemBucket;
-import net.minecraft.item.ItemDoor;
-import net.minecraft.item.ItemDye;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemSpade;
-import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -34,6 +27,7 @@ import net.tropicraft.core.common.enums.AshenMasks;
 import net.tropicraft.core.common.enums.ITropicraftVariant;
 import net.tropicraft.core.common.enums.TropicraftShells;
 import net.tropicraft.core.common.item.*;
+import net.tropicraft.core.common.item.ItemFishingRod;
 import net.tropicraft.core.common.item.armor.ItemAshenMask;
 import net.tropicraft.core.common.item.armor.ItemFireArmor;
 import net.tropicraft.core.common.item.armor.ItemNigelStache;
@@ -111,6 +105,8 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item leafBall;
     public static Item coconutBomb;
     public static Item fishingNet;
+    public static Item dartGun;
+    public static Item dart;
 
     // Bamboo n stuff
     public static Item bambooStick;
@@ -323,6 +319,8 @@ public class ItemRegistry extends TropicraftRegistry {
         swordZirconium = registerItem(registry, new ItemSword(materialZirconiumTools), "sword_zirconium");
 
         fishingNet = registerItem(registry, new ItemTropicraft(), "fishing_net");
+        dartGun = registerItem(registry, new ItemDartGun(), "dart_gun");
+        dart = registerItem(registry, new ItemTropicraft(), "dart");
 
         bambooStick = registerItem(registry, new ItemTropicraft(), "bamboo_stick");
         OreDictionary.registerOre("stickBamboo", bambooStick);

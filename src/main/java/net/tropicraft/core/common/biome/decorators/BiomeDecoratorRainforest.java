@@ -8,12 +8,7 @@ import net.minecraft.world.biome.Biome;
 import net.tropicraft.configuration.GenRates;
 import net.tropicraft.core.common.biome.BiomeTropicraft;
 import net.tropicraft.core.common.config.TropicsConfigs;
-import net.tropicraft.core.common.worldgen.WorldGenCoffeePlant;
-import net.tropicraft.core.common.worldgen.WorldGenHomeTree;
-import net.tropicraft.core.common.worldgen.WorldGenTallTree;
-import net.tropicraft.core.common.worldgen.WorldGenTualang;
-import net.tropicraft.core.common.worldgen.WorldGenUndergrowth;
-import net.tropicraft.core.common.worldgen.WorldGenUpTree;
+import net.tropicraft.core.common.worldgen.*;
 
 public class BiomeDecoratorRainforest extends BiomeDecoratorTropicraft {
 

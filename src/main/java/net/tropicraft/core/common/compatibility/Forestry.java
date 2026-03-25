@@ -63,7 +63,7 @@ public class Forestry {
                 RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(lime), new FluidStack(juice, 2 * appleJuiceAmount), coreItems.mulch.getItemStack(), 10);
                 RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(orange), new FluidStack(juice, 2 * appleJuiceAmount), coreItems.mulch.getItemStack(), 10);
                 RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(pineapple), new FluidStack(juice, 2 * appleJuiceAmount), coreItems.mulch.getItemStack(), 10);
-                RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(coconutChunk), new FluidStack(juice, 2 * appleJuiceAmount), coreItems.mulch.getItemStack(), 10);
+                RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(coconut), new FluidStack(juice, 2 * appleJuiceAmount), coreItems.mulch.getItemStack(), 10);
             }
 
             // Fermenter fuels
@@ -86,7 +86,7 @@ public class Forestry {
             ItemStack OrangeSapling = new ItemStack(saplings, 1, 5);
             ItemStack CoffeeBean = new ItemStack(coffeeBeans, 1, 2);
 
-            // Currently forestry doesn't want to register these crate's item models or recipes, so this is disabled for
+            // Currently, forestry doesn't want to register these crate's item models or recipes, so this is disabled for
             // now.
 
             if (moduleManager.isModuleEnabled(Constants.MOD_ID, ForestryModuleUids.CRATE)) {
@@ -130,7 +130,7 @@ public class Forestry {
 
             // Crop Farm
 
-            if (ModuleHelper.isEnabled(ForestryModuleUids.FARMING)) {
+            if (ModuleHelper.isEnabled(ForestryModuleUids.FARMING) && ForestryFarmIdentifier.CROPS != null) {
                 FarmRegistry.getInstance().registerFarmables(ForestryFarmIdentifier.CROPS, new FarmableAgingCrop(new ItemStack(coffeeBeans, 1, 0), coffeePlant, (IProperty<Integer>) coffeePlant.getBlockState().getProperty("age"), 6));
             }
         }

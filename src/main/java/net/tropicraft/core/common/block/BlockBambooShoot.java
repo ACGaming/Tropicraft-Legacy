@@ -18,7 +18,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 import net.tropicraft.core.registry.BlockRegistry;
-import net.tropicraft.core.registry.ItemRegistry;
 
 public class BlockBambooShoot extends BlockReed implements IPlantable {
 
@@ -92,11 +91,9 @@ public class BlockBambooShoot extends BlockReed implements IPlantable {
 			if (worldIn.isAirBlock(pos.up())) {
 				int i;
 
-				for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i) {
-					;
-				}
+				for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i) {}
 
-				if (i < 3) {
+				if (i < 16) {
 					int j = ((Integer)state.getValue(AGE)).intValue();
 
 					if (j == 15) {

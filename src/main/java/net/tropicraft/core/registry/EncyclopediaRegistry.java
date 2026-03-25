@@ -146,7 +146,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("fishingnet", new ItemStack(ItemRegistry.fishingNet)));
         enc.addPage(new ItemPage("fishbucket", new ItemStack(ItemRegistry.fishBucket)));
         //  enc.addPage(new ItemPage("enchantwand", new ItemStack(TCItemRegistry.enchantWand)));
-        //TODO enc.addPage(new ItemPage("blowgun", new ItemStack(ItemRegistry.blowGun, 1, 0)));
+        enc.addPage(new ItemPage("dart_gun", new ItemStack(ItemRegistry.dartGun)));
         //  enc.addPage(new ItemPage("firestaff", new ItemStack(TCItemRegistry.staffFire)));
         /*
          * firestaff.title = Fire Staff
@@ -267,7 +267,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         //      }
         //TODO enc.addPage(new ItemPage("curarebowl", new ItemStack(BlockRegistry.curareBowl)));
         //      TODO for (int i = 0; i < ItemCurare.effectNames.length; i++) {
-        //          enc.addPage(new ItemPage("dart", new ItemStack(TCItemRegistry.dart, 1, i)));
+        enc.addPage(new ItemPage("dart", new ItemStack(ItemRegistry.dart)));
         //      }
         enc.addPage(new ItemPage("fertilizer", new ItemStack(ItemRegistry.fertilizer)));
 

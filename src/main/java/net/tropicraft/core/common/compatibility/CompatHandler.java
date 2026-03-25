@@ -1,7 +1,13 @@
 package net.tropicraft.core.common.compatibility;
 
+import com.pam.harvestcraft.HarvestCraft;
+import com.pam.harvestcraft.tileentities.MarketData;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import java.lang.reflect.InvocationTargetException;
 
 import static net.tropicraft.core.common.config.TropicsConfigs.*;
 
@@ -17,6 +23,10 @@ public class CompatHandler {
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.preInit();
         if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.preInit();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.preInit();
+        if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.preInit();
+        if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.preInit();
+
+        //if (Loader.isModLoaded("") && enable Module) .preInit();
     }
 
     public static void init() {
@@ -24,6 +34,10 @@ public class CompatHandler {
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.init();
         if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule)  Harvestcraft.init();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule)  UnlimitedChiselWorks.init();
+        if (Loader.isModLoaded("railcraft") && enableRailcraftModule)  Railcraft.init();
+        if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule)  ImmersiveEngineering.init();
+
+        //if (Loader.isModLoaded("") && enable Module) .initnit();
     }
 
     public static void postInit() {
@@ -31,5 +45,9 @@ public class CompatHandler {
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.postInit();
         if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.postInit();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.postInit();
+        if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.postInit();
+        if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.postInit();
+
+        //if (Loader.isModLoaded("") && enable Module) .postInit();
     }
 }

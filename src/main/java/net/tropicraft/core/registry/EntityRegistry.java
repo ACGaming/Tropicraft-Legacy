@@ -43,6 +43,7 @@ import net.tropicraft.core.common.entity.placeable.EntityChair;
 import net.tropicraft.core.common.entity.placeable.EntityUmbrella;
 import net.tropicraft.core.common.entity.placeable.EntityWallItem;
 import net.tropicraft.core.common.entity.projectile.EntityCoconutGrenade;
+import net.tropicraft.core.common.entity.projectile.EntityDart;
 import net.tropicraft.core.common.entity.projectile.EntityPoisonBlot;
 import net.tropicraft.core.common.entity.underdasea.EntityManOWar;
 import net.tropicraft.core.common.entity.underdasea.EntitySeaTurtle;
@@ -105,6 +106,7 @@ public class EntityRegistry {
         registerEntity(registry, EntityHook.class, "tropihook", 80, 1, true);
         registerEntity(registry, EntityTropiSpider.class, "tropispider", 80, 3, true, SpawnPlacementType.ON_GROUND);
         registerEntity(registry, EntityTropiSpiderEgg.class, "tropispideregg", 80, 5, false);
+        registerEntity(registry, EntityDart.class, "dart", 32, 1, false);
 
         // Overworld mob spawns
         if (TropicsConfigs.spawnPassiveTropicsOceanMobsOverworld) {
