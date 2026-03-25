@@ -11,6 +11,7 @@ Changes
 - Bamboo shoots can now grow up to 16 blocks tall (_BIG_G_)
 Fixes
 - Fixed there being a duplicate recipe for creating zirconium (_BIG_G_)
+- Fixed lemons not being assigned to the "listAllCitrus" ore dictionary (_BIG_G_)
 
 7.1.9.124 for 1.12.2:
 New

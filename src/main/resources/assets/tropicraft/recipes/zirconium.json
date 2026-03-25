@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "tropicraft:zirconium",
+    "count": 1
+  },
+  "pattern": [
+    "AA",
+    "ZZ"
+  ],
+  "key": {
+    "A": {
+      "item": "tropicraft:azurite"
+    },
+    "Z": {
+      "item": "tropicraft:zircon"
+    }
+  }
+}
