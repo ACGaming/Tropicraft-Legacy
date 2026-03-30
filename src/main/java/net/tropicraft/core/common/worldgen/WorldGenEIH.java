@@ -220,22 +220,24 @@ public class WorldGenEIH extends TCGenBase {
             int eyeTwoX = i - 3;
             int eyeTwoY = j + 5;
             int eyeTwoZ = k + 1;
-            
+
             // Place eyes
-            placeEye(eyeOneX, eyeOneY, eyeOneZ);
-            placeEye(eyeTwoX, eyeTwoY, eyeTwoZ);
+            int eyeRand = rand.nextInt(TropicsConfigs.genEIHEyes.length);
+            placeEye(eyeOneX, eyeOneY, eyeOneZ, eyeRand);
+            placeEye(eyeTwoX, eyeTwoY, eyeTwoZ, eyeRand);
         }
         return true;
     }
-    
+
     /**
      * Place an eye on the head
      * @param x xCoord
      * @param y yCoord
      * @param z zCoord
+     * @param eyeRand random eye integer
      */
-    private void placeEye(int x, int y, int z) {
-        IBlockState blockstate = parseBlockState(TropicsConfigs.genEIHEyes[rand.nextInt(TropicsConfigs.genEIHEyes.length)]);
+    private void placeEye(int x, int y, int z, int eyeRand) {
+        IBlockState blockstate = parseBlockState(TropicsConfigs.genEIHEyes[eyeRand]);
         TCGenUtils.setBlockState(worldObj, x, y, z, blockstate, blockGenNotifyFlag);
     }
 

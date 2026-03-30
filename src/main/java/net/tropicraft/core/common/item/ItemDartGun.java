@@ -2,10 +2,13 @@ package net.tropicraft.core.common.item;
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.*;
+import net.minecraft.stats.StatList;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -15,6 +18,9 @@ import net.tropicraft.core.registry.ItemRegistry;
 
 import javax.annotation.Nullable;
 import java.util.List;
+
+import static net.minecraft.item.ItemBow.getArrowVelocity;
+import static sun.audio.AudioPlayer.player;
 
 public class ItemDartGun extends ItemTropicraft {
 
@@ -74,6 +80,67 @@ public class ItemDartGun extends ItemTropicraft {
     {
         return 16;
     }
+
+    // Called when the player stops using an Item (stops holding the right mouse button).
+/*
+    public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft)
+    {
+        if (entityLiving instanceof EntityPlayer)
+        {
+            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
+            boolean flag = entityplayer.capabilities.isCreativeMode;
+            ItemStack itemstack = this.findDart(entityplayer);
+
+            int i = this.getMaxItemUseDuration(stack) - timeLeft;
+            i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, entityplayer, i, !itemstack.isEmpty() || flag);
+            if (i < 0) return;
+
+            if (!itemstack.isEmpty() || flag)
+            {
+                if (itemstack.isEmpty())
+                {
+                    itemstack = new ItemStack(ItemRegistry.dart);
+                }
+
+                float f = getArrowVelocity(i);
+
+                if ((double)f >= 0.1D)
+                {
+                    boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemDart);
+
+                    if (!worldIn.isRemote)
+                    {
+                        ItemDart itemarrow = (ItemDart)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : ItemRegistry.dart);
+                        EntityDart entitydart = itemarrow.createDart(worldIn, itemstack, entityplayer);
+                        entitydart.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
+
+                        if (EnchantmentHelper.getEnchantmentLevel(Enchantments.FLAME, stack) > 0)
+                        {
+                            entitydart.setFire(100);
+                        }
+
+                        stack.damageItem(1, entityplayer);
+
+                    }
+
+                    worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+
+                    if (!flag1 && !entityplayer.capabilities.isCreativeMode)
+                    {
+                        itemstack.shrink(1);
+
+                        if (itemstack.isEmpty())
+                        {
+                            entityplayer.inventory.deleteStack(itemstack);
+                        }
+                    }
+
+                    entityplayer.addStat(StatList.getObjectUseStats(this));
+                }
+            }
+        }
+    }
+*/
 
     @Override
     public ItemStack onItemUseFinish(ItemStack itemStack, World world, EntityLivingBase living)

@@ -54,8 +54,8 @@
                             }
                         },
                         {
-                            "function": "set_damage",
-                            "damage": {
+                            "function": "set_data",
+                            "data": {
                                 "min": 0,
                                 "max": 5
                             }
@@ -106,67 +106,31 @@
                 {
                     "type": "item",
                     "name": "tropicraft:buried_treasure",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:trade_winds",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:eastern_isles",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:low_tide",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:summering",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:the_tribe",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": 1
-                        }
-                    ],
                     "weight": 9
                 },
                 {
@@ -181,8 +145,8 @@
                             }
                         },
                         {
-                            "function": "set_damage",
-                            "damage": {
+                            "function": "set_data",
+                            "data": {
                                 "min": 0,
                                 "max": 72
                             }

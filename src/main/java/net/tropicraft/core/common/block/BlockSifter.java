@@ -88,7 +88,8 @@ public class BlockSifter extends BlockTropicraft implements ITileEntityProvider 
 		if (tileentitysifta != null && !stack.isEmpty() && !tileentitysifta.isSifting()) {
 			Item helditem = stack.getItem();
 			if (helditem == Item.getItemFromBlock(Blocks.SAND) || (helditem == Item.getItemFromBlock(BlockRegistry.sands))) {
-				tileentitysifta.addItemToSifter(stack.splitStack(1));
+				//tileentitysifta.addItemToSifter(stack.splitStack(1));
+				tileentitysifta.addItemToSifter(new ItemStack(stack.getItem()));
 				tileentitysifta.startSifting();
 			}
 		}

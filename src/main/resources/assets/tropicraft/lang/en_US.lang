@@ -474,7 +474,7 @@ tropicraft.loading.misc.2=Prepare to make a splash
 tropicraft.tooltip.air_compressor=Place one or two empty scuba tanks in the compressor to fill them with air!
 tropicraft.tooltip.drink_mixer=Place two drink ingredients on the mixer, then place an empty mug on the base, then ???, then enjoy!
 tropicraft.tooltip.sifter=Place any type of tropics or regular sand in the sifter. What treasures are hidden inside?
-tropicraft.tooltip.bamboo_crafting_table=Currently non functional, but makes for a good decoration.
+#tropicraft.tooltip.bamboo_crafting_table=Currently non functional, but makes for a good decoration.
 tropicraft.tooltip.dart_gun=Damage increases with range.
 
 # Book text

@@ -46,6 +46,6 @@ public class BlockBambooCraftingTable extends BlockWorkbench {
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag flag) {
         super.addInformation(stack, world, tooltip, flag);
-        tooltip.add(I18n.format("tropicraft.tooltip.bamboo_crafting_table"));
+        //tooltip.add(I18n.format("tropicraft.tooltip.bamboo_crafting_table"));
     }
 }

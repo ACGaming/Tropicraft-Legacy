@@ -407,6 +407,9 @@ public class EntityDart extends Entity implements IProjectile, IEntityAdditional
         }
     }
 
+    public void shoot(EntityPlayer entityplayer, float rotationPitch, float rotationYaw, float v, float v1, float v2) {
+    }
+
     public enum DartType
     {
         dart;

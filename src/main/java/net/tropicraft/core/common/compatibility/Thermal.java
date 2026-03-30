@@ -10,7 +10,6 @@ import cofh.thermalexpansion.util.managers.machine.ExtruderManager;
 import cofh.thermalexpansion.util.managers.machine.SawmillManager;
 import cofh.thermalfoundation.init.TFFluids;
 import cofh.thermalfoundation.item.ItemMaterial;
-
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
@@ -98,15 +97,13 @@ public class Thermal {
 
         // Tapper
 
-        //TapperManager.addStandardMapping(new ItemStack(BlockRegistry.logs, 1, 0), new FluidStack(sap, 50));
-        //TapperManager.addStandardMapping(new ItemStack(logs, 1, 1), new FluidStack(resin, 100));
+        //TapperManager.addStandardMapping(PalmLog, sap);
+        //TapperManager.addStandardMapping(MahoganyLog, resin);
 
-            // Leaves
+        //addLeafMapping(logs, 1, leaves, 1);
+        //addLeafMapping(logs, 0, leaves, 0);
 
-        TapperManager.addLeafMapping(logs.getDefaultState(), leaves.getDefaultState());
-
-            // Fertilizer
-        //TapperManager.addFertilizer(fertilizer, 2);
+        // Tapper Fuel
         //TapperManager.addFertilizer(fertilizerCompound, 2);
 
         // All this because someone decided to make the addFertilizer function private.

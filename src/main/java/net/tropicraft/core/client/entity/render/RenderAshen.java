@@ -3,12 +3,16 @@ package net.tropicraft.core.client.entity.render;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.tropicraft.core.client.TropicraftRenderUtils;
 import net.tropicraft.core.client.entity.model.ModelAshen;
 import net.tropicraft.core.client.entity.render.layers.LayerHeldItemAshen;
 import net.tropicraft.core.client.entity.render.layers.LayerMaskAshen;
 import net.tropicraft.core.common.entity.hostile.EntityAshen;
+import net.tropicraft.core.common.entity.hostile.EntityAshenHunter;
+import net.tropicraft.core.registry.ItemRegistry;
+import org.lwjgl.opengl.GL11;
 
 public class RenderAshen extends RenderLiving<EntityAshen> {
 
@@ -44,7 +48,7 @@ public class RenderAshen extends RenderLiving<EntityAshen> {
 
 	//    @Override
 	//    protected void renderEquippedItems(EntityAshen entityliving, float f) {
-		//        if (entityliving instanceof EntityAshenHunter) {
+	//	          if (entityliving instanceof EntityAshenHunter) {
 	//            if (((EntityAshen) entityliving).getActionState() == 2) {
 	//                GL11.glPushMatrix();
 	//                modelAshen.leftArm.postRender(0.0625F);
@@ -53,7 +57,7 @@ public class RenderAshen extends RenderLiving<EntityAshen> {
 	//                GL11.glRotatef(45F, 0.0F, 1.0F, 0.0F);
 	//                float scale = 0.3F;
 	//                GL11.glScalef(scale, scale, scale);
-	//         //TODO       RenderManager.instance.itemRenderer.renderItem(entityliving, new ItemStack(TCItemRegistry.spearBamboo), 0);
+	//TODO            RenderManager.instance.itemRenderer.renderItem(entityliving, new ItemStack(ItemRegistry.bambooSpear), 0);
 	//                
 	//                GL11.glPopMatrix();
 	//                GL11.glPushMatrix();
@@ -79,7 +83,7 @@ public class RenderAshen extends RenderLiving<EntityAshen> {
 	//                GL11.glRotatef(160F, 0.0F, 1.0F, 0.0F);*/
 	//                
 	//                GL11.glScalef(scale, scale, scale);
-	//                Minecraft.getMinecraft().getItemRenderer().renderItem(entityliving, new ItemStack(ItemRegistry.blowGun), 0);
+	//                Minecraft.getMinecraft().getItemRenderer().renderItem(entityliving, new ItemStack(ItemRegistry.dartGun), 0);
 	//                GL11.glPopMatrix();
 	//            }
 	//        }

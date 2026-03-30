@@ -1,11 +1,12 @@
 - Add a built-in resource pack to undo all texture changes
-- Add Bamboo Crafting Table
+- Add a Tropics worldtype
 - Add Unlimited Chiselworks compat
 - Bring back coral and foamy sands spawning on beaches
 - Check if easter island heads do actually spawn with zirconium block eyes
 - Caught in the rain advancement is triggered by drinking anything but a pina colada???
 - Fill in all placeholder Encyclopedia entries
 - Finish implementing the diving computer
+- Fix bamboo, shaka, manganese, kelp and coral worldgen features spawning so square
 - Fix crash caused by incompatibility with buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
 - Fix respawning coconuts being able to replace other blocks, check "BlockTropicraftLog" line 64
 - Fix bamboo fishing rods stacking if bought from koa fisherman
@@ -24,7 +25,7 @@
 - Fix incompatibility with Traverse
 - Fix miss matched block blast resistance for Chunk Slab and all fences
 - Fix multimob's dummy mob spawning all ofer the place in the tropics
-- Implement Dart Gun (was most likely not a priority to reimplement due to 1.9 adding tipped arrows)
+- Implement darts with potion effects
 - Implement Fire Wand
 - Implement Ice Wand
 - Implement Leaf Ball

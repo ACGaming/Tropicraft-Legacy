@@ -29,9 +29,9 @@ public class TropicsConfigs {
             "minecraft:diamond_block",
             "minecraft:iron_block",
             "minecraft:gold_block",
-            "tropicraft:ore:0",
-            "tropicraft:ore:1",
-            "tropicraft:ore:2",
+            "tropicraft:blockore:0",
+            "tropicraft:blockore:1",
+            "tropicraft:blockore:2",
             "tropicraft:zirconium_block"
     };
     public static boolean genOverworldEIH = true;

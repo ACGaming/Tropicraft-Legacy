@@ -95,13 +95,6 @@ public class TileEntitySifter extends TileEntity implements ITickable {
 		List<ItemStack> drops = table.generateLootForPools(rand, builder.build());
 		for (ItemStack stack : drops) {
 			if (!stack.isEmpty()) {
-				if (stack.getItem() == ItemRegistry.ltShell) {
-					int damage = rand.nextInt(Names.LT17_NAMES.length);
-					stack.setItemDamage(damage);
-				} else if (stack.getItem() == ItemRegistry.shell) {
-					int damage = rand.nextInt(TropicraftShells.values().length);
-					stack.setItemDamage(damage);
-				}
 				spawn(stack, x, y, z);
 			}
 		}

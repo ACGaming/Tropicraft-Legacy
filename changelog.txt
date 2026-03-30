@@ -1,3 +1,13 @@
+7.1.9.126 for 1.12.2:
+New
+- The Bamboo Crafting Table is now fully useable (ACGaming)
+Changes
+- Sunken Ships now use json loot tables instead of having their chest loot hardcoded (_BIG_G_/ACGaming)
+- The sifter now uses loot tables for its drops (ACGaming)
+Fixes
+- Fixed Easter Island Heads not being able to spawn with Zirconium Block Eyes (_BIG_G_)
+- Fixed right-clicking on a sifter in creative mode still consuming the held item (ACGaming)
+
 7.1.9.125 for 1.12.2:
 New
 - Coffee Berries can now be processed in a thermal expansion sawmill into biomass (_BIG_G_)
