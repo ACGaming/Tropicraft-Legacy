@@ -35,7 +35,7 @@ public class BlockBambooCraftingTable extends BlockWorkbench {
         }
         else
         {
-            playerIn.openGui(Tropicraft.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            playerIn.openGui(Tropicraft.instance, 1, worldIn, pos.getX(), pos.getY(), pos.getZ());
             return true;
         }
     }
