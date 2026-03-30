@@ -23,6 +23,17 @@ public class TropicsConfigs {
     public static int chancePalmOverworld = -1;
     public static int factorPalmOverworld = 3;
 
+    public static String[] genEIHEyes = new String[] {
+            "minecraft:glowstone",
+            "minecraft:obsidian",
+            "minecraft:diamond_block",
+            "minecraft:iron_block",
+            "minecraft:gold_block",
+            "tropicraft:ore:0",
+            "tropicraft:ore:1",
+            "tropicraft:ore:2",
+            "tropicraft:zirconium_block"
+    };
     public static boolean genOverworldEIH = true;
     public static boolean genOverworldFlowers = true;
     public static boolean genOverworldPineapples = true;
@@ -100,6 +111,7 @@ public class TropicsConfigs {
         chancePalmOverworld = config.get(C_GENERATION, "palmChanceOfGenInOverworld", chancePalmOverworld).getInt();
         factorPalmOverworld = config.get(C_GENERATION, "palmPopulationFactorInOverworld", factorPalmOverworld).getInt();
 
+        genEIHEyes = config.get(C_GENERATION, "genEIHEyes", genEIHEyes, "List of blocks for the EIH statue's eyes - Format: modid:block[:metadata] - Example: minecraft:glowstone OR tropicraft:ore:3").getStringList();
         genOverworldEIH = config.get(C_GENERATION, "genTropicraftEIHInOverworld", genOverworldEIH).getBoolean();
         genOverworldFlowers = config.get(C_GENERATION, "genTropicraftFlowersInOverworld", genOverworldFlowers).getBoolean();
         genOverworldPineapples = config.get(C_GENERATION, "genPineapplesInOverworld", genOverworldPineapples).getBoolean();
