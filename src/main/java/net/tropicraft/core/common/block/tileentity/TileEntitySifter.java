@@ -1,5 +1,6 @@
 package net.tropicraft.core.common.block.tileentity;
 
+import java.util.List;
 import java.util.Random;
 
 import javax.annotation.Nonnull;
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -16,12 +16,16 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
+import net.minecraft.world.WorldServer;
+import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.storage.loot.LootTable;
 import net.tropicraft.Names;
 import net.tropicraft.core.common.block.tileentity.message.MessageSifterInventory;
 import net.tropicraft.core.common.block.tileentity.message.MessageSifterStart;
 import net.tropicraft.core.common.enums.TropicraftShells;
 import net.tropicraft.core.common.network.TCPacketHandler;
 import net.tropicraft.core.registry.ItemRegistry;
+import net.tropicraft.core.registry.LootRegistry;
 
 public class TileEntitySifter extends TileEntity implements ITickable {
 
@@ -85,23 +89,23 @@ public class TileEntitySifter extends TileEntity implements ITickable {
 	 * Dump the items involved in regular sifting
 	 */
 	private void dumpBeachResults(double x, double y, double z) {
-		int dumpCount = rand.nextInt(3) + 1;
-		ItemStack stack;
-
-		while (dumpCount > 0) {
-			dumpCount--;
-
-			if (rand.nextInt(10) == 0) {
-				stack = getRareItem();
-			} else if (rand.nextInt(10) < 3) {
-				int damage = rand.nextInt(Names.LT17_NAMES.length);
-				stack = new ItemStack(ItemRegistry.ltShell, 1, damage);
-			} else {
-				stack = getCommonItem();
+		if (getWorld().isRemote) return;
+		LootTable table = getWorld().getLootTableManager().getLootTableFromLocation(isHeatedSifter() ? LootRegistry.sifterHeated : LootRegistry.sifterRegular);
+		LootContext.Builder builder = new LootContext.Builder((WorldServer) getWorld());
+		List<ItemStack> drops = table.generateLootForPools(rand, builder.build());
+		for (ItemStack stack : drops) {
+			if (!stack.isEmpty()) {
+				if (stack.getItem() == ItemRegistry.ltShell) {
+					int damage = rand.nextInt(Names.LT17_NAMES.length);
+					stack.setItemDamage(damage);
+				} else if (stack.getItem() == ItemRegistry.shell) {
+					int damage = rand.nextInt(TropicraftShells.values().length);
+					stack.setItemDamage(damage);
+				}
+				spawn(stack, x, y, z);
 			}
-
-			spawn(stack, x, y, z);
 		}
+		this.syncInventory();
 	}
 
 	/**
@@ -113,40 +117,6 @@ public class TileEntitySifter extends TileEntity implements ITickable {
 		EntityItem eitem = new EntityItem(getWorld(), x, y, z, stack);
 		eitem.setLocationAndAngles(x, y, z, 0, 0);
 		getWorld().spawnEntity(eitem);
-	}
-
-	private ItemStack getCommonItem() {
-		// Random from -1 to size-1
-		int dmg = rand.nextInt(TropicraftShells.values().length + 1) - 1;
-		if (dmg < 0) {
-		    return getRareItem();
-		}
-		return new ItemStack(ItemRegistry.shell, 1, dmg);
-	}
-
-	private ItemStack getRareItem() {
-		int dmg = rand.nextInt(12);
-
-		switch (dmg) {
-		case 0:
-			return new ItemStack(ItemRegistry.shell, 1, TropicraftShells.RUBE.getMeta()); //rube nautilus
-		case 1:
-			return new ItemStack(Items.GOLD_NUGGET, 1);
-		case 2:
-			return new ItemStack(Items.BUCKET, 1);
-		case 3:
-			return new ItemStack(Items.WOODEN_SHOVEL, 1);
-		case 4:
-			return new ItemStack(Items.GLASS_BOTTLE, 1);
-		case 5:
-			return new ItemStack(ItemRegistry.whitePearl, 1);
-		case 6:
-			return new ItemStack(ItemRegistry.blackPearl, 1);
-		case 7:
-			return new ItemStack(Items.STONE_SHOVEL, 1);
-		default:
-			return new ItemStack(ItemRegistry.shell, 1, TropicraftShells.RUBE.getMeta()); //rube nautilus
-		}
 	}
 
 	/**

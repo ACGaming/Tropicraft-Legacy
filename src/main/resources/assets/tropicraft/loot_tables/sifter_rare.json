@@ -1,0 +1,50 @@
+{
+  "pools": [
+    {
+      "name": "rare",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "tropicraft:shell",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_nugget",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bucket",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:wooden_shovel",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:glass_bottle",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:white_pearl",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:black_pearl",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:stone_shovel",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}
