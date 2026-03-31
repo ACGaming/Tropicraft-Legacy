@@ -1,17 +1,15 @@
-- Add a built-in resource pack to undo all texture changes
-- Add a Tropics worldtype
-- Add Unlimited Chiselworks compat
-- Bring back coral and foamy sands spawning on beaches
-- Check if easter island heads do actually spawn with zirconium block eyes
-- Caught in the rain advancement is triggered by drinking anything but a pina colada???
+## DOES IT EVEN WORK? ##
+
+- Can volcano's actually erupt?
+
+## FIX ##
+
+- Caught in the rain advancement is triggered by drinking anything but a piña colada???
 - Fix chunk o head blocks not covering the inside of volcano's all the way to bedrock
 - Fix tropics hostile mobs still tracking down players even in peaceful
-- Fill in all placeholder Encyclopedia entries
-- Finish implementing the diving computer
 - Fix cascading worldgen lag while in the tropics
 - Fix bamboo, shaka, manganese, kelp and coral worldgen features spawning so square
 - Fix crash caused by incompatibility with buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
-- Fix respawning coconuts being able to replace other blocks, check "BlockTropicraftLog" line 64
 - Fix bamboo fishing rods stacking if bought from koa fisherman
 - Fix Bamboo Flower Pots: - Not dropping the flower they contain (present as early as TC 7.0 for 1.10.2)
                           - Trying to put a pineapple or iris flower in a bamboo flower pot will cause the item to be consumed but not displayed in the pot itself (present as early as TC 7.0 for 1.10.2)
@@ -28,22 +26,33 @@
 - Fix incompatibility with Traverse
 - Fix miss matched block blast resistance for Chunk Slab and all fences
 - Fix multimob's dummy mob spawning all ofer the place in the tropics
+
+## MAYBE ##
+
+- Add a built-in resource pack to undo all texture changes
+- Add a Tropics worldtype
+- Add Unlimited Chiselworks compat
+- Bring back coral and foamy sands spawning on beaches
+- Make the tiki torch look more like a tiki torch
+- Rebalance tool stats?
+- Make koa trades unlock like villager trades?
+- Fix Donation Block no longer working?
+- Add bamboo-glass boat?
+- Bring back placeable cocktails?
+
+## TODO ##
+
+- Make Home Tree chests use loot tables instead of hardcoded loot
+- Fill in all placeholder Encyclopedia entries
+- Finish implementing the diving computer
 - Implement darts with potion effects
 - Implement Fire Wand
 - Implement Ice Wand
 - Implement Leaf Ball
 - Implement Tame Wand
 - Make fire armor craftable by throwing scale armor in lava
-- Make the sifter cull it's sides like glass
-- Make the tiki torch look more like a tiki torch
 - Make trapdoors work as furnace fuels
 - Rewrite encyclopedia entity page type, make them not only get unlocked if you give yourself the spawn eggs of mobs
 - Update sapling_palm.png, make it actually look like a palm tree
-- Update the Drink Mixer model and texture, make it not look exactly like the air compressor
-- Update languages: franch, russian, chinese, etc
-Maybe:
-- Rebalance tool stats?
-- Make koa trades unlock like villager trades?
-- Fix Donation Block no longer working?
-- Add bamboo-glass boat?
-- Bring back placeable cocktails?
+- Update languages: french, russian, chinese, etc.
+- Update bamboo flower pot item texture to better match the vanilla flower pot
