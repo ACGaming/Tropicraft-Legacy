@@ -1,417 +1,85 @@
 package net.tropicraft.core.common.entity.projectile;
 
 import io.netty.buffer.ByteBuf;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IProjectile;
-import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.network.play.server.SPacketChangeGameState;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.tropicraft.core.common.TropicraftDamageSource;
+import net.tropicraft.core.registry.ItemRegistry;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
-public class EntityDart extends Entity implements IProjectile, IEntityAdditionalSpawnData
-{
+public class EntityDart extends EntityArrow implements IProjectile, IEntityAdditionalSpawnData {
     private static final DataParameter<Integer> DART_TYPE = EntityDataManager.createKey(EntityDart.class, DataSerializers.VARINT);
-    private Entity shootingEntity;
-    private int ticksInAir;
-    private double damage;
 
-    public EntityDart(World world)
-    {
+    public EntityDart(World world) {
         super(world);
-        this.setSize(0.1F, 0.1F);
+        this.setSize(0.5F, 0.5F);
     }
 
-    public EntityDart(World world, double x, double y, double z)
-    {
-        super(world);
-        this.setSize(0.1F, 0.1F);
-        this.setPosition(x, y, z);
-    }
-
-    public EntityDart(World world, EntityLivingBase shooter, EntityLivingBase indirect, float velocity, float inaccuracy)
-    {
-        super(world);
-        this.shootingEntity = shooter;
-        this.posY = shooter.posY + shooter.getEyeHeight() - 0.10000000149011612D;
-        double d0 = indirect.posX - shooter.posX;
-        double d1 = indirect.getEntityBoundingBox().minY + indirect.height / 3.0F - this.posY;
-        double d2 = indirect.posZ - shooter.posZ;
-        double d3 = MathHelper.sqrt(d0 * d0 + d2 * d2);
-
-        if (d3 >= 1.0E-7D)
-        {
-            float f = (float)(MathHelper.atan2(d2, d0) * 180.0D / Math.PI) - 90.0F;
-            float f1 = (float)-(MathHelper.atan2(d1, d3) * 180.0D / Math.PI);
-            double d4 = d0 / d3;
-            double d5 = d2 / d3;
-            this.setLocationAndAngles(shooter.posX + d4, this.posY, shooter.posZ + d5, f, f1);
-            float f2 = (float)(d3 * 0.20000000298023224D);
-            this.shoot(d0, d1 + f2, d2, velocity, inaccuracy);
-        }
-    }
-
-    public EntityDart(World world, EntityLivingBase shooter, float velocity)
-    {
-        super(world);
-        this.shootingEntity = shooter;
-        this.setSize(0.1F, 0.1F);
-        this.setLocationAndAngles(shooter.posX, shooter.posY + shooter.getEyeHeight(), shooter.posZ, shooter.rotationYaw, shooter.rotationPitch);
-        this.posX -= MathHelper.cos(this.rotationYaw / 180.0F * (float)Math.PI) * 0.16F;
-        this.posY -= 0.10000000149011612D;
-        this.posZ -= MathHelper.sin(this.rotationYaw / 180.0F * (float)Math.PI) * 0.16F;
-        this.setPosition(this.posX, this.posY, this.posZ);
-        this.motionX = -MathHelper.sin(this.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(this.rotationPitch / 180.0F * (float)Math.PI);
-        this.motionZ = MathHelper.cos(this.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(this.rotationPitch / 180.0F * (float)Math.PI);
-        this.motionY = -MathHelper.sin(this.rotationPitch / 180.0F * (float)Math.PI);
-        this.shoot(this.motionX, this.motionY, this.motionZ, velocity * 1.5F, 1.0F);
+    public EntityDart(World world, EntityLivingBase shooter, float velocity) {
+        super(world, shooter);
+        this.setSize(0.5F, 0.5F);
+        this.setDamage(3.0D);
+        this.shoot(shooter, shooter.rotationPitch, shooter.rotationYaw, 0.0F, velocity, 1.0F);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public boolean isInRangeToRenderDist(double distance)
-    {
-        double d0 = this.getEntityBoundingBox().getAverageEdgeLength() * 10.0D;
+    protected void entityInit() {
+        super.entityInit();
+        this.dataManager.register(DART_TYPE, 0);
+    }
 
-        if (Double.isNaN(d0))
-        {
-            d0 = 1.0D;
-        }
-        d0 = d0 * 64.0D * getRenderDistanceWeight();
-        return distance < d0 * d0;
+    public DartType getDartType() {
+        return DartType.values()[this.dataManager.get(DART_TYPE)];
+    }
+
+    public void setDartType(DartType type) {
+        this.dataManager.set(DART_TYPE, type.ordinal());
     }
 
     @Override
-    protected void entityInit()
-    {
-        this.dataManager.register(EntityDart.DART_TYPE, 0);
+    public void writeEntityToNBT(NBTTagCompound compound) {
+        super.writeEntityToNBT(compound);
+        compound.setInteger("DartType", this.getDartType().ordinal());
     }
 
     @Override
-    public void shoot(double x, double y, double z, float velocity, float inaccuracy)
-    {
-        float f = MathHelper.sqrt(x * x + y * y + z * z);
-        x = x / f;
-        y = y / f;
-        z = z / f;
-        x = x + this.rand.nextGaussian() * 0.007499999832361937D * inaccuracy;
-        y = y + this.rand.nextGaussian() * 0.007499999832361937D * inaccuracy;
-        z = z + this.rand.nextGaussian() * 0.007499999832361937D * inaccuracy;
-        x = x * velocity;
-        y = y * velocity;
-        z = z * velocity;
-        this.motionX = x;
-        this.motionY = y;
-        this.motionZ = z;
-        float f1 = MathHelper.sqrt(x * x + z * z);
-        this.rotationYaw = (float)(MathHelper.atan2(x, z) * (180D / Math.PI));
-        this.rotationPitch = (float)(MathHelper.atan2(y, f1) * (180D / Math.PI));
-        this.prevRotationYaw = this.rotationYaw;
-        this.prevRotationPitch = this.rotationPitch;
+    public void readEntityFromNBT(NBTTagCompound compound) {
+        super.readEntityFromNBT(compound);
+        this.setDartType(DartType.values()[compound.getInteger("DartType")]);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void setPositionAndRotationDirect(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean teleport)
-    {
-        this.setPosition(x, y, z);
-        this.setRotation(yaw, pitch);
+    protected ItemStack getArrowStack() {
+        return new ItemStack(ItemRegistry.dart);
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void setVelocity(double x, double y, double z)
-    {
-        this.motionX = x;
-        this.motionY = y;
-        this.motionZ = z;
-
-        if (this.prevRotationPitch == 0.0F && this.prevRotationYaw == 0.0F)
-        {
-            float f = MathHelper.sqrt(x * x + z * z);
-            this.prevRotationYaw = this.rotationYaw = (float)(MathHelper.atan2(x, z) * 180.0D / Math.PI);
-            this.prevRotationPitch = this.rotationPitch = (float)(MathHelper.atan2(y, f) * 180.0D / Math.PI);
-            this.prevRotationYaw = this.rotationYaw;
-            this.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, this.rotationPitch);
-        }
-    }
-
-    @Override
-    public void onUpdate()
-    {
-        super.onUpdate();
-
-        if (this.prevRotationPitch == 0.0F && this.prevRotationYaw == 0.0F)
-        {
-            float f = MathHelper.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);
-            this.rotationYaw = (float)(MathHelper.atan2(this.motionX, this.motionZ) * (180D / Math.PI));
-            this.rotationPitch = (float)(MathHelper.atan2(this.motionY, f) * (180D / Math.PI));
-            this.prevRotationYaw = this.rotationYaw;
-            this.prevRotationPitch = this.rotationPitch;
-        }
-
-        ++this.ticksInAir;
-        Vec3d vec31 = new Vec3d(this.posX, this.posY, this.posZ);
-        Vec3d vec3 = new Vec3d(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
-        RayTraceResult raytraceresult = this.world.rayTraceBlocks(vec31, vec3, false, true, false);
-        vec31 = new Vec3d(this.posX, this.posY, this.posZ);
-        vec3 = new Vec3d(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
-
-        if (this.ticksInAir > 8)
-        {
-            this.setDead();
-        }
-        if (raytraceresult != null)
-        {
-            vec3 = new Vec3d(raytraceresult.hitVec.x, raytraceresult.hitVec.y, raytraceresult.hitVec.z);
-        }
-
-        Entity entity = this.findEntityOnPath(vec31, vec3);
-
-        if (entity != null)
-        {
-            raytraceresult = new RayTraceResult(entity);
-        }
-
-        if (raytraceresult != null && raytraceresult.entityHit instanceof EntityPlayer)
-        {
-            EntityPlayer entityplayer = (EntityPlayer)raytraceresult.entityHit;
-
-            if (this.shootingEntity instanceof EntityPlayer && !((EntityPlayer)this.shootingEntity).canAttackPlayer(entityplayer))
-            {
-                raytraceresult = null;
-            }
-        }
-
-        if (this.getDartType() == 0) {
-            this.damage = 2.0D;
-        }
-
-        if (raytraceresult != null && !ForgeEventFactory.onProjectileImpact(this, raytraceresult))
-        {
-            this.onHit(raytraceresult);
-        }
-
-        this.posX += this.motionX;
-        this.posY += this.motionY;
-        this.posZ += this.motionZ;
-        float f3 = MathHelper.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);
-        this.rotationYaw = (float)(MathHelper.atan2(this.motionX, this.motionZ) * 180.0D / Math.PI);
-
-        for (this.rotationPitch = (float)(MathHelper.atan2(this.motionY, f3) * 180.0D / Math.PI); this.rotationPitch - this.prevRotationPitch < -180.0F; this.prevRotationPitch -= 360.0F) {}
-
-        while (this.rotationPitch - this.prevRotationPitch >= 180.0F)
-        {
-            this.prevRotationPitch += 360.0F;
-        }
-        while (this.rotationYaw - this.prevRotationYaw < -180.0F)
-        {
-            this.prevRotationYaw -= 360.0F;
-        }
-        while (this.rotationYaw - this.prevRotationYaw >= 180.0F)
-        {
-            this.prevRotationYaw += 360.0F;
-        }
-        this.rotationPitch = this.prevRotationPitch + (this.rotationPitch - this.prevRotationPitch) * 0.2F;
-        this.rotationYaw = this.prevRotationYaw + (this.rotationYaw - this.prevRotationYaw) * 0.2F;
-        float speed = 1.5F;
-        this.motionX *= speed;
-        this.motionY *= speed;
-        this.motionZ *= speed;
-        this.setPosition(this.posX, this.posY, this.posZ);
-        this.doBlockCollisions();
-    }
-
-    @Override
-    public void writeEntityToNBT(NBTTagCompound nbt)
-    {
-        nbt.setDouble("Damage", this.damage);
-        nbt.setInteger("DartType", this.getDartType());
-    }
-
-    @Override
-    public void readEntityFromNBT(NBTTagCompound nbt)
-    {
-        this.damage = nbt.getDouble("Damage");
-        this.setDartType(nbt.getInteger("DartType"));
-    }
-
-    @Override
-    protected boolean canTriggerWalking()
-    {
-        return false;
-    }
-
-    @Override
-    public boolean canBeAttackedWithItem()
-    {
-        return false;
-    }
-
-    @Override
-    public float getEyeHeight()
-    {
-        return 0.0F;
-    }
-
-    @Override
-    public void writeSpawnData(ByteBuf buffer)
-    {
+    public void writeSpawnData(ByteBuf buffer) {
         buffer.writeInt(this.shootingEntity != null ? this.shootingEntity.getEntityId() : -1);
     }
 
     @Override
-    public void readSpawnData(ByteBuf buffer)
-    {
-        Entity shooter = this.world.getEntityByID(buffer.readInt());
-
-        if (shooter instanceof EntityLivingBase)
-        {
-            this.shootingEntity = shooter;
-        }
+    public void readSpawnData(ByteBuf buffer) {
+        Entity e = this.world.getEntityByID(buffer.readInt());
+        if (e instanceof EntityLivingBase) this.shootingEntity = e;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public int getBrightnessForRender()
-    {
+    public int getBrightnessForRender() {
         return 15728880;
     }
 
-    @Override
-    public float getBrightness()
-    {
-        return 1.0F;
-    }
-
-    public void setDamage(double damage)
-    {
-        this.damage = damage;
-    }
-
-    public int getDartType()
-    {
-        return this.dataManager.get(EntityDart.DART_TYPE);
-    }
-
-    public void setDartType(DartType type)
-    {
-        this.setDartType(type.ordinal());
-    }
-
-    private void setDartType(int type)
-    {
-        this.dataManager.set(EntityDart.DART_TYPE, type);
-    }
-
-    @Nullable
-    private Entity findEntityOnPath(Vec3d start, Vec3d end)
-    {
-        Entity entity = null;
-        List<Entity> list = this.world.getEntitiesWithinAABBExcludingEntity(this, this.getEntityBoundingBox().expand(this.motionX, this.motionY, this.motionZ).grow(1.0D));
-        double d0 = 0.0D;
-
-        for (Entity entity1 : list)
-        {
-            if (entity1 != this.shootingEntity || this.ticksInAir >= 5)
-            {
-                AxisAlignedBB axisalignedbb = entity1.getEntityBoundingBox().grow(0.30000001192092896D);
-                RayTraceResult raytraceresult = axisalignedbb.calculateIntercept(start, end);
-
-                if (raytraceresult != null)
-                {
-                    double d1 = start.squareDistanceTo(raytraceresult.hitVec);
-
-                    if (d1 < d0 || d0 == 0.0D)
-                    {
-                        entity = entity1;
-                        d0 = d1;
-                    }
-                }
-            }
-        }
-        return entity;
-    }
-
-    private void onHit(RayTraceResult raytraceResult)
-    {
-        Entity entity = raytraceResult.entityHit;
-
-        if (entity != null)
-        {
-            float f2 = MathHelper.sqrt(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ);
-            int l = MathHelper.ceil(f2 * this.damage);
-
-            DamageSource damagesource;
-
-            if (this.shootingEntity == null)
-            {
-                damagesource = TropicraftDamageSource.causeDartDamage(this, this);
-            }
-            else
-            {
-                damagesource = TropicraftDamageSource.causeDartDamage(this, this.shootingEntity);
-            }
-
-            if (entity.attackEntityFrom(damagesource, l))
-            {
-                if (entity instanceof EntityLivingBase)
-                {
-                    EntityLivingBase entitylivingbase = (EntityLivingBase)entity;
-
-                    if (this.shootingEntity instanceof EntityLivingBase)
-                    {
-                        EnchantmentHelper.applyThornEnchantments(entitylivingbase, this.shootingEntity);
-                        EnchantmentHelper.applyArthropodEnchantments((EntityLivingBase)this.shootingEntity, entitylivingbase);
-                    }
-                    if (this.shootingEntity != null && entity != this.shootingEntity && entity instanceof EntityPlayer && this.shootingEntity instanceof EntityPlayerMP)
-                    {
-                        ((EntityPlayerMP)this.shootingEntity).connection.sendPacket(new SPacketChangeGameState(6, 0.0F));
-                    }
-                }
-                if (!(entity instanceof EntityEnderman))
-                {
-                    this.setDead();
-                }
-            }
-        }
-        else
-        {
-            this.motionX = (float)(raytraceResult.hitVec.x - this.posX);
-            this.motionY = (float)(raytraceResult.hitVec.y - this.posY);
-            this.motionZ = (float)(raytraceResult.hitVec.z - this.posZ);
-            float f5 = MathHelper.sqrt(this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ);
-            this.posX -= this.motionX / f5 * 0.05000000074505806D;
-            this.posY -= this.motionY / f5 * 0.05000000074505806D;
-            this.posZ -= this.motionZ / f5 * 0.05000000074505806D;
-            this.setDead();
-        }
-    }
-
-    public void shoot(EntityPlayer entityplayer, float rotationPitch, float rotationYaw, float v, float v1, float v2) {
-    }
-
-    public enum DartType
-    {
-        dart;
+    public enum DartType {
+        DART
     }
 }
