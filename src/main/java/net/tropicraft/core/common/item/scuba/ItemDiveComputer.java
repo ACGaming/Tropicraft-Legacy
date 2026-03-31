@@ -21,11 +21,13 @@ public class ItemDiveComputer extends ItemMap {
     private static String tagDiveTime = "DiveTime";
 
     public ItemDiveComputer() {
+        super();
+        this.setMaxStackSize(1);
     }
 
     /**
      * Called each tick as long the item is on a player inventory. Uses by maps to check if is on a player hand and
-     * update it's contents.
+     * update its contents.
      */
     @Override
     public void onUpdate(ItemStack itemstack, World world, Entity entity, int par4, boolean par5) {
@@ -128,7 +130,7 @@ public class ItemDiveComputer extends ItemMap {
     //    private boolean armorCheck(World world, EntityPlayer player, ItemStack helmetStack, ItemStack chestplateStack,
     //            ItemStack leggingsStack, ItemStack flippersStack) {
     //
-    //        if (helmetstack.isEmpty() || chestplatestack.isEmpty() || leggingsstack.isEmpty() || flippersstack.isEmpty())
+    //        if (helmetStack.isEmpty() || chestplateStack.isEmpty() || leggingsStack.isEmpty() || flippersStack.isEmpty())
     //            return false;
     //
     //        if (!(helmetStack.getItem() instanceof ItemScubaHelmet))

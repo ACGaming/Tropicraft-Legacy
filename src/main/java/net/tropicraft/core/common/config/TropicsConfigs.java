@@ -88,7 +88,7 @@ public class TropicsConfigs {
     /* == Modules == */
     public static boolean enableForestryModule = true;
     public static boolean enableThermalModule = true;
-    public static boolean enableHarvestcraftModule = true;
+    //public static boolean enableHarvestcraftModule = true;
     public static boolean enableRailcraftModule = true;
     public static boolean enableImmersiveEngineeringModule = true;
 
@@ -111,7 +111,7 @@ public class TropicsConfigs {
         chancePalmOverworld = config.get(C_GENERATION, "palmChanceOfGenInOverworld", chancePalmOverworld).getInt();
         factorPalmOverworld = config.get(C_GENERATION, "palmPopulationFactorInOverworld", factorPalmOverworld).getInt();
 
-        genEIHEyes = config.get(C_GENERATION, "genEIHEyes", genEIHEyes, "List of blocks for the EIH statue's eyes - Format: modid:block[:metadata] - Example: minecraft:glowstone OR tropicraft:ore:3").getStringList();
+        genEIHEyes = config.get(C_GENERATION, "genEIHEyes", genEIHEyes, "List of blocks for the EIH statue's eyes - Format: modid:block[:metadata] - Example: minecraft:glowstone OR tropicraft:blockore:3. Defaults : [ \n\"minecraft:glowstone\",\n" + "\"minecraft:obsidian\",\n" + "\"minecraft:diamond_block\",\n" + "\"minecraft:iron_block\",\n" + "\"minecraft:gold_block\",\n" + "\"tropicraft:blockore:0\",\n" + "\"tropicraft:blockore:1\",\n" + "\"tropicraft:blockore:2\",\n" + "\"tropicraft:zirconium_block\"]").getStringList();
         genOverworldEIH = config.get(C_GENERATION, "genTropicraftEIHInOverworld", genOverworldEIH).getBoolean();
         genOverworldFlowers = config.get(C_GENERATION, "genTropicraftFlowersInOverworld", genOverworldFlowers).getBoolean();
         genOverworldPineapples = config.get(C_GENERATION, "genPineapplesInOverworld", genOverworldPineapples).getBoolean();
@@ -142,7 +142,7 @@ public class TropicsConfigs {
 
         enableForestryModule = config.get(C_MODULES, "enableForestryModule", enableForestryModule, "Enable or disable the Forestry compatibility module. [default: true]").getBoolean();
         enableThermalModule = config.get(C_MODULES, "enableThermalModule", enableThermalModule, "Enable or disable the Thermal Expansion compatibility module. [default: true]").getBoolean();
-        enableHarvestcraftModule = config.get(C_MODULES, "enableHarvestcraftModule", enableHarvestcraftModule, "Enable or disable the Harvestcraft compatibility module. It currently does nothing :( [default: true]").getBoolean();
+        //enableHarvestcraftModule = config.get(C_MODULES, "enableHarvestcraftModule", enableHarvestcraftModule, "Enable or disable the Harvestcraft compatibility module. It currently does nothing :( [default: true]").getBoolean();
         enableRailcraftModule = config.get(C_MODULES, "enableRailcraftModule", enableRailcraftModule, "Enable or disable the Railcraft compatibility module. [default: true]").getBoolean();
         enableImmersiveEngineeringModule = config.get(C_MODULES, "enableImmersiveEngineeringModule", enableImmersiveEngineeringModule, "Enable or disable the Immersive Engineering compatibility module. [default: true]").getBoolean();
 

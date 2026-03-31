@@ -9,12 +9,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-// Code borrowed from Natura Legacy as a placeholder
+import net.tropicraft.Info;
 
 @SideOnly(Side.CLIENT)
 public class GuiBambooCraftingTable extends GuiContainer {
-    private static final ResourceLocation CRAFTING_TABLE_GUI_TEXTURES = new ResourceLocation("textures/gui/container/crafting_table.png");
+    private static final ResourceLocation BAMBOO_CRAFTING_TABLE_GUI_TEXTURES = new ResourceLocation(Info.MODID ,"textures/gui/bamboo_crafting_table.png");
 
     public GuiBambooCraftingTable(InventoryPlayer playerInv, World worldIn) {
         this(playerInv, worldIn, BlockPos.ORIGIN);
@@ -49,7 +48,7 @@ public class GuiBambooCraftingTable extends GuiContainer {
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(CRAFTING_TABLE_GUI_TEXTURES);
+        this.mc.getTextureManager().bindTexture(BAMBOO_CRAFTING_TABLE_GUI_TEXTURES);
         int i = (this.width - this.xSize) / 2;
         int j = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(i, j, 0, 0, this.xSize, this.ySize);

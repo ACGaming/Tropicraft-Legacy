@@ -21,7 +21,7 @@ public class CompatHandler {
 
         if (Loader.isModLoaded("forestry") && enableForestryModule) Forestry.preInit();
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.preInit();
-        if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.preInit();
+        //if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.preInit();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.preInit();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.preInit();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.preInit();
@@ -32,7 +32,7 @@ public class CompatHandler {
     public static void init() {
         if (Loader.isModLoaded("forestry") && enableForestryModule) Forestry.init();
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.init();
-        if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule)  Harvestcraft.init();
+        //if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule)  Harvestcraft.init();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule)  UnlimitedChiselWorks.init();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule)  Railcraft.init();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule)  ImmersiveEngineering.init();
@@ -43,7 +43,7 @@ public class CompatHandler {
     public static void postInit() {
         if (Loader.isModLoaded("forestry") && enableForestryModule) Forestry.postInit();
         if (Loader.isModLoaded("thermalexpansion") && enableThermalModule) Thermal.postInit();
-        if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.postInit();
+        //if (Loader.isModLoaded("harvestcraft") && enableHarvestcraftModule) Harvestcraft.postInit();
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.postInit();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.postInit();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.postInit();

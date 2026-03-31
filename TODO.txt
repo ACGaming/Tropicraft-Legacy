@@ -4,8 +4,11 @@
 - Bring back coral and foamy sands spawning on beaches
 - Check if easter island heads do actually spawn with zirconium block eyes
 - Caught in the rain advancement is triggered by drinking anything but a pina colada???
+- Fix chunk o head blocks not covering the inside of volcano's all the way to bedrock
+- Fix tropics hostile mobs still tracking down players even in peaceful
 - Fill in all placeholder Encyclopedia entries
 - Finish implementing the diving computer
+- Fix cascading worldgen lag while in the tropics
 - Fix bamboo, shaka, manganese, kelp and coral worldgen features spawning so square
 - Fix crash caused by incompatibility with buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
 - Fix respawning coconuts being able to replace other blocks, check "BlockTropicraftLog" line 64

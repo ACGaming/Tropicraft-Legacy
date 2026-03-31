@@ -1,3 +1,4 @@
+/*
 package net.tropicraft.core.common.compatibility;
 
 import com.pam.harvestcraft.tileentities.MarketData;
@@ -30,3 +31,4 @@ public class Harvestcraft {
 
     public static void postInit() {}
 }
+*/

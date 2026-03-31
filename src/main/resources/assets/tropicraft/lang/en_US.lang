@@ -474,8 +474,6 @@ tropicraft.loading.misc.2=Prepare to make a splash
 tropicraft.tooltip.air_compressor=Place one or two empty scuba tanks in the compressor to fill them with air!
 tropicraft.tooltip.drink_mixer=Place two drink ingredients on the mixer, then place an empty mug on the base, then ???, then enjoy!
 tropicraft.tooltip.sifter=Place any type of tropics or regular sand in the sifter. What treasures are hidden inside?
-#tropicraft.tooltip.bamboo_crafting_table=Currently non functional, but makes for a good decoration.
-#tropicraft.tooltip.dart_gun=Damage increases with range.
 
 # Book text
 tropicraft.book.toc.title=Table of Contents
@@ -589,7 +587,7 @@ tropicraft.encyclopedia.volcanicsand.desc=Tread lightly on this sand...or don't 
 tropicraft.encyclopedia.nigel.title=Nigel Winthorpe
 tropicraft.encyclopedia.nigel.desc=The person who's journal was used to write the Encyclopedia Tropica. He was the first to discover the Tropics after finding a strange staff in an unknown jungle temple. While his current were abouts are unknown one thing is certain, he sure won't needing this no more.
 
-tropicraft.encyclopedia.dart_gun.title=Blow Gun
+tropicraft.encyclopedia.dart_gun.title=Dart Gun
 tropicraft.encyclopedia.dart_gun.desc=This tube of bamboo is used to shoot neurotoxin-laced darts at your pray. You will be surprised how a far and fast you can shoot a dart with a hefty blow.
 
 tropicraft.encyclopedia.bromeliad.title=Bromeliad
