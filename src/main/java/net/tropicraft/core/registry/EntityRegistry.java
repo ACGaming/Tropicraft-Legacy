@@ -106,7 +106,7 @@ public class EntityRegistry {
         registerEntity(registry, EntityHook.class, "tropihook", 80, 1, true);
         registerEntity(registry, EntityTropiSpider.class, "tropispider", 80, 3, true, SpawnPlacementType.ON_GROUND);
         registerEntity(registry, EntityTropiSpiderEgg.class, "tropispideregg", 80, 5, false);
-        registerEntity(registry, EntityDart.class, "dart", 32, 1, false);
+        registerEntity(registry, EntityDart.class, "dart", 32, 1, true);
 
         // Overworld mob spawns
         if (TropicsConfigs.spawnPassiveTropicsOceanMobsOverworld) {
