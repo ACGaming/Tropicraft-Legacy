@@ -1,0 +1,36 @@
+{
+  "pools": [
+    {
+      "name": "tree_frog_red",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "tropicraft:poison_frog_skin",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "looting_enchant",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "frog_legs",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "entities/tree_frog_green",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

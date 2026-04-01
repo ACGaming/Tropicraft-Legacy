@@ -81,8 +81,7 @@ public class ItemMobEgg extends ItemTropicraft {
             spawnCreature(world, s, (double)pos.getX() + 0.5D, (double)pos.getY() + ySpawnOffset, (double)pos.getZ() + 0.5D);
         }
 
-        player.swingArm(EnumHand.MAIN_HAND);
-        return EnumActionResult.PASS;
+        return EnumActionResult.SUCCESS;
     }
 
     /**

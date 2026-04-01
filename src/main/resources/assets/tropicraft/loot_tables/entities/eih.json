@@ -11,10 +11,7 @@
           "functions": [
             {
               "function": "set_count",
-              "count": {
-                "min": 3,
-                "max": 3
-              }
+              "count": 3
             },
             {
               "function": "looting_enchant",
@@ -22,13 +19,6 @@
                 "min": 0,
                 "max": 3
               }
-            }
-          ],
-          "conditions": [
-            {
-            "condition": "random_chance_with_looting",
-              "chance": 0.2,
-              "looting_multiplier": 0.05
             }
           ]
         }

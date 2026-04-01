@@ -237,6 +237,7 @@ public class WorldGenEIH extends TCGenBase {
      * @param eyeRand random eye integer
      */
     private void placeEye(int x, int y, int z, int eyeRand) {
+        System.out.println("Step one: Place the eyes.");
         IBlockState blockstate = parseBlockState(TropicsConfigs.genEIHEyes[eyeRand]);
         TCGenUtils.setBlockState(worldObj, x, y, z, blockstate, blockGenNotifyFlag);
     }
@@ -248,12 +249,14 @@ public class WorldGenEIH extends TCGenBase {
      */
     private IBlockState parseBlockState(String config) {
         if (config == null || config.trim().isEmpty()) {
+            System.out.println("Step two: Parse the metadata for the blocks soon to be eyes.");
             return Blocks.GLOWSTONE.getDefaultState();
         }
         String[] parts = config.trim().split(":");
         ResourceLocation loc = new ResourceLocation(parts[0], parts[1]);
         int meta = 0;
         if (parts.length == 3) { // meta specified
+            System.out.println("Step three: Check the metadata of the blocks soon to be eyes");
             meta = Integer.parseInt(parts[2]);
         }
         Block block = ForgeRegistries.BLOCKS.getValue(loc);

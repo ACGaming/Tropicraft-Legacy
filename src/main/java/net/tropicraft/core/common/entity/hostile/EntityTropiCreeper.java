@@ -65,8 +65,7 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
      */
     private void explode() {
         if (!this.world.isRemote) {
-            //TODO: readd coconut bomb drop for creeper
-            // this.dropItem(TCItemRegistry.coconutBomb.itemID, rand.nextInt(3) + 1);
+            this.dropItem(ItemRegistry.coconutBomb, rand.nextInt(3) + 1);
             int radius = 5;
             int radiusSq = radius * radius;
             BlockPos center = getPosition();
