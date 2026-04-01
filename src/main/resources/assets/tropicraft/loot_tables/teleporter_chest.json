@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "name": "teleporter_chest",
+      "__Comment": "This loottable is only used if the player DOESN'T have an encyclopedia with them while traveling to the tropics.",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "tropicraft:encyclopedia_tropica",
+          "weight": 100
+        }
+      ]
+    }
+  ]
+}

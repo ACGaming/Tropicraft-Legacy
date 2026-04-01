@@ -24,12 +24,12 @@ import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 import net.tropicraft.core.common.block.BlockTikiTorch;
 import net.tropicraft.core.common.block.BlockTropicraftSands;
-import net.tropicraft.core.common.block.BlockTropicsPortal;
 import net.tropicraft.core.common.block.tileentity.TileEntityBambooChest;
 import net.tropicraft.core.common.enums.TropicraftBundles;
 import net.tropicraft.core.common.enums.TropicraftSands;
 import net.tropicraft.core.registry.BlockRegistry;
 import net.tropicraft.core.registry.ItemRegistry;
+import net.tropicraft.core.registry.LootRegistry;
 
 
 public class TeleporterTropics extends Teleporter {
@@ -72,6 +72,7 @@ public class TeleporterTropics extends Teleporter {
 
         System.out.printf("It took %f seconds for TeleporterTropics.placeInPortal to complete\n", (finishTime - startTime) / 1000.0F);
     }
+
 
     @Override
     public boolean placeInExistingPortal(Entity entity, float f)
@@ -213,7 +214,8 @@ public class TeleporterTropics extends Teleporter {
                                 for (int inv = 0; inv < chest.getSizeInventory(); inv++) {
                                     ItemStack stack = chest.getStackInSlot(inv);
                                     if (stack.isEmpty()) {
-                                        chest.setInventorySlotContents(inv, new ItemStack(ItemRegistry.encyclopedia, 1));
+                                        //chest.setInventorySlotContents(inv, new ItemStack(ItemRegistry.encyclopedia, 1));
+                                        chest.setLootTable(LootRegistry.teleporterChest, random.nextLong());
                                         break;
                                     }
                                 }

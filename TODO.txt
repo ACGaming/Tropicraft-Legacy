@@ -6,7 +6,7 @@
 
 - Caught in the rain advancement is triggered by drinking anything but a piña colada???
 - Fix chunk o head blocks not covering the inside of volcano's all the way to bedrock
-- Fix tropics hostile mobs still tracking down players even in peaceful
+- Fix tropics hostile mobs still tracking down players even in peaceful/creative
 - Fix cascading worldgen lag while in the tropics
 - Fix bamboo, shaka, manganese, kelp and coral worldgen features spawning so square
 - Fix crash caused by incompatibility with buildcraft's biome systems, see "BiomeInitializer" and "BiomeProviderTropicraft" from BC and TC respectively
@@ -26,6 +26,7 @@
 - Fix incompatibility with Traverse
 - Fix miss matched block blast resistance for Chunk Slab and all fences
 - Fix multimob's dummy mob spawning all ofer the place in the tropics
+- Fix Koa Fisherman AI breaking when given bamboo fishing rods
 
 ## MAYBE ##
 
@@ -45,7 +46,6 @@
 - Make Home Tree chests use loot tables instead of hardcoded loot
 - Fill in all placeholder Encyclopedia entries
 - Finish implementing the diving computer
-- Implement darts with potion effects
 - Implement Fire Wand
 - Implement Ice Wand
 - Implement Leaf Ball
@@ -56,3 +56,15 @@
 - Update sapling_palm.png, make it actually look like a palm tree
 - Update languages: french, russian, chinese, etc.
 - Update bamboo flower pot item texture to better match the vanilla flower pot
+
+## Dart Gun ##
+
+- Fix Koa Fisherman AI not being able to shoot darts with the dartgun
+- Fix Dart gun rendering on Ashen
+- Fix AIAshenShootDart behaviour making them shoot slowness arrows instead of slowness darts
+
+- Implement darts with potion effects
+- Implement Ashen being able to use the new dart gun
+
+- Add Curare
+- Add Curare Bowl

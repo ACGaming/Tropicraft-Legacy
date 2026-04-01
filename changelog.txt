@@ -1,14 +1,18 @@
 7.1.9.126 for 1.12.2:
 New
-- The Bamboo Crafting Table is now fully usable (ACGaming)
+- The Bamboo Crafting Table is now fully functional (ACGaming)
+- The Coconut Grenade server whitelist can now be turned on and off with a config option and is turned off by default (ACGaming)
 Changes
 - Sunken Ships now use json loot tables instead of having their chest loot hardcoded (_BIG_G_/ACGaming)
 - The sifter now uses loot tables for its drops (ACGaming)
 - Diving computers are no longer stackable (_BIG_G_)
 - Overhauled the dart gun to function more like a bow (ACGaming)
+- Ashen now use dart guns instead of dagger (will still shoot slowness arrows) (_BIG_G_)
+- The tropicraft portal chest now uses loot tables (_BIG_G_)
 Fixes
 - Fixed Easter Island Heads not being able to spawn with Zirconium Block Eyes (ACGaming)
 - Fixed right-clicking on a sifter in creative mode still consuming the held item (ACGaming)
+- Fixed Coconut Grenades doing... whatever that was (ACGaming)
 
 7.1.9.125 for 1.12.2:
 New

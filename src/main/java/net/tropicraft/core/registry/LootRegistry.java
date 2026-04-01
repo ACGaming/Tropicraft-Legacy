@@ -11,6 +11,7 @@ public class LootRegistry extends TropicraftRegistry {
     public static ResourceLocation sifterHeated;
     public static ResourceLocation sifterRare;
     public static ResourceLocation sunkenShip;
+    public static ResourceLocation teleporterChest;
 
     public static void postInit() {
         buriedTreasure = LootTableList.register(new ResourceLocation(Info.MODID, "buried_treasure"));
@@ -18,5 +19,6 @@ public class LootRegistry extends TropicraftRegistry {
         sifterHeated = LootTableList.register(new ResourceLocation(Info.MODID, "sifter_heated"));
         sifterRare = LootTableList.register(new ResourceLocation(Info.MODID, "sifter_rare"));
         sunkenShip = LootTableList.register(new ResourceLocation(Info.MODID, "sunken_ship"));
+        teleporterChest = LootTableList.register(new ResourceLocation(Info.MODID, "teleporter_chest"));
     }
 }
