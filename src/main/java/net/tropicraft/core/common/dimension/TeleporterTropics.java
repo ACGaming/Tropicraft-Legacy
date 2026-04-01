@@ -215,7 +215,7 @@ public class TeleporterTropics extends Teleporter {
                                     ItemStack stack = chest.getStackInSlot(inv);
                                     if (stack.isEmpty()) {
                                         //chest.setInventorySlotContents(inv, new ItemStack(ItemRegistry.encyclopedia, 1));
-                                        chest.setLootTable(LootRegistry.teleporterChest, random.nextLong());
+                                        chest.setLootTable(LootRegistry.tropicsPortal, random.nextLong());
                                         break;
                                     }
                                 }

@@ -11,11 +11,11 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EnumDifficulty;
@@ -24,6 +24,10 @@ import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.EntityLandHostile;
 import net.tropicraft.core.common.entity.passive.EntityKoaBase;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.tropiSkeleton;
 
 public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
 
@@ -95,6 +99,12 @@ public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
         return this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.isValidLightLevel() && super.getCanSpawnHere();
     }
 
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return tropiSkeleton;
+    }
+
+    /*
     @Override
     protected void dropFewItems(boolean par1, int par2) {
         int j = this.rand.nextInt(2) + this.rand.nextInt(1 + par2);
@@ -108,7 +118,7 @@ public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
         if (this.rand.nextInt(10) == 0) {
             this.dropItem(ItemRegistry.bambooSpear, 1);
         }
-    }
+    }*/
 
     @Override
     protected SoundEvent getAmbientSound() {
