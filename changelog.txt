@@ -13,6 +13,7 @@ Fixes
 - Fixed Easter Island Heads not being able to spawn with Zirconium Block Eyes (ACGaming)
 - Fixed right-clicking on a sifter in creative mode still consuming the held item (ACGaming)
 - Fixed Coconut Grenades doing... whatever that was (ACGaming)
+- Fixed Tropical Water having no blast resistance (_BIG_G_)
 
 7.1.9.125 for 1.12.2:
 New

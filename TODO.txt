@@ -4,6 +4,9 @@
 
 ## FIX ##
 
+- Fix lighting on thatch roofing
+- Fix water logged tropicraft fences making a gap in the water model
+- Fix Tropical Water, Portal liquids and portal sandstone not working with Waila
 - Caught in the rain advancement is triggered by drinking anything but a piña colada???
 - Fix chunk o head blocks not covering the inside of volcano's all the way to bedrock
 - Fix tropics hostile mobs still tracking down players even in peaceful/creative
@@ -25,7 +28,7 @@
 - Fix incompatibility with Roughly Enough IDs
 - Fix incompatibility with Traverse
 - Fix miss matched block blast resistance for Chunk Slab and all fences
-- Fix multimob's dummy mob spawning all ofer the place in the tropics
+- Fix multimob's dummy mob spawning all over the place in the tropics
 - Fix Koa Fisherman AI breaking when given bamboo fishing rods
 
 ## MAYBE ##
