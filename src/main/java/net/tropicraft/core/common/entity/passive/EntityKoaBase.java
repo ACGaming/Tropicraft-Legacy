@@ -767,7 +767,7 @@ public class EntityKoaBase extends EntityVillager {
     }
 
     public void setFishingItem() {
-        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(Items.FISHING_ROD));
+        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ItemRegistry.fishingRod));
     }
 
     public void setFightingItem() {
