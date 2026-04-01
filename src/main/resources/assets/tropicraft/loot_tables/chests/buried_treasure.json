@@ -76,21 +76,57 @@
                 {
                     "type": "item",
                     "name": "tropicraft:scale_boots",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 4
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:scale_leggings",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 4
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:scale_chestplate",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 4
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:scale_helmet",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 4
                 },
                 {
@@ -106,31 +142,85 @@
                 {
                     "type": "item",
                     "name": "tropicraft:buried_treasure",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:trade_winds",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:eastern_isles",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:low_tide",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:summering",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
                     "type": "item",
                     "name": "tropicraft:the_tribe",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 9
                 },
                 {
@@ -157,6 +247,15 @@
                 {
                     "type": "item",
                     "name": "tropicraft:nigel_stache",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ],
                     "weight": 1
                 }
             ]

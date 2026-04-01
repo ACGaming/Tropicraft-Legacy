@@ -1,0 +1,92 @@
+{
+  "pools": [
+    {
+      "name": "home_tree",
+      "rolls": {
+        "min": 6,
+        "max": 18
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "tropicraft:bamboo_shoot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 20
+              }
+            }
+          ],
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:nigel_stache",
+
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:coconut_bomb",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:scale",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:cooked_frog_leg",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "tropicraft:ashen_masks",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:trade_winds",
+
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:eastern_isles",
+
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

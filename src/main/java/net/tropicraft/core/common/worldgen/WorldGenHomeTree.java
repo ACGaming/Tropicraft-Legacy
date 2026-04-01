@@ -25,6 +25,7 @@ import net.tropicraft.core.common.enums.TropicraftLeaves;
 import net.tropicraft.core.common.enums.TropicraftLogs;
 import net.tropicraft.core.registry.BlockRegistry;
 import net.tropicraft.core.registry.ItemRegistry;
+import net.tropicraft.core.registry.LootRegistry;
 
 public class WorldGenHomeTree extends TCGenBase {
 
@@ -170,7 +171,8 @@ public class WorldGenHomeTree extends TCGenBase {
 		if (chest != null) {
 			int treasure = rand.nextInt(6) + 4;
 			for (int x = 0; x < treasure; x++) {
-				chest.setInventorySlotContents(rand.nextInt(chest.getSizeInventory()), randLoot());
+				//chest.setInventorySlotContents(rand.nextInt(chest.getSizeInventory()), randLoot());
+				chest.setLootTable(LootRegistry.homeTree, rand.nextLong());
 			}
 		}
 		return new int[] {trunkX, trunkZ};
@@ -419,7 +421,7 @@ public class WorldGenHomeTree extends TCGenBase {
 		}
 		return places;
 	}
-
+/*
 	public ItemStack randLoot() {
 		int picker = rand.nextInt(18);
 		if(picker < 6)
@@ -458,5 +460,5 @@ public class WorldGenHomeTree extends TCGenBase {
 		{
 			return new ItemStack(ItemRegistry.azurite);
 		}
-	}
+	}*/
 }

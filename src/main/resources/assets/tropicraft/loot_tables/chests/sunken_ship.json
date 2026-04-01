@@ -24,6 +24,7 @@
         {
           "type": "item",
           "name": "tropicraft:nigel_stache",
+
           "weight": 1
         },
         {
@@ -40,21 +41,25 @@
         {
           "type": "item",
           "name": "tropicraft:scale_boots",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:scale_leggings",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:scale_chestplate",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:scale_helmet",
+
           "weight": 2
         },
         {
@@ -102,31 +107,37 @@
         {
           "type": "item",
           "name": "tropicraft:buried_treasure",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:eastern_isles",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:low_tide",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:summering",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:the_tribe",
+
           "weight": 2
         },
         {
           "type": "item",
           "name": "tropicraft:trade_winds",
+
           "weight": 2
         },
         {

@@ -6,19 +6,42 @@ import net.tropicraft.Info;
 
 public class LootRegistry extends TropicraftRegistry {
 
+    // Chests
+
     public static ResourceLocation buriedTreasure;
+    public static ResourceLocation sunkenShip;
+    public static ResourceLocation teleporterChest;
+    public static ResourceLocation homeTree;
+
+    // Sifter
+
     public static ResourceLocation sifterRegular;
     public static ResourceLocation sifterHeated;
     public static ResourceLocation sifterRare;
-    public static ResourceLocation sunkenShip;
-    public static ResourceLocation teleporterChest;
+
+    // Mobs
+
+    public static ResourceLocation eih;
+    public static ResourceLocation iguana;
 
     public static void postInit() {
-        buriedTreasure = LootTableList.register(new ResourceLocation(Info.MODID, "buried_treasure"));
-        sifterRegular = LootTableList.register(new ResourceLocation(Info.MODID, "sifter_regular"));
-        sifterHeated = LootTableList.register(new ResourceLocation(Info.MODID, "sifter_heated"));
-        sifterRare = LootTableList.register(new ResourceLocation(Info.MODID, "sifter_rare"));
-        sunkenShip = LootTableList.register(new ResourceLocation(Info.MODID, "sunken_ship"));
-        teleporterChest = LootTableList.register(new ResourceLocation(Info.MODID, "teleporter_chest"));
+
+        // Chests
+
+        buriedTreasure = LootTableList.register(new ResourceLocation(Info.MODID, "chests/buried_treasure"));
+        sunkenShip = LootTableList.register(new ResourceLocation(Info.MODID, "chests/sunken_ship"));
+        teleporterChest = LootTableList.register(new ResourceLocation(Info.MODID, "chests/teleporter_chest"));
+        homeTree = LootTableList.register(new ResourceLocation(Info.MODID, "chests/home_tree"));
+
+        // Sifter
+
+        sifterRegular = LootTableList.register(new ResourceLocation(Info.MODID, "sifter/sifter_regular"));
+        sifterHeated = LootTableList.register(new ResourceLocation(Info.MODID, "sifter/sifter_heated"));
+        sifterRare = LootTableList.register(new ResourceLocation(Info.MODID, "sifter/sifter_rare"));
+
+        // Mobs
+
+        eih = LootTableList.register(new ResourceLocation(Info.MODID, "entities/eih"));
+        iguana = LootTableList.register(new ResourceLocation(Info.MODID, "entities/iguana"));
     }
 }
