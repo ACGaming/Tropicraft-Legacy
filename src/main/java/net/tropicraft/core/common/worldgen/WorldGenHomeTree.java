@@ -213,10 +213,10 @@ public class WorldGenHomeTree extends TCGenBase {
 			int branchHeight = height + rand.nextInt(4);
 			int leafRadius = rand.nextInt(5) - 3;
 			genTopBranch(branchX1, height, branchZ1, branchX1, height + rand.nextInt(4) + 4, branchZ1, topX, topZ);
-			genLeafCircle(branchX1, branchHeight - 1, branchZ1, leafRadius + 5, leafRadius + 3, leafID, leafMeta, true);
-			genLeafCircle(branchX1, branchHeight, branchZ1, leafRadius + 6, 0, leafID, leafMeta, true);
-			genLeafCircle(branchX1, branchHeight + 1, branchZ1, leafRadius + 10, 0, leafID, leafMeta, true);
-			genLeafCircle(branchX1, branchHeight + 2, branchZ1, leafRadius + 9, 0, leafID, leafMeta, true);
+			genLeafCircle(branchX1, branchHeight - 1, branchZ1, leafRadius + 5, leafRadius + 3, leaves, true);
+			genLeafCircle(branchX1, branchHeight, branchZ1, leafRadius + 6, 0, leaves, true);
+			genLeafCircle(branchX1, branchHeight + 1, branchZ1, leafRadius + 10, 0, leaves, true);
+			genLeafCircle(branchX1, branchHeight + 2, branchZ1, leafRadius + 9, 0, leaves, true);
 		}*/
 	}
 
@@ -429,10 +429,10 @@ public class WorldGenHomeTree extends TCGenBase {
 		else if (picker < 7) {
 			return new ItemStack(ItemRegistry.nigelStache);
 		}
-//		else if(picker < 8)
-//		{
-//			return new ItemStack(ItemRegistry.coconutBomb, rand.nextInt(3) + 1);
-//		}
+		else if(picker < 8)
+		{
+			return new ItemStack(ItemRegistry.coconutBomb, rand.nextInt(3) + 1);
+		}
 		else if(picker < 10)
 		{
 			return new ItemStack(ItemRegistry.scale, rand.nextInt(3) + 1);

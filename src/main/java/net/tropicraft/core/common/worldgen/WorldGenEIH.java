@@ -258,6 +258,8 @@ public class WorldGenEIH extends TCGenBase {
         }
         Block block = ForgeRegistries.BLOCKS.getValue(loc);
         if (block == null) {
+            System.out.println("Unable to find block"+ block +", replacing with glowstone.");
+            // This print statement never gets reached due to something above.
             return Blocks.GLOWSTONE.getDefaultState();
         }
         return block.getStateFromMeta(meta);

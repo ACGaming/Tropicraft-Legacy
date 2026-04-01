@@ -767,11 +767,16 @@ public class EntityKoaBase extends EntityVillager {
     }
 
     public void setFishingItem() {
-        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ItemRegistry.fishingRod));
+        //this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ItemRegistry.fishingRod));
+        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(Items.FISHING_ROD));
     }
 
     public void setFightingItem() {
         this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ItemRegistry.dagger));
+
+    }
+    public void setShootingItem() {
+        this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ItemRegistry.dartGun));
     }
 
     public void monitorHomeVillage() {

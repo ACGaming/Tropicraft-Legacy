@@ -48,7 +48,7 @@ public class EntityAshenHunter extends EntityAshen {
 		setActionState(2);
 		actionPicker = 2;
 		hasGTFO = false;
-		this.setHeldItem(EnumHand.MAIN_HAND, new ItemStack(ItemRegistry.dagger));
+		this.setHeldItem(EnumHand.MAIN_HAND, new ItemStack(ItemRegistry.dartGun));
 		// lostSight = 0;
 
 		this.tasks.addTask(1, new EntityAISwimming(this));

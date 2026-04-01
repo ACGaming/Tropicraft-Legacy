@@ -80,8 +80,7 @@ public class LayerHeldItemAshen extends LayerHeldItem {
 				GL11.glRotatef(5F, 0.0F, 0.0F, 1.0F);
 
 				GL11.glScalef(scale, scale, scale);
-				//TODO CHANGE TO BLOW GUN
-				Minecraft.getMinecraft().getItemRenderer().renderItem(entityliving, new ItemStack(ItemRegistry.dagger), TransformType.THIRD_PERSON_LEFT_HAND);
+				Minecraft.getMinecraft().getItemRenderer().renderItem(entityliving, new ItemStack(ItemRegistry.dartGun), TransformType.THIRD_PERSON_LEFT_HAND);
 				GL11.glPopMatrix();
 			}
 		}

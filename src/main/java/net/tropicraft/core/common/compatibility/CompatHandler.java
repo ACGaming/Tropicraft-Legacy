@@ -1,13 +1,7 @@
 package net.tropicraft.core.common.compatibility;
 
-import com.pam.harvestcraft.HarvestCraft;
-import com.pam.harvestcraft.tileentities.MarketData;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import java.lang.reflect.InvocationTargetException;
 
 import static net.tropicraft.core.common.config.TropicsConfigs.*;
 
