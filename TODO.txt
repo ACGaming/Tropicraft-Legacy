@@ -4,6 +4,7 @@
 
 ## FIX ##
 
+- Fix spawn eggs not playing the item right click animation upon use
 - Fix lighting on thatch roofing
 - Fix water logged tropicraft fences making a gap in the water model
 - Fix Tropical Water, Portal liquids and portal sandstone not working with Waila
@@ -23,7 +24,7 @@
 - Fix Coconut Bomb entity... more like coconut drill
 - Fix fence gates using the wrong soundtypes
 - Fix flippers not doing anything when config "enableSwimAnimation" is set to false or when Aqua Acrobatics is present
-- Fix the forestry grafter dropping palm sapling when breaking mahogany leaves
+- Fix the forestry grafter dropping palm sapling when breaking any tropicraft leaves
 - Fix Home Trees not rendering properly on the client side when first generated (somehow still an issue as of TC 9 for 1.21.8)
 - Fix incompatibility with Roughly Enough IDs
 - Fix incompatibility with Traverse
