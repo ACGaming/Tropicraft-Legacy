@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "minecraft:entities/spider",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

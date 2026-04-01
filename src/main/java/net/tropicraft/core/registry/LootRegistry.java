@@ -23,6 +23,9 @@ public class LootRegistry extends TropicraftRegistry {
 
     public static ResourceLocation eih;
     public static ResourceLocation iguana;
+    public static ResourceLocation tropiSpider;
+
+    //public static ResourceLocation ;
 
     public static void postInit() {
 
@@ -43,5 +46,8 @@ public class LootRegistry extends TropicraftRegistry {
 
         eih = LootTableList.register(new ResourceLocation(Info.MODID, "entities/eih"));
         iguana = LootTableList.register(new ResourceLocation(Info.MODID, "entities/iguana"));
+        tropiSpider = LootTableList.register(new ResourceLocation(Info.MODID, "entities/tropi_spider"));
+
+        // = LootTableList.register(new ResourceLocation(Info.MODID, "entities/"));
     }
 }
