@@ -24,13 +24,15 @@ public class ItemCoconutBomb extends ItemTropicraft {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         ItemStack itemstack = player.getHeldItem(hand);
-        if (!itemstack.isEmpty()) {
+        if (!player.capabilities.isCreativeMode) {
             itemstack.shrink(1);
         }
-        world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.NEUTRAL, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + 1f * 0.5F);
+        world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.NEUTRAL, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + 0.5F);
         if (!world.isRemote) {
-            if (ArrayUtils.contains(TropicsConfigs.coconutBombWhitelist, player.getGameProfile().getName())) {
-                world.spawnEntity(new EntityCoconutGrenade(world, player));
+            if (!TropicsConfigs.enableCoconutBombWhitelist || ArrayUtils.contains(TropicsConfigs.coconutBombWhitelist, player.getGameProfile().getName())) {
+                EntityCoconutGrenade grenade = new EntityCoconutGrenade(world, player);
+                grenade.shoot(player, player.rotationPitch, player.rotationYaw, -20.0F, 0.5F, 1.0F);
+                world.spawnEntity(grenade);
             } else {
                 player.sendMessage(new TextComponentTranslation(I18n.translateToLocal("tropicraft.coconutBombWarning")));
             }
