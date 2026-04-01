@@ -1,6 +1,7 @@
 {
   "pools": [
     {
+      "name": "string/spidereyes",
       "rolls": 1,
       "entries": [
         {

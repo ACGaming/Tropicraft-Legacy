@@ -17,7 +17,7 @@
               }
             },
             {
-              "function": "fortune_enchant",
+              "function": "looting_enchant",
               "count": {
                 "min": 0,
                 "max": 3
@@ -26,9 +26,9 @@
           ],
           "conditions": [
             {
-            "condition": "random_chance_with_fortune",
+            "condition": "random_chance_with_looting",
               "chance": 0.2,
-              "fortune_multiplier": 0.05
+              "looting_multiplier": 0.05
             }
           ]
         }

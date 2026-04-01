@@ -11,18 +11,22 @@ import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.Util;
 import net.tropicraft.core.common.entity.ai.EntityAIWanderNotLazy;
 import net.tropicraft.core.common.entity.egg.EntityTropiSpiderEgg;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.tropiSpider;
 
 public class EntityTropiSpider extends EntitySpider implements IMob {
 
@@ -79,6 +83,12 @@ public class EntityTropiSpider extends EntitySpider implements IMob {
 		super.damageEntity(damageSrc, damageAmount);
 	}
 
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return tropiSpider;
+	}
+
+	/*
 	@Override
 	protected void dropFewItems(boolean par1, int par2) {
 		int j = this.rand.nextInt(2) + this.rand.nextInt(1 + par2);
@@ -86,7 +96,7 @@ public class EntityTropiSpider extends EntitySpider implements IMob {
 			this.dropItem(Items.STRING, 1);
 		}
 	}
-
+	*/
 	@Override
     public boolean isOnLadder() {
 		return this.isBesideClimbableBlock() && this.getNavigator().noPath();

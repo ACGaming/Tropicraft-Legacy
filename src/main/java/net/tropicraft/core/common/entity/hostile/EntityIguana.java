@@ -22,12 +22,13 @@ import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.EntityLandHostile;
 import net.tropicraft.core.common.sound.TropicraftSounds;
-import net.tropicraft.core.registry.ItemRegistry;
-import net.tropicraft.core.registry.SoundRegistry;
+
+import static net.tropicraft.core.registry.LootRegistry.iguana;
 
 public class EntityIguana extends EntityLandHostile implements IMob {
 
@@ -44,10 +45,16 @@ public class EntityIguana extends EntityLandHostile implements IMob {
 		this.isImmuneToFire = true;
 		setSize(1.0F, 0.4F);
 	}
-	
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return iguana;
+	}
+
     /**
      * drops the loot of this entity upon death
      */
+	/*
 	@Override
     protected void dropLoot(boolean wasRecentlyHit, int lootingModifier, DamageSource source) {
         int numDrops = 3 + this.rand.nextInt(1 + lootingModifier);
@@ -67,7 +74,7 @@ public class EntityIguana extends EntityLandHostile implements IMob {
 		if (livingBase != null) {
 			this.angerTargetUUID = livingBase.getUniqueID();
 		}
-	}
+	}*/
 
 	@Override
     protected void initEntityAI() {

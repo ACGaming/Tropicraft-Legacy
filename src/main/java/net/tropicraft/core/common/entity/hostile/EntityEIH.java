@@ -10,21 +10,20 @@ import net.minecraft.entity.ai.EntityAILeapAtTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.EntityLandHostile;
 import net.tropicraft.core.common.sound.TropicraftSounds;
-import net.tropicraft.core.registry.BlockRegistry;
-import net.tropicraft.core.registry.SoundRegistry;
+
+import static net.tropicraft.core.registry.LootRegistry.eih;
 
 public class EntityEIH extends EntityLandHostile implements IMob {
 	//0 = sleep, 1 = aware, 2 = angry
@@ -165,9 +164,15 @@ public class EntityEIH extends EntityLandHostile implements IMob {
 		return this.getEntityBoundingBox();
 	}
 
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return eih;
+	}
+
     /**
      * drops the loot of this entity upon death
      */
+	/*
     @Override
     protected void dropLoot(boolean wasRecentlyHit, int lootingModifier, DamageSource source) {
         int numDrops = 3 + this.rand.nextInt(1 + lootingModifier);
@@ -175,7 +180,7 @@ public class EntityEIH extends EntityLandHostile implements IMob {
         if (!world.isRemote) {
             this.dropItem(Item.getItemFromBlock(BlockRegistry.chunk), numDrops);
         }
-    }
+    }*/
 
 	/**
 	 *
