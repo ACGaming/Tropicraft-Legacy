@@ -3,10 +3,16 @@ package net.tropicraft.core.common.entity.underdasea.atlantoku;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.sound.TropicraftSounds;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.dolphin;
+import static net.tropicraft.core.registry.LootRegistry.iguana;
 
 public class EntityDolphin extends EntityTropicraftWaterBase implements IPredatorDiet, IAmphibian{
 
@@ -25,11 +31,14 @@ public class EntityDolphin extends EntityTropicraftWaterBase implements IPredato
 				this.setTexture("dolphin2");
 			}
 		}
-		this.setDropStack(ItemRegistry.fertilizer, 3);
+		//this.setDropStack(ItemRegistry.fertilizer, 3);
 		this.setMaxHealth(10);
 	}
-	
-	
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return dolphin;
+	}
 	
 	@Override
 	public void entityInit() {

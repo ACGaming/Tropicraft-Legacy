@@ -1,12 +1,12 @@
 {
   "pools": [
     {
-      "name": "tree_frog_blue",
+      "name": "failgull",
       "rolls": 1,
       "entries": [
         {
           "type": "loot_table",
-          "name": "tropicraft:entities/tree_frog_red",
+          "name": "minecraft:entities/parrot",
           "weight": 1
         }
       ]

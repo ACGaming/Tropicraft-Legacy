@@ -1,12 +1,12 @@
 {
   "pools": [
     {
-      "name": "tree_frog_blue",
+      "name": "fertilizer",
       "rolls": 1,
       "entries": [
         {
           "type": "loot_table",
-          "name": "tropicraft:entities/tree_frog_red",
+          "name": "tropicraft:entities/dolphin",
           "weight": 1
         }
       ]

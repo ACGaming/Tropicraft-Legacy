@@ -16,7 +16,6 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.EnumDifficulty;
@@ -172,16 +171,16 @@ public class EntityTreeFrog extends EntityLand implements IMob, IRangedAttackMob
 	@Nullable
 	protected ResourceLocation getLootTable() {
 		if (!world.isRemote) {
-			if (this.getType() != Type.GREEN) {
+			if (this.getType() == Type.GREEN) {
 				return treeFrogGreen;
 			}
-			if (this.getType() != Type.RED) {
+			if (this.getType() == Type.RED) {
 				return treeFrogRed;
 			}
-			if (this.getType() != Type.BLUE) {
+			if (this.getType() == Type.BLUE) {
 				return treeFrogBlue;
 			}
-			if (this.getType() != Type.YELLOW) {
+			if (this.getType() == Type.YELLOW) {
 				return treeFrogYellow;
 			}
 		}
@@ -191,6 +190,7 @@ public class EntityTreeFrog extends EntityLand implements IMob, IRangedAttackMob
 	/**
 	 * drops the loot of this entity upon death
 	 */
+
 	/*
 	@Override
 	protected void dropLoot(boolean wasRecentlyHit, int lootingModifier, DamageSource source) {

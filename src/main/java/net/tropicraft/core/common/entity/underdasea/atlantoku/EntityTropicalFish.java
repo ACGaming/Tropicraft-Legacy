@@ -16,6 +16,7 @@ import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
@@ -23,6 +24,8 @@ import net.tropicraft.core.common.item.ItemFishBucket;
 import net.tropicraft.core.registry.ItemRegistry;
 
 import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.tropicalFish;
 
 public class EntityTropicalFish extends EntitySchoolableFish implements IAtlasFish {
 
@@ -72,9 +75,14 @@ public class EntityTropicalFish extends EntitySchoolableFish implements IAtlasFi
 
 		int color = world.rand.nextInt(NAMES.length);
 		setColor(color);
-		this.setDropStack(new ItemStack(ItemRegistry.rawTropicalFish, 1, color), 1);
+		//this.setDropStack(new ItemStack(ItemRegistry.rawTropicalFish, 1, color), 1);
 
 		return super.onInitialSpawn(difficulty, livingdata);
+	}
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return tropicalFish;
 	}
 
 	@Override

@@ -1,17 +1,21 @@
 {
   "pools": [
     {
-      "name": "tree_frog_green",
+      "name": "raw_eagle_ray",
       "rolls": 1,
       "entries": [
         {
           "type": "item",
-          "name": "tropicraft:frog_leg",
           "weight": 1,
+          "name": "tropicraft:ray_raw",
           "functions": [
             {
               "function": "set_count",
-              "count": 2
+              "count": 1
+            },
+            {
+              "function": "looting_enchant",
+              "count": 0
             },
             {
               "function": "furnace_smelt",
@@ -24,10 +28,6 @@
                   }
                 }
               ]
-            },
-            {
-              "function": "looting_enchant",
-              "count": 0
             }
           ]
         }

@@ -1,12 +1,18 @@
 package net.tropicraft.core.common.entity.underdasea.atlantoku;
 
 import static java.lang.Math.PI;
+import static net.tropicraft.core.registry.LootRegistry.dolphin;
+import static net.tropicraft.core.registry.LootRegistry.eagleRay;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
 
 public class EntityEagleRay extends EntityTropicraftWaterBase {
 
@@ -42,8 +48,13 @@ public class EntityEagleRay extends EntityTropicraftWaterBase {
         this.setSize(1f, 0.25f);
         this.setSwimSpeeds(0.1f, 0.1f, 0.1f);
         this.setMaxHealth(5);
-        this.setDropStack(ItemRegistry.rawRay, 1);
+        //this.setDropStack(ItemRegistry.rawRay, 1);
         this.experienceValue = 8;
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return eagleRay;
     }
 
     @Override

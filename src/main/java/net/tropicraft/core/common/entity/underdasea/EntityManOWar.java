@@ -8,14 +8,18 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntitySelectors;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.manOWar;
 
 public class EntityManOWar extends EntityWaterMob {
 
@@ -157,6 +161,12 @@ public class EntityManOWar extends EntityWaterMob {
 		return this.randomMotionVecX != 0.0F || this.randomMotionVecY != 0.0F || this.randomMotionVecZ != 0.0F;
 	}
 
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return manOWar;
+	}
+
+	/*
 	@Override
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
@@ -166,7 +176,7 @@ public class EntityManOWar extends EntityWaterMob {
 			for (int i = 0; i < numDrops; i++)
 				this.dropItem(Items.SLIME_BALL, 1);
 		}
-	}
+	}*/
 
 	@Override
 	public boolean getCanSpawnHere() {

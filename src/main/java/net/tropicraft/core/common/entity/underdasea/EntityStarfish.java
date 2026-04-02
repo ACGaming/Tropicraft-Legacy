@@ -5,12 +5,18 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.IEntityAdditionalSpawnData;
 import net.tropicraft.core.common.entity.egg.EntityEgg;
 import net.tropicraft.core.common.entity.egg.EntityStarfishEgg;
 import net.tropicraft.core.common.enums.TropicraftShells;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.iguana;
+import static net.tropicraft.core.registry.LootRegistry.starfish;
 
 public class EntityStarfish extends EntityEchinoderm implements IEntityAdditionalSpawnData {
 	public static final float BABY_WIDTH = 0.25f;
@@ -28,7 +34,7 @@ public class EntityStarfish extends EntityEchinoderm implements IEntityAdditiona
 		setStarfishType(StarfishType.values()[rand.nextInt(StarfishType.values().length)]);
 		this.experienceValue = 5;
 	}
-	
+
 	public EntityStarfish(World world, boolean baby) {
 		super(world, baby);
 		setStarfishType(StarfishType.values()[rand.nextInt(StarfishType.values().length)]);
@@ -110,12 +116,18 @@ public class EntityStarfish extends EntityEchinoderm implements IEntityAdditiona
 	public boolean isPotentialMate(EntityEchinoderm other) {
 		return super.isPotentialMate(other) && ((EntityStarfish)other).getStarfishType() == getStarfishType();
 	}
-	
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return starfish;
+	}
+
+	/*
 	@Override
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
 		if (!this.world.isRemote) {
 			this.entityDropItem(new ItemStack(ItemRegistry.shell, 1, TropicraftShells.STARFISH.getMeta()), 0);
 		}
-	}
+	}*/
 }

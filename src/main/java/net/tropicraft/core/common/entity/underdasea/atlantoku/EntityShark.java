@@ -8,12 +8,18 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.BossInfoServer;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.EntityLand;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.iguana;
+import static net.tropicraft.core.registry.LootRegistry.shark;
 
 public class EntityShark extends EntityTropicraftWaterBase implements IPredatorDiet {
 
@@ -31,9 +37,14 @@ public class EntityShark extends EntityTropicraftWaterBase implements IPredatorD
 		this.setExpRate(5);
 		this.setApproachesPlayers(true);
 		this.setFishable(true);
-		this.setDropStack(ItemRegistry.fertilizer, 3);
+		//this.setDropStack(ItemRegistry.fertilizer, 3);
 		this.setMaxHealth(10);
 		this.setAttackDamage(4f);
+	}
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return shark;
 	}
 
 	@Override

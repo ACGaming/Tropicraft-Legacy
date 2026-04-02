@@ -2,10 +2,12 @@
 New
 - The Bamboo Crafting Table is now fully functional (ACGaming)
 - The Coconut Bomb server whitelist can now be turned on and off with a config option, now off by default (ACGaming)
-Changes
-- Sunken Ships, the sifter, the tropicraft portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)
-- Easter Island Heads, Iguanas and Tropical Spiders can have exposed loot tables (_BIG_G_)
 - Tropical spiders can now drop spider eyes (_BIG_G_)
+- Killing with fire any mobs that drop meat will now drop cooked meat (_BIG_G_)
+Changes
+- The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
+- Sunken Ships, the sifter, the tropicraft portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)
+- Easter Island Heads, Iguanas, Tropical Spiders, Failgulls, Man O Wars, Dolphins, Eagle Rays, Tree Frogs, HammerHead Sharks, Tropical Fishes now have exposed loot tables (_BIG_G_)
 - Overhauled the dart gun to function more like a bow (ACGaming)
 - Diving computers are no longer stackable (_BIG_G_)
 - Ashen now use dart guns instead of dagger (will still shoot slowness arrows) (_BIG_G_)
@@ -16,6 +18,7 @@ Fixes
 - Fixed Coconut Grenades doing... whatever that was (ACGaming)
 - Fixed Tropical Water having no blast resistance (_BIG_G_)
 - Fixed using spawn eggs not making the arm swinging animation (Icarus)
+- Fixed Sea Urchin and Starfish Eggs and Lava Ball not having an entity name (_BIG_G_)
 
 7.1.9.125 for 1.12.2:
 New

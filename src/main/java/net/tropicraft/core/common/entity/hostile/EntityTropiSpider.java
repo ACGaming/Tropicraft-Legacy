@@ -97,6 +97,7 @@ public class EntityTropiSpider extends EntitySpider implements IMob {
 		}
 	}
 	*/
+
 	@Override
     public boolean isOnLadder() {
 		return this.isBesideClimbableBlock() && this.getNavigator().noPath();

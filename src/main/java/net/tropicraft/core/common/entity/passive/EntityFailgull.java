@@ -11,10 +11,15 @@ import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.failgull;
 
 public class EntityFailgull extends EntityFlying {
 
@@ -269,5 +274,10 @@ public class EntityFailgull extends EntityFlying {
 	@Override
 	public boolean isCreatureType(EnumCreatureType type, boolean forSpawnCount) {
 		return type == EnumCreatureType.MONSTER;
+	}
+
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		return failgull;
 	}
 }

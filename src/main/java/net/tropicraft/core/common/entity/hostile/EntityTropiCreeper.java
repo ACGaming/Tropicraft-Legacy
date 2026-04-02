@@ -17,12 +17,15 @@ import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
@@ -276,6 +279,39 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
         super.onStruckByLightning(lightningBolt);
         this.dataManager.set(POWERED, Boolean.valueOf(true));
     }
+
+	/*
+	@Override
+	protected boolean processInteract(EntityPlayer player, EnumHand hand)
+	{
+		ItemStack itemstack = player.getHeldItem(hand);
+
+		if (itemstack.getItem() == Items.FLINT_AND_STEEL)
+		{
+			this.world.playSound(player, this.posX, this.posY, this.posZ, SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
+			player.swingArm(hand);
+
+			if (!this.world.isRemote)
+			{
+				this.ignite();
+				itemstack.damageItem(1, player);
+				return true;
+			}
+		}
+
+		return super.processInteract(player, hand);
+	}
+
+	public boolean hasIgnited()
+	{
+		return ((Boolean)this.dataManager.get(IGNITED)).booleanValue();
+	}
+	
+	public void ignite()
+	{
+		this.dataManager.set(IGNITED, Boolean.valueOf(true));
+	}
+	*/
 
 	//CREEPER CODE COPY END
 

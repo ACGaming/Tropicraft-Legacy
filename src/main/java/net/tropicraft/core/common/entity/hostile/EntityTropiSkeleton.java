@@ -11,6 +11,7 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -98,13 +99,14 @@ public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
     public boolean getCanSpawnHere() {
         return this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.isValidLightLevel() && super.getCanSpawnHere();
     }
-
+/*
     @Nullable
     protected ResourceLocation getLootTable() {
         return tropiSkeleton;
     }
 
-    /*
+    */
+
     @Override
     protected void dropFewItems(boolean par1, int par2) {
         int j = this.rand.nextInt(2) + this.rand.nextInt(1 + par2);
@@ -118,7 +120,7 @@ public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
         if (this.rand.nextInt(10) == 0) {
             this.dropItem(ItemRegistry.bambooSpear, 1);
         }
-    }*/
+    }
 
     @Override
     protected SoundEvent getAmbientSound() {

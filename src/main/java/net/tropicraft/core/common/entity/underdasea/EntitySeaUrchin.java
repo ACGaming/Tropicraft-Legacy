@@ -6,10 +6,16 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.egg.EntityEgg;
 import net.tropicraft.core.common.entity.egg.EntitySeaUrchinEgg;
 import net.tropicraft.core.registry.ItemRegistry;
+
+import javax.annotation.Nullable;
+
+import static net.tropicraft.core.registry.LootRegistry.iguana;
+import static net.tropicraft.core.registry.LootRegistry.seaUrchin;
 
 public class EntitySeaUrchin extends EntityEchinoderm {
 	/**
@@ -81,6 +87,15 @@ public class EntitySeaUrchin extends EntityEchinoderm {
 		}
 	}
 
+	/*
+	@Nullable
+	protected ResourceLocation getLootTable() {
+		if (this.isChild() ? null) {
+			return seaUrchin;
+		}
+	}
+	*/
+	
 	@Override
 	protected Item getDropItem() {
 		return isChild() ? null : ItemRegistry.seaUrchinRoe;
