@@ -7,6 +7,7 @@ import java.util.Random;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.tropicraft.core.common.config.TropicsConfigs;
+import net.tropicraft.core.common.enums.TropicraftOres;
 import org.apache.commons.lang3.ArrayUtils;
 
 import net.minecraft.block.Block;
@@ -18,7 +19,7 @@ import net.minecraft.world.World;
 import net.tropicraft.core.registry.BlockRegistry;
 
 public class WorldGenEIH extends TCGenBase {
-	
+
 	private static final int CHUNK_SIZE_Y = 256;
 	private static final Block EIH_BLOCK = BlockRegistry.chunk;
 	private static final Material[] VALID_MATERIALS_FOR_PLACEMENT = new Material[] {Material.GROUND, Material.GRASS, Material.ROCK, Material.PLANTS};
@@ -210,21 +211,28 @@ public class WorldGenEIH extends TCGenBase {
             setBlock(worldObj, i + -2, j + -3, k + 0, EIH_BLOCK);
             setBlock(worldObj, i + -1, j + -3, k + 0, EIH_BLOCK);
             setBlock(worldObj, i + 0, j + -3, k + 0, EIH_BLOCK);
-            
+
+            int k1 = rand.nextInt(7);
+            int tropiBlockMeta = rand.nextInt(3);
+
             // Coords of the first eye
             int eyeOneX = i;
             int eyeOneY = j + 5;
             int eyeOneZ = k + 1;
-            
+
             // Coords of the second eye
             int eyeTwoX = i - 3;
             int eyeTwoY = j + 5;
             int eyeTwoZ = k + 1;
 
             // Place eyes
+            /*
             int eyeRand = rand.nextInt(TropicsConfigs.genEIHEyes.length);
             placeEye(eyeOneX, eyeOneY, eyeOneZ, eyeRand);
             placeEye(eyeTwoX, eyeTwoY, eyeTwoZ, eyeRand);
+            */
+            placeEye(eyeOneX, eyeOneY, eyeOneZ, k1, tropiBlockMeta);
+            placeEye(eyeTwoX, eyeTwoY, eyeTwoZ, k1, tropiBlockMeta);
         }
         return true;
     }
@@ -234,19 +242,51 @@ public class WorldGenEIH extends TCGenBase {
      * @param x xCoord
      * @param y yCoord
      * @param z zCoord
-     * @param eyeRand random eye integer
+   //* @param eyeRand random eye integer
      */
+
+    private void placeEye(int x, int y, int z, int eye_rand, int tropiBlockMeta) {
+        IBlockState blockstate;
+        switch (eye_rand) {
+            case 0:
+            case 5:
+                blockstate = Blocks.GLOWSTONE.getDefaultState();
+                break;
+            case 1:
+                blockstate = Blocks.OBSIDIAN.getDefaultState();
+                break;
+            case 2:
+                blockstate = Blocks.DIAMOND_BLOCK.getDefaultState();
+                break;
+            case 3:
+                blockstate = Blocks.IRON_BLOCK.getDefaultState();
+                break;
+            case 4:
+                blockstate = Blocks.GOLD_BLOCK.getDefaultState();
+                break;
+            case 6:
+                blockstate = BlockRegistry.oreBlock.defaultForVariant(TropicraftOres.VALUES[tropiBlockMeta]);
+                break;
+            default:    // Should never get called, if so, redstone in tropics :o
+                blockstate = Blocks.REDSTONE_BLOCK.getDefaultState();
+                break;
+        }
+
+        TCGenUtils.setBlockState(worldObj, x, y, z, blockstate, blockGenNotifyFlag);
+
+    /*
     private void placeEye(int x, int y, int z, int eyeRand) {
         System.out.println("Step one: Place the eyes.");
         IBlockState blockstate = parseBlockState(TropicsConfigs.genEIHEyes[eyeRand]);
         TCGenUtils.setBlockState(worldObj, x, y, z, blockstate, blockGenNotifyFlag);
-    }
+    }*/
 
-    /**
-     * Parse config entry string for blockstate
-     * @param config block string
-     * @return blockstate
-     */
+        /**
+         * Parse config entry string for blockstate
+         * @param config block string
+         * @return blockstate
+         */
+    /*
     private IBlockState parseBlockState(String config) {
         if (config == null || config.trim().isEmpty()) {
             System.out.println("Step two: Parse the metadata for the blocks soon to be eyes.");
@@ -266,5 +306,6 @@ public class WorldGenEIH extends TCGenBase {
             return Blocks.GLOWSTONE.getDefaultState();
         }
         return block.getStateFromMeta(meta);
+        */
     }
 }
