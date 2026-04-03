@@ -4,6 +4,7 @@ New
 - The Coconut Bomb server whitelist can now be turned on and off with a config option, now off by default (ACGaming)
 - Tropical spiders can now drop spider eyes (_BIG_G_)
 - Killing with fire any mobs that drop meat will now drop cooked meat (_BIG_G_)
+- Tropical skeletons and creepers can now drop their respective skulls if killed by a charged creeper (_BIG_G_)
 Changes
 - The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
 - Sunken Ships, the sifter, the Tropicraft Portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)

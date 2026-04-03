@@ -9,6 +9,8 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -144,6 +146,25 @@ public class EntityTropiSkeleton extends EntityLandHostile implements IMob {
         if (!this.world.isRemote && this.world.getDifficulty() == EnumDifficulty.PEACEFUL)
         {
             this.setDead();
+        }
+    }
+
+    /**
+     * Called when the mob's health reaches 0.
+     */
+    public void onDeath(DamageSource cause)
+    {
+        super.onDeath(cause);
+
+        if (cause.getTrueSource() instanceof EntityCreeper)
+        {
+            EntityCreeper entitycreeper = (EntityCreeper)cause.getTrueSource();
+
+            if (entitycreeper.getPowered() && entitycreeper.ableToCauseSkullDrop())
+            {
+                entitycreeper.incrementDroppedSkulls();
+                this.entityDropItem(new ItemStack(Items.SKULL, 1, 0), 0.0F);
+            }
         }
     }
 }

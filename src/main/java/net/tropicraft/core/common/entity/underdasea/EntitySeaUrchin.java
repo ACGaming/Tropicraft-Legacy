@@ -87,19 +87,17 @@ public class EntitySeaUrchin extends EntityEchinoderm {
 		}
 	}
 
-	/*
+
 	@Nullable
 	protected ResourceLocation getLootTable() {
-		if (this.isChild() ? null) {
-			return seaUrchin;
-		}
+			return isChild() ? null : seaUrchin;
+
 	}
-	*/
-	
+	/*
 	@Override
 	protected Item getDropItem() {
 		return isChild() ? null : ItemRegistry.seaUrchinRoe;
-	}
+	}*/
 
 	@Override
 	public EntityEgg createEgg() {

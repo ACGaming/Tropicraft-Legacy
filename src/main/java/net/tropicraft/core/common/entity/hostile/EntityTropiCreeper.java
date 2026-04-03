@@ -215,6 +215,11 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
 		if (par1DamageSource.getTrueSource() instanceof EntitySkeleton) {
 			this.dropItem(ItemRegistry.recordEasternIsles, 1);
 		}
+		else if (par1DamageSource.getTrueSource() instanceof EntityCreeper && par1DamageSource.getTrueSource() != this && ((EntityCreeper)par1DamageSource.getTrueSource()).getPowered() && ((EntityCreeper)par1DamageSource.getTrueSource()).ableToCauseSkullDrop())
+		{
+			((EntityCreeper)par1DamageSource.getTrueSource()).incrementDroppedSkulls();
+			this.entityDropItem(new ItemStack(Items.SKULL, 1, 4), 0.0F);
+		}
 		super.onDeath(par1DamageSource);
 	}
 
