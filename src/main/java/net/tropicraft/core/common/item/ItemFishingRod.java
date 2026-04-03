@@ -2,22 +2,16 @@ package net.tropicraft.core.common.item;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.tropicraft.core.client.TropicraftRenderUtils;
 import net.tropicraft.core.common.entity.underdasea.atlantoku.EntityHook;
 import net.tropicraft.core.common.entity.underdasea.atlantoku.RodLink;
 
@@ -26,7 +20,7 @@ public class ItemFishingRod extends Item {
 	public ItemFishingRod() {
 		this.setMaxDamage(64);
 		this.setMaxStackSize(1);
-		this.addPropertyOverride(TropicraftRenderUtils.getTexture("items/fishing_rod_cast"), new IItemPropertyGetter() {
+		this.addPropertyOverride(new ResourceLocation("cast"), new IItemPropertyGetter() {
 			@Override
             @SideOnly(Side.CLIENT)
 			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
@@ -38,7 +32,7 @@ public class ItemFishingRod extends Item {
 	}
 
 	/**
-	 * Returns True is the item is renderer in full 3D when hold.
+	 * Returns True is the item is renderer in full 3D when held.
 	 */
 	@Override
     @SideOnly(Side.CLIENT)
@@ -57,7 +51,7 @@ public class ItemFishingRod extends Item {
 	}
 
 	/**
-	 * Called when the equipped item is right clicked.
+	 * Called when the equipped item is right-clicked.
 	 */
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {

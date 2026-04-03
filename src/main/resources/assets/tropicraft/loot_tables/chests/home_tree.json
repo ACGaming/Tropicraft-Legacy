@@ -19,7 +19,7 @@
               }
             }
           ],
-          "weight": 8
+          "weight": 6
         },
         {
           "type": "item",
@@ -39,7 +39,7 @@
               }
             }
           ],
-          "weight": 8
+          "weight": 4
         },
         {
           "type": "item",
@@ -83,6 +83,12 @@
         {
           "type": "item",
           "name": "tropicraft:eastern_isles",
+
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "tropicraft:zirconium",
 
           "weight": 2
         }

@@ -268,6 +268,7 @@ public class WorldGenEIH extends TCGenBase {
                 blockstate = BlockRegistry.oreBlock.defaultForVariant(TropicraftOres.VALUES[tropiBlockMeta]);
                 break;
             default:    // Should never get called, if so, redstone in tropics :o
+                        // Odd comment since redstone ore is hardcoded to spawn in the tropics.
                 blockstate = Blocks.REDSTONE_BLOCK.getDefaultState();
                 break;
         }

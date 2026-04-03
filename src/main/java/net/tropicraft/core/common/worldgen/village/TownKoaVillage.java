@@ -22,6 +22,7 @@ import net.tropicraft.core.common.town.SpawnLocationData;
 import net.tropicraft.core.common.town.TownObject;
 import net.tropicraft.core.registry.BlockRegistry;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
