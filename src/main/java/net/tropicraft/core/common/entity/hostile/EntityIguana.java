@@ -46,14 +46,14 @@ public class EntityIguana extends EntityLandHostile implements IMob {
 		setSize(1.0F, 0.4F);
 	}
 
+	/**
+	 * drops the loot of this entity upon death
+	 */
 	@Nullable
 	protected ResourceLocation getLootTable() {
 		return iguana;
 	}
 
-    /**
-     * drops the loot of this entity upon death
-     */
 	/*
 	@Override
     protected void dropLoot(boolean wasRecentlyHit, int lootingModifier, DamageSource source) {

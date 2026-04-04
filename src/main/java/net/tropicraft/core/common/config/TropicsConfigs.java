@@ -69,6 +69,7 @@ public class TropicsConfigs {
     public static boolean enableCoconutBombWhitelist = false;
     public static String[] coconutBombWhitelist = {};
     public static boolean enableSwimAnimation = true;
+    //public static boolean enableTextureUpdatePack = true;
     
     /* == Entity Configs == */
     public static boolean spawnPassiveTropicsOceanMobsOverworld = false;
@@ -95,6 +96,7 @@ public class TropicsConfigs {
     //public static boolean enableHarvestcraftModule = true;
     public static boolean enableRailcraftModule = true;
     public static boolean enableImmersiveEngineeringModule = true;
+    public static boolean enableExNihiloCreatioModule = true;
 
     private static Configuration config;
 
@@ -132,6 +134,7 @@ public class TropicsConfigs {
         enableCoconutBombWhitelist = config.get(C_MISC, "enableCoconutBombWhitelist", enableCoconutBombWhitelist).getBoolean();
         coconutBombWhitelist = config.get(C_MISC, "coconutBombWhitelist", coconutBombWhitelist).getStringList();
         enableSwimAnimation = config.get(C_MISC, "enableSwimAnimation", enableSwimAnimation).getBoolean();
+        //enableTextureUpdatePack = config.get(C_MISC, "enableTextureUpdatePack", enableTextureUpdatePack).getBoolean();
 
         allowVolcanoEruption = config.get(C_MISC, "allowVolcanoEruption", allowVolcanoEruption).getBoolean();
 
@@ -150,6 +153,7 @@ public class TropicsConfigs {
         //enableHarvestcraftModule = config.get(C_MODULES, "enableHarvestcraftModule", enableHarvestcraftModule, "Enable or disable the Harvestcraft compatibility module. It currently does nothing :( [default: true]").getBoolean();
         enableRailcraftModule = config.get(C_MODULES, "enableRailcraftModule", enableRailcraftModule, "Enable or disable the Railcraft compatibility module. [default: true]").getBoolean();
         enableImmersiveEngineeringModule = config.get(C_MODULES, "enableImmersiveEngineeringModule", enableImmersiveEngineeringModule, "Enable or disable the Immersive Engineering compatibility module. [default: true]").getBoolean();
+        enableExNihiloCreatioModule = config.get(C_MODULES, "enableExNihiloCreatioModule", enableExNihiloCreatioModule, "Enable or disable the Ex Nihilo Creatio compatibility module. [default: true]").getBoolean();
 
         config.setCategoryComment(C_DONATIONS, "Used for the LoveTropics charity drive.");
         tiltifyAppToken = config.get(C_DONATIONS, "tiltifyAppToken", tiltifyAppToken, "Add a token here to enable donation tracking, leave blank to disable").getString();

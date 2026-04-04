@@ -7,7 +7,7 @@ import net.tropicraft.core.common.fluid.FluidTropicsPortal;
 import net.tropicraft.core.common.fluid.FluidTropicsWater;
 
 @Mod.EventBusSubscriber
-public class FluidRegistry {
+public class TCFluidRegistry {
 
 	public static final Fluid tropicsWater = new FluidTropicsWater(TropicraftRegistry.getNamePrefixed(Names.TROPICS_WATER));
 	public static final Fluid tropicsPortal = new FluidTropicsPortal(TropicraftRegistry.getNamePrefixed(Names.TROPICS_PORTAL));
@@ -25,7 +25,7 @@ public class FluidRegistry {
 		tropicsWater.setBlock(BlockRegistry.tropicsWater);
 		tropicsPortal.setBlock(BlockRegistry.tropicsPortal);
 
-		FluidRegistry.registerFluid(tropicsWater);
+		TCFluidRegistry.registerFluid(tropicsWater);
 		//TODO no longer needed? FluidContainerRegistry.registerFluidContainer(tropicsWater, new ItemStack(ItemRegistry.tropicsWaterBucket));
 	}
 

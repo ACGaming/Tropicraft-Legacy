@@ -145,9 +145,15 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("portalstarter",  new ItemStack(ItemRegistry.portalEnchanter)));
         enc.addPage(new ItemPage("fishingnet", new ItemStack(ItemRegistry.fishingNet)));
         enc.addPage(new ItemPage("fishbucket", new ItemStack(ItemRegistry.fishBucket)));
-        //  enc.addPage(new ItemPage("enchantwand", new ItemStack(TCItemRegistry.enchantWand)));
+        //enc.addPage(new ItemPage("enchantwand", new ItemStack(ItemRegistry.enchantWand)));
         enc.addPage(new ItemPage("dart_gun", new ItemStack(ItemRegistry.dartGun)));
-        //  enc.addPage(new ItemPage("firestaff", new ItemStack(TCItemRegistry.staffFire)));
+
+        enc.addPage(new ItemPage("hoesouzium", new ItemStack(ItemRegistry.hoeSouzium)));
+        enc.addPage(new ItemPage("pickaxesouzium", new ItemStack(ItemRegistry.pickaxeSouzium)));
+        enc.addPage(new ItemPage("shovelsouzium", new ItemStack(ItemRegistry.shovelSouzium)));
+        enc.addPage(new ItemPage("axesouzium", new ItemStack(ItemRegistry.axeSouzium)));
+
+        //enc.addPage(new ItemPage("firestaff", new ItemStack(ItemRegistry.staffFire)));
         /*
          * firestaff.title = Fire Staff
            firestaff.desc = A mystical weapon usually wielded by a Koa Shaman which allows the holder to shoot fireballs that resemble meteors from the Catacombs
@@ -263,7 +269,7 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
         enc.addPage(new ItemPage("coconutbomb", new ItemStack(ItemRegistry.coconutBomb)));
 
         //      TODO for (int i = 0; i < ItemCurare.effectNames.length; i++) {
-        //          enc.addPage(new ItemPage("curare", new ItemStack(TCItemRegistry.curare, 1, i)));
+        //          enc.addPage(new ItemPage("curare", new ItemStack(ItemRegistry.curare, 1, i)));
         //      }
         //TODO enc.addPage(new ItemPage("curarebowl", new ItemStack(BlockRegistry.curareBowl)));
         //      TODO for (int i = 0; i < ItemCurare.effectNames.length; i++) {
@@ -273,14 +279,14 @@ public class EncyclopediaRegistry extends TropicraftRegistry {
 
         enc.addPage(new ItemPage("frogskin", new ItemStack(ItemRegistry.poisonFrogSkin)));
 
-        //enc.addPage(new ItemPage("icestaff", new ItemStack(TCItemRegistry.staffIce)));
+        //enc.addPage(new ItemPage("icestaff", new ItemStack(ItemRegistry.staffIce)));
         enc.addPage(new ItemPage("iggyscale", new ItemStack(ItemRegistry.scale)));
         enc.addPage(new ItemPage("iguana_leather", new ItemStack(ItemRegistry.iguanaLeather)));
-        //enc.addPage(new ItemPage("journalpage", new ItemStack(TCItemRegistry.journalPage)));
+        //enc.addPage(new ItemPage("journalpage", new ItemStack(ItemRegistry.journalPage)));
         //TODO enc.addPage(new ItemPage("koachest", new ItemStack(BlockRegistry.koaChest)));
         //TODO enc.addPage(new ItemPage("leafball", new ItemStack(ItemRegistry.leafBall)));
 
-        //enc.addPage(new ItemPage("nigeljournal", new ItemStack(TCItemRegistry.nigelJournal)));
+        //enc.addPage(new ItemPage("nigeljournal", new ItemStack(ItemRegistry.nigelJournal)));
 
         enc.addPage(new ItemPage("sifter", new ItemStack(BlockRegistry.sifter)));
         //TODO enc.addPage(new ItemPage("snaretrap", new ItemStack(ItemRegistry.snareTrap)));

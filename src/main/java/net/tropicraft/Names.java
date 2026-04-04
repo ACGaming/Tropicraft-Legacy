@@ -35,6 +35,7 @@ public final class Names {
 	public static final String BLOCK_PALM_STAIRS = "palm_stairs";
 	public static final String BONGO = "bongo";
     public static final String AIR_COMPRESSOR = "air_compressor";
+	public static final String FIRE_PIT = "fire_pit";
     public static final String BAMBOO_FENCE = "bamboo_fence";
     public static final String BAMBOO_FENCE_GATE = "bamboo_fence_gate";
     public static final String THATCH_FENCE = "thatch_fence";

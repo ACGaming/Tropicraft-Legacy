@@ -14,7 +14,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DifficultyInstance;
@@ -22,7 +21,6 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.tropicraft.core.common.entity.EntityLand;
 import net.tropicraft.core.common.entity.projectile.EntityPoisonBlot;
-import net.tropicraft.core.registry.ItemRegistry;
 
 import javax.annotation.Nullable;
 
@@ -168,6 +166,9 @@ public class EntityTreeFrog extends EntityLand implements IMob, IRangedAttackMob
 		super.readEntityFromNBT(n);
 	}
 
+	/**
+	 * drops the loot of this entity upon death
+	 */
 	@Nullable
 	protected ResourceLocation getLootTable() {
 		if (!world.isRemote) {
@@ -186,10 +187,6 @@ public class EntityTreeFrog extends EntityLand implements IMob, IRangedAttackMob
 		}
         return null;
     }
-
-	/**
-	 * drops the loot of this entity upon death
-	 */
 
 	/*
 	@Override

@@ -30,12 +30,10 @@ import net.tropicraft.core.common.capability.ExtendedWorldStorage;
 import net.tropicraft.core.common.capability.PlayerDataInstance;
 import net.tropicraft.core.common.capability.WorldDataInstance;
 import net.tropicraft.core.common.command.CommandTropicsMiscClient;
-import net.tropicraft.core.common.compatibility.CompatHandler;
 import net.tropicraft.core.common.config.TropicsConfigs;
 import net.tropicraft.core.common.dimension.TropicraftWorldUtils;
 import net.tropicraft.core.common.donations.ThreadWorkerDonations;
 import net.tropicraft.core.common.drinks.MixerRecipes;
-import net.tropicraft.core.common.event.AchievementEvents;
 import net.tropicraft.core.common.event.BlockEvents;
 import net.tropicraft.core.common.event.ItemEvents;
 import net.tropicraft.core.common.event.MiscEvents;
@@ -46,14 +44,7 @@ import net.tropicraft.core.common.network.TCPacketHandler;
 import net.tropicraft.core.common.worldgen.overworld.TCWorldGenerator;
 import net.tropicraft.core.encyclopedia.TropicalBook;
 import net.tropicraft.core.proxy.CommonProxy;
-import net.tropicraft.core.registry.BlockRegistry;
-import net.tropicraft.core.registry.CommandRegistry;
-import net.tropicraft.core.registry.FluidRegistry;
-import net.tropicraft.core.registry.LootRegistry;
-import net.tropicraft.core.registry.OreDict;
-import net.tropicraft.core.registry.SmeltingRegistry;
-import net.tropicraft.core.registry.SoundRegistry;
-import net.tropicraft.core.registry.TileEntityRegistry;
+import net.tropicraft.core.registry.*;
 
 @Mod(modid = Info.MODID, version = Info.VERSION, dependencies = "after:forge@[14.23.0.2544,)", guiFactory = Info.GUI_FACTORY)
 public class Tropicraft {
@@ -79,10 +70,9 @@ public class Tropicraft {
 
 	    TropicsConfigs.init(event.getSuggestedConfigurationFile());
 
-		CompatHandler.preInit();
+		CompatRegistry.preInit();
 		ColorHelper.init();
 		SoundRegistry.init();
-		//FluidRegistry.preInit();
 		//BlockRegistry.preInit();
 	    proxy.preInit();
 		TileEntityRegistry.init();
@@ -97,9 +87,8 @@ public class Tropicraft {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		TCPacketHandler.init();
-		CompatHandler.init();
-	//	ItemRegistry.init();
-//		AchievementRegistry.init();
+		CompatRegistry.init();
+	    //ItemRegistry.init();
 		//EntityRegistry.init();
 		proxy.init();
 		MixerRecipes.addMixerRecipes();
@@ -108,7 +97,6 @@ public class Tropicraft {
 		OreDict.registerVanilla();
 		MinecraftForge.EVENT_BUS.register(new ItemEvents());
 		MinecraftForge.EVENT_BUS.register(new BlockEvents());
-		MinecraftForge.EVENT_BUS.register(new AchievementEvents());
 		MinecraftForge.EVENT_BUS.register(new BuildEvents());
 		MinecraftForge.EVENT_BUS.register(new MiscEvents());
 		MinecraftForge.EVENT_BUS.register(new SpawnEvents());
@@ -121,10 +109,10 @@ public class Tropicraft {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		FluidRegistry.postInit();
+		TCFluidRegistry.postInit();
 		LootRegistry.postInit();
-		CompatHandler.postInit();
-		
+		CompatRegistry.postInit();
+
 		if (event.getSide().isClient()) {
 		    ClientCommandHandler.instance.registerCommand(new CommandTropicsMiscClient());
 		}

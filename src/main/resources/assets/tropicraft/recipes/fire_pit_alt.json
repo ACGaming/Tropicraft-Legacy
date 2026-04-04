@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "tropicraft:fire_pit"
+  },
+  "pattern": [
+    " Y ",
+    "YZY",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "tropicraft:chunk"
+    },
+    "Y": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "Z": {
+      "type": "forge:ore_dict",
+      "ore": "logWood"
+    }
+  }
+}

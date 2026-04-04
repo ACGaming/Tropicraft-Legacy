@@ -51,7 +51,7 @@ public class WorldGenForestAltarRuin extends TCDirectionalGen {
             mainloop:
             for(int x = 0; x < width; x++) {
                 for(int y = 0; y < 4; y++) {
-                    if(worldObj.getBlock(x, y + j, z) == logs) {
+                    if(world.getBlock(x, y + j, z) == logs) {
                         continue mainloop;
                     }
                     if(rand.nextInt(4) != 0) {

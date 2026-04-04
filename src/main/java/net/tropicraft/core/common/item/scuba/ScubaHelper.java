@@ -2,7 +2,6 @@ package net.tropicraft.core.common.item.scuba;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class ScubaHelper {

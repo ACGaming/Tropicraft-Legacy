@@ -53,7 +53,7 @@ public class ItemRegistry extends TropicraftRegistry {
     }
 
     // Ore gems
-    public static Item azurite, eudialyte, zircon, zirconium;
+    public static Item azurite, eudialyte, zircon, zirconium, souzium;
 
     // Yummy delicious fruits
     public static Item grapefruit, lemon, lime, orange;
@@ -81,6 +81,7 @@ public class ItemRegistry extends TropicraftRegistry {
     public static ToolMaterial materialEudialyteTools = EnumHelper.addToolMaterial("eudialyte", 2, 750, 6.0F, 2.0F, 14);
     public static ToolMaterial materialZirconiumTools = EnumHelper.addToolMaterial("zirconium", 3, 1800, 8.5F, 3.0F, 10);
     public static ToolMaterial materialBambooTools = EnumHelper.addToolMaterial("bamboo", 1, 110, 1.2F, 1F, 6);
+    public static ToolMaterial materialUnderwaterTools = EnumHelper.addToolMaterial("tcaqua", 2, 500, 6.5F, 2.5F, 14);
 
     // Tools and weapons
     public static Item hoeEudialyte;
@@ -100,9 +101,14 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item axeZirconium;
     public static Item swordZirconium;
 
+    public static Item hoeSouzium;
+    public static Item pickaxeSouzium;
+    public static Item shovelSouzium;
+    public static Item axeSouzium;
+
     public static Item bambooSpear;
     public static Item dagger;
-    public static Item leafBall;
+    //public static Item leafBall;
     public static Item coconutBomb;
     public static Item fishingNet;
     public static Item dartGun;
@@ -174,6 +180,9 @@ public class ItemRegistry extends TropicraftRegistry {
     public static Item thatchTrapdoor;
 
     public static Item waterWand;
+    //public static Item tameWand;
+    //public static Item fireWand;
+    //public static Item iceWand;
 
     public static Item seaUrchinRoe;
     public static Item mobEgg;
@@ -183,16 +192,16 @@ public class ItemRegistry extends TropicraftRegistry {
     public static final ArmorMaterial materialPinkSuit = EnumHelper.addArmorMaterial("pink_suit", "pink_suit", 15, new int[]{2, 0, 4, 1}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     public static Item pinkFlippers;
     //public static Item pinkLeggings;
-    public static Item pinkChestplate;
+    //public static Item pinkChestplate;
     public static Item pinkChestplateGear;
-    public static Item pinkHelmet;
+    //public static Item pinkHelmet;
 
     public static final ArmorMaterial materialYellowSuit = EnumHelper.addArmorMaterial("yellow_suit", "yellow_suit", 15, new int[]{2, 0, 4, 1}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     public static Item yellowFlippers;
     //public static Item yellowLeggings;
-    public static Item yellowChestplate;
+    //public static Item yellowChestplate;
     public static Item yellowChestplateGear;
-    public static Item yellowHelmet;
+    //public static Item yellowHelmet;
 
     public static Item diveComputer;
 
@@ -284,6 +293,8 @@ public class ItemRegistry extends TropicraftRegistry {
             OreDictionary.registerOre("gemZircon", zircon);
         zirconium = registerItem(registry, new ItemTropicsOre(), "zirconium");
             OreDictionary.registerOre("gemZirconium", zirconium);
+        //souzium = registerItem(registry, new ItemTropicsOre(), "souzium");
+        //    OreDictionary.registerOre("gemSouzium", souzium);
         
         grapefruit = registerItem(registry, new ItemTropicraftFood(2, 0.2F), "grapefruit");
             OreDictionary.registerOre("cropGrapefruit", grapefruit);
@@ -319,9 +330,14 @@ public class ItemRegistry extends TropicraftRegistry {
         axeZirconium = registerItem(registry, new ItemTropicraftAxe(materialZirconiumTools, 6.0F, -3.2F), "axe_zirconium");
         swordZirconium = registerItem(registry, new ItemSword(materialZirconiumTools), "sword_zirconium");
 
+        axeSouzium = registerItem(registry, new ItemUnderwaterAxe(materialUnderwaterTools, 4.0F, -2.0F), "axe_souzium");
+        hoeSouzium = registerItem(registry, new ItemUnderwaterHoe(materialUnderwaterTools), "hoe_souzium");
+        pickaxeSouzium = registerItem(registry, new ItemUnderwaterPickaxe(materialUnderwaterTools), "pickaxe_souzium");
+        shovelSouzium = registerItem(registry, new ItemUnderwaterShovel(materialUnderwaterTools), "shovel_souzium");
+
         fishingNet = registerItem(registry, new ItemTropicraft(), "fishing_net");
         dartGun = registerItem(registry, new ItemDartGun(), "dart_gun");
-        dart = registerItem(registry, new ItemTropicraft(), "dart");
+        dart = registerItem(registry, new ItemDart(), "dart");
 
         bambooStick = registerItem(registry, new ItemTropicraft(), "bamboo_stick");
             OreDictionary.registerOre("stickBamboo", bambooStick);
@@ -401,6 +417,7 @@ public class ItemRegistry extends TropicraftRegistry {
             Tropicraft.proxy.registerArbitraryBlockVariants("bamboo_item_frame", "normal", "map");
 
         waterWand = registerItem(registry, new ItemWaterWand(), "water_wand");
+        //tameWand = registerItem(registry, new ItemTameWand(), "tame_wand");
 
         seaUrchinRoe = registerItem(registry, new ItemTropicraftFood(3, 0.3F), "sea_urchin_roe");
         mobEgg = registerMultiItemPrefixed(registry, new ItemMobEgg(), "spawn_egg", Names.EGG_NAMES);

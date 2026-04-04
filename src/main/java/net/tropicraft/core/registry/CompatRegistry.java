@@ -1,11 +1,12 @@
-package net.tropicraft.core.common.compatibility;
+package net.tropicraft.core.registry;
 
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.tropicraft.core.common.compatibility.*;
 
 import static net.tropicraft.core.common.config.TropicsConfigs.*;
 
-public class CompatHandler {
+public class CompatRegistry {
 
     @SubscribeEvent
     public static void preInit() {
@@ -19,8 +20,9 @@ public class CompatHandler {
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.preInit();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.preInit();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.preInit();
+        if (Loader.isModLoaded("exnihilocreatio") && enableExNihiloCreatioModule) ExNihiloCreatio.preInit();
 
-        //if (Loader.isModLoaded("") && enable Module) .preInit();
+        //if (Loader.isModLoaded("") && ) .preInit();
     }
 
     public static void init() {
@@ -30,8 +32,9 @@ public class CompatHandler {
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule)  UnlimitedChiselWorks.init();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule)  Railcraft.init();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule)  ImmersiveEngineering.init();
+        if (Loader.isModLoaded("exnihilocreatio") && enableExNihiloCreatioModule) ExNihiloCreatio.init();
 
-        //if (Loader.isModLoaded("") && enable Module) .initnit();
+        //if (Loader.isModLoaded("") && ) .init();
     }
 
     public static void postInit() {
@@ -41,7 +44,8 @@ public class CompatHandler {
         //if (Loader.isModLoaded("unlimitedchiselworks") && enableunlimitedchiselworksModule) UnlimitedChiselWorks.postInit();
         if (Loader.isModLoaded("railcraft") && enableRailcraftModule) Railcraft.postInit();
         if (Loader.isModLoaded("immersiveengineering") && enableImmersiveEngineeringModule) ImmersiveEngineering.postInit();
+        if (Loader.isModLoaded("exnihilocreatio") && enableExNihiloCreatioModule) ExNihiloCreatio.postInit();
 
-        //if (Loader.isModLoaded("") && enable Module) .postInit();
+        //if (Loader.isModLoaded("") && ) .postInit();
     }
 }

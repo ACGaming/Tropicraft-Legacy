@@ -14,13 +14,12 @@
     },
     "parent": "tropicraft:tropics/root",
     "criteria": {
-        "get_stone": {
+        "craft_pina_colada": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "item": "tropicraft:cocktail",
-                        "data": 0
+                        "item": "tropicraft:cocktail"
                     }
                 ]
             }

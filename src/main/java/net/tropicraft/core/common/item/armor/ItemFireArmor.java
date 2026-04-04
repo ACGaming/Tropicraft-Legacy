@@ -55,7 +55,7 @@ public class ItemFireArmor extends ItemTropicraftArmor {
     @Override
     public void damageArmor(EntityLivingBase player, ItemStack stack,
             DamageSource source, int damage, int slot) {
-        if(source == DamageSource.IN_FIRE || source == DamageSource.LAVA) {
+        if(source == DamageSource.IN_FIRE || source == DamageSource.LAVA || source == DamageSource.HOT_FLOOR) {
             //cheap way to slow the damage
             //if (player.worldObj.getWorldTime() % 2 == 0) {
             stack.damageItem(damage, player);
@@ -66,7 +66,7 @@ public class ItemFireArmor extends ItemTropicraftArmor {
 
     @Override
     public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
-        if (source == DamageSource.IN_FIRE || source == DamageSource.LAVA) {
+        if (source == DamageSource.IN_FIRE || source == DamageSource.LAVA || source == DamageSource.HOT_FLOOR) {
             // Invincible to fire damage
             return new ArmorProperties(10, 1.0, Integer.MAX_VALUE);
         } else {

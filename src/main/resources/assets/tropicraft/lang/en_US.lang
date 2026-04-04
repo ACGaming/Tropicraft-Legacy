@@ -72,6 +72,7 @@ tile.tropicraft.tiki_torch.name=Tiki Torch
 tile.tropicraft.drink_mixer.name=Drink Mixer
 tile.tropicraft.sifter.name=Sifter
 tile.tropicraft.air_compressor.name=Air Compressor
+tile.tropicraft.fire_pit.name=Fire Pit
 tile.tropicraft.flower_pot.name=Bamboo Flower Pot
 tile.tropicraft.palm_stairs.name=Palm Stairs
 tile.tropicraft.mahogany_stairs.name=Mahogany Stairs
@@ -114,6 +115,10 @@ item.tropicraft.hoe_eudialyte.name=Eudialyte Hoe
 item.tropicraft.pickaxe_eudialyte.name=Eudialyte Pickaxe
 item.tropicraft.shovel_eudialyte.name=Eudialyte Shovel
 item.tropicraft.sword_eudialyte.name=Eudialyte Sword
+item.tropicraft.axe_souzium.name=Souzium Aqua Axe
+item.tropicraft.hoe_souzium.name=Souzium Aqua Hoe
+item.tropicraft.pickaxe_souzium.name=Souzium Aqua Pickaxe
+item.tropicraft.shovel_souzium.name=Souzium Aqua Shovel
 item.tropicraft.axe_zircon.name=Zircon Axe
 item.tropicraft.hoe_zircon.name=Zircon Hoe
 item.tropicraft.pickaxe_zircon.name=Zircon Pickaxe
@@ -482,6 +487,15 @@ tropicraft.tooltip.air_compressor=Place one or two empty scuba tanks in the comp
 tropicraft.tooltip.drink_mixer=Place two drink ingredients on the mixer, then place an empty mug on the base, then ???, then enjoy!
 tropicraft.tooltip.sifter=Place any type of tropics or regular sand in the sifter. What treasures are hidden inside?
 
+dart.tropicraft:prefix.name=Dart of
+dart.tropicraft:paralyze.name=Paralysis
+dart.tropicraft:poison.name=Poison
+dart.tropicraft:moveSlowdown.name=Slow Movement
+dart.tropicraft:harm.name=Harm
+dart.tropicraft:confusion.name=Confusion
+dart.tropicraft:hunger.name=Hunger
+dart.tropicraft:weakness.name=Weakness
+
 # Book text
 tropicraft.book.toc.title=Table of Contents
 tropicraft.book.bookmarks.title=Bookmarks
@@ -683,6 +697,18 @@ tropicraft.encyclopedia.firehelm.desc=Helmet constructed of an unknown material 
 
 tropicraft.encyclopedia.fireleggings.title=Fire Leggings
 tropicraft.encyclopedia.fireleggings.desc=Leggings constructed of an unknown material that gains durability when in fire, but don't stand in the fire too long, or you will be burned!
+
+tropicraft.encyclopedia.hoesouzium.title=Souzium Aqua Hoe
+tropicraft.encyclopedia.hoesouzium.desc=Hoe constructed of an unknown material that mines faster while underwater, but slower above water.
+
+tropicraft.encyclopedia.pickaxesouzium.title=Souzium Aqua Pickaxe
+tropicraft.encyclopedia.pickaxesouzium.desc=Pickaxe constructed of an unknown material that mines faster while underwater, but slower above water.
+
+tropicraft.encyclopedia.shovelsouzium.title=Souzium Aqua Shovel
+tropicraft.encyclopedia.shovelsouzium.desc=Shovel constructed of an unknown material that mines faster while underwater, but slower above water.
+
+tropicraft.encyclopedia.axesouzium.title=Souzium Aqua Axe
+tropicraft.encyclopedia.axesouzium.desc=Axe constructed of an unknown material that mines faster while underwater, but slower above water.
 
 tropicraft.encyclopedia.fishbucket.title=Fish in a Bucket
 tropicraft.encyclopedia.fishbucket.desc=Use this to place the fish that you catch in the wild. Make an aquarium, perhaps!

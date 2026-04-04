@@ -164,14 +164,14 @@ public class EntityEIH extends EntityLandHostile implements IMob {
 		return this.getEntityBoundingBox();
 	}
 
+	/**
+	 * drops the loot of this entity upon death
+	 */
 	@Nullable
 	protected ResourceLocation getLootTable() {
 		return eih;
 	}
 
-    /**
-     * drops the loot of this entity upon death
-     */
 	/*
     @Override
     protected void dropLoot(boolean wasRecentlyHit, int lootingModifier, DamageSource source) {

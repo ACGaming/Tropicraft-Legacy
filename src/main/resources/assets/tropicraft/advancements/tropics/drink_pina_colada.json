@@ -14,13 +14,12 @@
     },
     "parent": "tropicraft:tropics/craft_pina_colada",
     "criteria": {
-        "get_stone": {
-            "trigger": "consume_item",
+        "drink_pina_colada": {
+            "trigger": "minecraft:consume_item",
             "conditions": {
                 "items": [
                     {
-                        "item": "tropicraft:cocktail",
-                        "data": 0
+                        "item": "tropicraft:cocktail"
                     }
                 ]
             }

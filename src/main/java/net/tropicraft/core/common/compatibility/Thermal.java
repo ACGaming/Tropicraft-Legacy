@@ -45,8 +45,8 @@ public class Thermal {
 
         ItemStack BambooBundle = new ItemStack(bundles, 1, 1);
 
-        FluidStack sap = new FluidStack(TFFluids.fluidSap, 50);
-        FluidStack resin = new FluidStack(TFFluids.fluidResin, 50);
+        //FluidStack sap = new FluidStack(TFFluids.fluidSap, 50);
+        //FluidStack resin = new FluidStack(TFFluids.fluidResin, 50);
 
         // Phytogenic Insolator
 

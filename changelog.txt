@@ -1,26 +1,33 @@
 7.1.9.126 for 1.12.2:
 New
+- Added a new tool type that mines faster while under water but slower above water, currently not craftable (_BIG_G_)
+- Ex Nihilo Creatio Compatibility: - Many plants can now be composted into dirt (_BIG_G_)
+- Killing with fire any mobs that drop meat will now drop cooked meat (_BIG_G_)
+- Scale and Fire Armors now also protect the player from damage while walking on magma blocks (_BIG_G_)
 - The Bamboo Crafting Table is now fully functional (ACGaming)
 - The Coconut Bomb server whitelist can now be turned on and off with a config option, now off by default (ACGaming)
-- Tropical spiders can now drop spider eyes (_BIG_G_)
-- Killing with fire any mobs that drop meat will now drop cooked meat (_BIG_G_)
+- Tropi Creepers can now be manually ignited using a flint and steel (_BIG_G_)
+- Tropi Creepers now play a Grass Place sound effect when they explode (_BIG_G_)
 - Tropical skeletons and creepers can now drop their respective skulls if killed by a charged creeper (_BIG_G_)
+- Tropical spiders can now drop spider eyes (_BIG_G_)
 Changes
-- The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
-- Sunken Ships, the sifter, the Tropicraft Portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)
+- Ashens now use dart guns instead of dagger (will still shoot slowness arrows) (_BIG_G_)
+- Diving computers are no longer stackable (_BIG_G_)
 - Easter Island Heads, Iguanas, Tropical Spiders, Failgulls, Man O Wars, Dolphins, Eagle Rays, Tree Frogs, HammerHead Sharks, Tropical Fishes now have exposed loot tables (_BIG_G_)
 - Overhauled the dart gun to function more like a bow (ACGaming)
-- Diving computers are no longer stackable (_BIG_G_)
-- Ashens now use dart guns instead of dagger (will still shoot slowness arrows) (_BIG_G_)
+- Renamed "FluidRegistry" to "TCFluidRegistry" due to it conflicting with a forge class of the same name (_BIG_G_)
+- Sunken Ships, the sifter, the Tropicraft Portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)
+- The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
+- The Iris flower is now part of the "flower" ore dictionary (_BIG_G_)
 - Tropi Creepers can now once again drop coconut bombs upon "exploding" (_BIG_G_)
 Fixes
+- Fixed Bamboo Fishing Rod item texture not having a hook and line (_BIG_G_)
+- Fixed Coconut Bombs doing... whatever that was (ACGaming)
 - Fixed Easter Island Heads not being able to spawn with Zirconium Block Eyes (_BIG_G_)
 - Fixed right-clicking on a sifter in creative mode still consuming the held item (ACGaming)
-- Fixed Coconut Bombs doing... whatever that was (ACGaming)
+- Fixed Sea Urchin and Starfish Eggs and Lava Ball not having an entity name (_BIG_G_)
 - Fixed Tropical Water having no blast resistance (_BIG_G_)
 - Fixed using spawn eggs not making the arm swinging animation (Icarus)
-- Fixed Sea Urchin and Starfish Eggs and Lava Ball not having an entity name (_BIG_G_)
-- Fixed Bamboo Fishing Rod item texture not having a hook and line (_BIG_G_)
 
 7.1.9.125 for 1.12.2:
 New

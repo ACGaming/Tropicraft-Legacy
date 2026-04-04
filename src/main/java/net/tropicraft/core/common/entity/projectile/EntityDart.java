@@ -80,6 +80,13 @@ public class EntityDart extends EntityArrow implements IProjectile, IEntityAddit
     }
 
     public enum DartType {
-        DART
+        DART,
+        PARALYZE,
+        POISON,
+        MOVE_SLOWDOWN,
+        HARM,
+        CONFUSION,
+        HUNGER,
+        WEAKNESS
     }
 }

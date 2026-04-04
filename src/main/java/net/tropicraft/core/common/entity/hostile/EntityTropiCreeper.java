@@ -11,7 +11,6 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.IMob;
@@ -62,7 +61,29 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
 		super(world);
 		this.setSize(0.6F, 1.7F);
 	}
-	
+
+	protected boolean processInteract(EntityPlayer player, EnumHand hand)
+	{
+		ItemStack itemstack = player.getHeldItem(hand);
+
+		if (itemstack.getItem() == Items.FLINT_AND_STEEL)
+		{
+			this.world.playSound(player, this.posX, this.posY, this.posZ, SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
+			player.swingArm(hand);
+
+			if (!this.world.isRemote)
+			{
+				this.explode();
+				itemstack.damageItem(1, player);
+				this.world.spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, this.posX, this.posY, this.posZ, 1.0D, 0.0D, 0.0D);
+				this.setDead();
+				return true;
+			}
+		}
+
+		return super.processInteract(player, hand);
+	}
+
     /**
      * Creates an explosion as determined by this creeper's power and explosion radius.
      */
@@ -83,6 +104,7 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
                     IBlockState state = BlockRegistry.flowers.getDefaultState().withProperty(BlockTropicsFlowers.VARIANT, TropicraftFlowers.VALUES[rand.nextInt(TropicraftFlowers.VALUES.length)]);
                     if (BlockRegistry.flowers.canBlockStay(world, attempt, state)) {
                         world.setBlockState(attempt, state);
+						this.playSound(SoundEvents.BLOCK_GRASS_PLACE, 0.5F, 1.0F);
                     }
                 }
             }
@@ -279,44 +301,12 @@ public class EntityTropiCreeper extends EntityLand implements IMob {
     /**
      * Called when a lightning bolt hits the entity.
      */
+	/*
     @Override
     public void onStruckByLightning(EntityLightningBolt lightningBolt) {
         super.onStruckByLightning(lightningBolt);
         this.dataManager.set(POWERED, Boolean.valueOf(true));
-    }
-
-	/*
-	@Override
-	protected boolean processInteract(EntityPlayer player, EnumHand hand)
-	{
-		ItemStack itemstack = player.getHeldItem(hand);
-
-		if (itemstack.getItem() == Items.FLINT_AND_STEEL)
-		{
-			this.world.playSound(player, this.posX, this.posY, this.posZ, SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
-			player.swingArm(hand);
-
-			if (!this.world.isRemote)
-			{
-				this.ignite();
-				itemstack.damageItem(1, player);
-				return true;
-			}
-		}
-
-		return super.processInteract(player, hand);
-	}
-
-	public boolean hasIgnited()
-	{
-		return ((Boolean)this.dataManager.get(IGNITED)).booleanValue();
-	}
-	
-	public void ignite()
-	{
-		this.dataManager.set(IGNITED, Boolean.valueOf(true));
-	}
-	*/
+    }*/
 
 	//CREEPER CODE COPY END
 

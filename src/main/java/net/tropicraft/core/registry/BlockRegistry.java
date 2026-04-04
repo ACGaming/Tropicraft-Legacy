@@ -184,6 +184,7 @@ public class BlockRegistry extends TropicraftRegistry {
 	public static Block drinkMixer;
 	public static Block sifter;
 	public static Block airCompressor;
+	public static Block firePit;
 	
 	public static Block flowerPot;
 	public static Block bambooDoor;
@@ -226,7 +227,7 @@ public class BlockRegistry extends TropicraftRegistry {
 	 */
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        FluidRegistry.preInit();
+        TCFluidRegistry.preInit();
         
         IForgeRegistry<Block> registry = event.getRegistry();
 		chunk = registerBlock(registry, new BlockChunkOHead(), Names.BLOCK_CHUNK_O_HEAD);
@@ -316,6 +317,8 @@ public class BlockRegistry extends TropicraftRegistry {
 
 		pineapple = registerBlock(registry, new BlockPineapple(), "pineapple");
 		iris = registerBlock(registry, new BlockIris(), "iris");
+			OreDictionary.registerOre("flower", pineapple);
+
 		coffeePlant = registerBlock(registry, new BlockCoffeeBush(), "coffee_bush", (IBlockItemRegistrar) null);
 
 		sands = registerBlock(registry, new BlockTropicraftSands(), "sand", new MultiBlockItemCreator(TropicraftSands.VALUES)
@@ -332,7 +335,8 @@ public class BlockRegistry extends TropicraftRegistry {
 		drinkMixer = registerBlock(registry, new BlockDrinkMixer(), Names.DRINK_MIXER);
 		sifter = registerBlock(registry, new BlockSifter(), Names.SIFTER);
 		airCompressor = registerBlock(registry, new BlockAirCompressor(), Names.AIR_COMPRESSOR);
-		
+		firePit = registerBlock(registry, new BlockFirePit(), Names.FIRE_PIT);
+
 		flowerPot = registerBlockNoItem(registry, new BlockTropicraftFlowerPot(), Names.FLOWER_POT);
 		bambooDoor = registerBlockNoItem(registry, new BlockBambooDoor(), Names.BAMBOO_DOOR);
 		mahoganyDoor = registerBlockNoItem(registry, new BlockMahoganyDoor(), Names.MAHOGANY_DOOR);
@@ -345,7 +349,7 @@ public class BlockRegistry extends TropicraftRegistry {
 		thatchTrapdoor = registerBlockNoItem(registry, new BlockThatchTrapdoor(), Names.THATCH_TRAPDOOR);
 
 		bambooCraftingTable = registerBlock(registry, new BlockBambooCraftingTable(), Names.BAMBOO_CRAFTING_TABLE);
-		OreDictionary.registerOre("workbench", bambooCraftingTable);
+			OreDictionary.registerOre("workbench", bambooCraftingTable);
 
 		bongo = registerBlock(registry, new BlockBongoDrum(), Names.BONGO, new MultiBlockItemCreator(TropicraftBongos.VALUES));
 
@@ -371,9 +375,9 @@ public class BlockRegistry extends TropicraftRegistry {
 		packedPurifiedSand = registerBlock(registry, new BlockPackedPurifiedSand(), "packed_purified_sand");
 		
 		// Water must be after fences to reference them in ctor
-        tropicsWater = registerBlockNoItem(registry, new BlockTropicsWater(FluidRegistry.tropicsWater, Material.WATER), Names.TROPICS_WATER);
-        tropicsPortal = registerBlockNoItem(registry, new BlockTropicsPortal(FluidRegistry.tropicsPortal, Material.WATER, false), Names.TROPICS_PORTAL);
-        tropicsPortalTeleporter = registerBlockNoItem(registry, new BlockTropicsPortal(FluidRegistry.tropicsPortal, Material.WATER, true), Names.TROPICS_PORTAL_TELEPORTER);
+        tropicsWater = registerBlockNoItem(registry, new BlockTropicsWater(TCFluidRegistry.tropicsWater, Material.WATER), Names.TROPICS_WATER);
+        tropicsPortal = registerBlockNoItem(registry, new BlockTropicsPortal(TCFluidRegistry.tropicsPortal, Material.WATER, false), Names.TROPICS_PORTAL);
+        tropicsPortalTeleporter = registerBlockNoItem(registry, new BlockTropicsPortal(TCFluidRegistry.tropicsPortal, Material.WATER, true), Names.TROPICS_PORTAL_TELEPORTER);
         Tropicraft.proxy.registerFluidBlockRendering(BlockRegistry.tropicsWater, Names.TROPICS_WATER);
         Tropicraft.proxy.registerFluidBlockRendering(BlockRegistry.tropicsPortal, Names.TROPICS_PORTAL);
         Tropicraft.proxy.registerFluidBlockRendering(BlockRegistry.tropicsPortalTeleporter, Names.TROPICS_PORTAL_TELEPORTER);
