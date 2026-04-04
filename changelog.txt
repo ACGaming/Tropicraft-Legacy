@@ -1,3 +1,7 @@
+7.1.9.127 for 1.12.2
+
+- The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
+
 7.1.9.126 for 1.12.2:
 New
 - Added a new tool type that mines faster while under water but slower above water, currently not craftable (_BIG_G_)
@@ -18,7 +22,6 @@ Changes
 - Overhauled the dart gun to function more like a bow (ACGaming)
 - Renamed "FluidRegistry" to "TCFluidRegistry" due to it conflicting with a forge class of the same name (_BIG_G_)
 - Sunken Ships, the sifter, the Tropicraft Portal chest and Home Trees now have exposed loot tables (_BIG_G_/ACGaming)
-- The blocks Easter Island Heads can spawn with as eyes are now controlled by a config (ACGaming)
 - The Iris flower is now part of the "flower" ore dictionary (_BIG_G_)
 - Tropi Creepers can now once again drop coconut bombs upon "exploding" (_BIG_G_)
 Fixes
