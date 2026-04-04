@@ -1,6 +1,7 @@
 7.1.9.126 for 1.12.2:
 New
 - Added a new tool type that mines faster while under water but slower above water, currently not craftable (_BIG_G_)
+- Added back the fire pit, for now it uses normal smoke particles (_BIG_G_)
 - Ex Nihilo Creatio Compatibility: - Many plants can now be composted into dirt (_BIG_G_)
 - Killing with fire any mobs that drop meat will now drop cooked meat (_BIG_G_)
 - Scale and Fire Armors now also protect the player from damage while walking on magma blocks (_BIG_G_)
