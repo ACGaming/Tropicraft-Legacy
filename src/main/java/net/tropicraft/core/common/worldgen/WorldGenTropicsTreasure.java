@@ -45,12 +45,15 @@ public class WorldGenTropicsTreasure extends TCGenBase {
                 int sandArea = 2;
 
                 // Check the surface level to make sure there's a 5x5 sand area to gen on
+                // As it seems the code never gets beyond this part
+                // This seems to be a slightly modified version of the 1.7 code
                 for (int surroundZ = z - sandArea; surroundZ <= z + sandArea; surroundZ++) {
                     for (int surroundX = x - sandArea; surroundX <= x + sandArea; surroundX++) {
                         BlockPos pos3 = new BlockPos(surroundX, j, surroundZ);
                         if (!sandBlocks.contains(worldObj.getBlockState(pos3).getBlock())) {
                             continue tryagain;
-                        }
+                        } System.out.println("Not a good enough spot for buried treasure, keep looking.");
+
                     }
                 }
 
@@ -58,7 +61,7 @@ public class WorldGenTropicsTreasure extends TCGenBase {
                 BlockPos chestPos = new BlockPos(x, y - depth, z);
                 if (!sandBlocks.contains(worldObj.getBlockState(chestPos).getBlock())) {
                     continue tryagain;
-                }
+                } System.err.println("Generating Treasure chest at: " + i + " " + y + " " + k);
 
                 // Draw the X that marks the spot
                 int count = 0;
@@ -70,7 +73,7 @@ public class WorldGenTropicsTreasure extends TCGenBase {
                     worldObj.setBlockState(xPos.add(count, 0, -count), coloredSand);
                     worldObj.setBlockState(xPos.add(-count, 0, count), coloredSand);
                     count++;
-                }
+                } System.out.println("Draw the X that marks the spot");
 
                 // Place a chest under the X somewhere, fill it
                 if (!worldObj.isRemote) {
@@ -80,7 +83,7 @@ public class WorldGenTropicsTreasure extends TCGenBase {
                     TileEntityChest chest = (TileEntityChest) worldObj.getTileEntity(chestPos);
                     if (chest == null) {
                         return false;
-                    }
+                    } System.out.println("Place a chest under the X somewhere, fill it");
 
                     chest.setLootTable(LootRegistry.buriedTreasure, rand.nextLong());
 
@@ -88,7 +91,7 @@ public class WorldGenTropicsTreasure extends TCGenBase {
                     ItemStack map = new ItemStack(Items.FILLED_MAP);
                     initializeMap(worldObj, map, chestPos);
                     chest.setInventorySlotContents(rand.nextInt(chest.getSizeInventory()), map);
-                }
+                } System.out.println("Add filled map to chest");
 
                 return true;
             }
@@ -113,6 +116,7 @@ public class WorldGenTropicsTreasure extends TCGenBase {
         data.scale = 3;
         data.dimension = (byte)worldObj.provider.getDimension();
         data.markDirty();
+        System.out.println("");
     }
 
 }
